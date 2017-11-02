@@ -1,0 +1,327 @@
+//Grid System//
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 768px) {
+
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .col-1-2 {
+    width: 100%;
+  }
+  .col-2-5 {
+    width: 100%;
+  }
+  .col-3-5 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+    .container {
+      width: 750px;
+      margin: auto;
+    }
+    .col-1, .col-2-3, .col-1-2, .col-2-5, .col-3-5{
+      float: left;
+    }
+    .col-1{
+      width: 100%;
+    }
+
+    .col-2-3 {
+      width: 66.66%;
+    }
+
+    .col-3-5 {
+      width: 60%;
+    }
+
+    .col-2-5 {
+      width: 40%;
+    }
+
+    .col-1-2 {
+      width: 50%;
+    }
+
+    .col-1-4 {
+      width: 25%;
+    }
+
+
+
+  }
+
+
+
+//Grid System//
+
+
+
+
+
+
+
+
+body{
+  font-family: 'Lato', sans-serif;
+  position: relative;
+}
+//components//
+h1{
+  font-size: 32px;
+  padding: 25px 0 25px 0;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  color: #093500;
+  font-size: 36px;
+  font-weight: 300;
+}
+
+h3{
+  color: #093500;
+  font-size: 22px;
+}
+
+h4{
+  color: #80a60f;
+  font-size: 14px;
+  padding: 0;
+  font-weight: 400;
+  font-family: 'Signika', sans-serif;
+}
+
+p{
+  color: #000;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: 'Signika', sans-serif;
+  line-height: 16px;
+  display: inline-block;
+}
+
+hr{
+  color: #dadada;
+  margin: 20px 0 20px 0;
+}
+
+img{
+  display: inline-block;
+}
+
+//components//
+
+
+
+
+header{
+  position: relative;
+  background-image: url("../img/header-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  a{
+    color: #fff;
+    text-decoration: none;
+    b{
+      font-weight: 900;
+    }
+  }
+  a:hover, a:visited{
+    color: #fff;
+  }
+
+}
+
+.top-nav{
+  ul{
+    display: block;
+
+    li{
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      min-width: 19%;
+
+      a{
+        display: inline-block;
+        min-width: 100%;
+        color: #093500;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 25px 0 25px 0;
+        transition: 0.3s;
+        text-decoration: none;
+
+        background-image: url("../img/arrow.png");
+        background-repeat: no-repeat;
+        background-position: calc(100% + 2px) calc(100% - 25px);
+
+      }
+      a:hover{
+        text-shadow: 3px 2px 2px rgba(150, 150, 150, 1);
+
+      }
+    }
+
+  }
+}
+
+
+.hero{
+  background-color: #ecf0fc;
+
+  .hero-img{
+    img{
+
+      position: relative;
+      left: 50px;
+
+    }
+  }
+  .hero-info{
+    h2{
+      position: relative;
+      right: 50px;
+      margin: 25px 0 25px 0;
+      b{
+        font-weight: 800;
+      }
+    }
+    p{
+
+    }
+  }
+}
+
+
+.main{
+  padding: 25px 0 25px 0;
+  border-bottom: solid 5px #dadada;
+  .left-side{
+    padding:0 25px 0 25px;
+    border-right: 1px solid #dadada;
+    h3{
+      margin-bottom: 25px;
+    }
+    p{
+      margin-bottom: 20px ;
+    }
+
+  }
+  .right-side{
+    padding:0 25px 0 25px;
+    h3{
+      margin-bottom: 15px;
+    }
+    .research{
+      padding: 18px 0 18px 0;
+      border-bottom: solid 1px #dadada;
+    }
+    .services{
+      padding: 18px 0 18px 0;
+    }
+  }
+}
+
+
+footer{
+  p{
+    margin: 25px;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  h4{
+    font-size: 16px;
+  }
+
+  p{
+    font-size: 14px;
+  }
+
+
+  .top-nav{
+    padding: 20px 0 20px 0;
+    ul{
+      li{
+
+        display: inline;
+        text-align: center;
+
+        a {
+          font-size: 22px;
+          padding: 10px 0 10px 0;
+          background-image: none;
+        }
+      }
+    }
+  }
+  .hero{
+    padding: 25px 0 25px 0;
+    .hero-img{
+      text-align: center;
+      img{
+        position: relative;
+        left: 0;
+    }
+    }
+    .hero-info{
+      h2{
+        position: relative;
+        right: 0;
+      }
+    }
+  }
+
+  .main{
+    padding: 25px 0 25px 0;
+    border-bottom: solid 5px #dadada;
+    .left-side{
+      padding:0;
+      border-right:none;
+    }
+    .right-side{
+      padding:0;
+      h3 {
+        margin: 15px 0 15px 0;
+      }
+      .research{
+        border-bottom: solid 1px #dadada;
+        padding: 18px 0 18px 0;
+        border-bottom:none;
+        img{
+            width: 100%;
+        }
+      }
+      .services{
+        padding: 18px 0 18px 0;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
+}
