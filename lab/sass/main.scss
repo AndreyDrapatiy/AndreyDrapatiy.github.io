@@ -13,7 +13,7 @@
 @media (max-width: 768px) {
 
   .container {
-    width: 90%;
+    width: 98%;
     margin: auto;
   }
 
@@ -60,18 +60,8 @@
     .col-1-4 {
       width: 25%;
     }
-
-
-
-  }
-
-
-
+}
 //Grid System//
-
-
-
-
 
 
 
@@ -83,7 +73,7 @@ body{
 //components//
 h1{
   font-size: 32px;
-  padding: 25px 0 25px 0;
+  padding: 25px;
   font-weight: 300;
   font-family: 'Open Sans', sans-serif;
 }
@@ -123,6 +113,10 @@ hr{
 
 img{
   display: inline-block;
+}
+.learn-more{
+  display: inline-block;
+  padding: 5px 0 10px 0;
 }
 
 //components//
