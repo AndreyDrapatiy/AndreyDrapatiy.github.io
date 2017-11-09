@@ -1,0 +1,325 @@
+@import "common";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url("../img/material-wallpaper.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main {
+  position: relative;
+  width: 450px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding-bottom: 40px;
+  border-radius: 3px;
+  background: #fafafa;
+  overflow-y: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  .top-bar {
+    background: #3F51B5;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+
+  }
+  .sidebar {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+    transition: 0.3s;
+    width: 260px;
+    z-index: 8;
+    .sidebar-header {
+      display: block;
+      height: 68px;
+      background-color: #303F9F;
+    }
+    ul {
+
+      li {
+        font-size: 18px;
+        padding: 15px;
+        transition: 0.2s;
+        color: #757575;
+        width: 260px;
+        cursor: pointer;
+        i {
+          position: relative;
+          display: inline-block;
+          margin: 0 20px 0 5px;
+
+          top: 3px;
+          font-size: 20px;
+
+        }
+      }
+      li:hover {
+        background: #3F51B5;
+        color: #fff;
+      }
+    }
+  }
+
+  .new-item-input {
+    display: none;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 80px 24px 10px 24px;
+
+    .group {
+      position: relative;
+      margin-bottom: 50px;
+    }
+    input {
+      font-size: 18px;
+      padding: 10px 10px 10px 5px;
+      display: block;
+      width: 380px;
+      border: none;
+      border-bottom: 1px solid #757575;
+      background: #fafafa;
+    }
+    input:focus {
+      outline: none;
+    }
+
+    label {
+      color: #999;
+      font-size: 18px;
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left: 5px;
+      top: 10px;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+
+    /* active state */
+    input:focus ~ label, input:valid ~ label {
+      top: -20px;
+      font-size: 14px;
+      color: #f50057;
+    }
+
+
+    .bar {
+      position: relative;
+      display: block;
+      width: 395px;
+    }
+    .bar:before, .bar:after {
+      content: '';
+      height: 2px;
+      width: 0;
+      bottom: 1px;
+      position: absolute;
+      background: #5264AE;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+    .bar:before {
+      left: 50%;
+    }
+    .bar:after {
+      right: 50%;
+    }
+
+
+    input:focus ~ .bar:before, input:focus ~ .bar:after {
+      width: 50%;
+    }
+
+    .highlight {
+      position: absolute;
+      height: 60%;
+      width: 100px;
+      top: 25%;
+      left: 0;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    input:focus ~ .highlight {
+      -webkit-animation: inputHighlighter 0.3s ease;
+      -moz-animation: inputHighlighter 0.3s ease;
+      animation: inputHighlighter 0.3s ease;
+    }
+
+    @-webkit-keyframes inputHighlighter {
+      from {
+        background: #5264AE;
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
+    @-moz-keyframes inputHighlighter {
+      from {
+        background: #5264AE;
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
+    @keyframes inputHighlighter {
+      from {
+        background: #5264AE;
+      }
+      to {
+        width: 0;
+        background: transparent;
+      }
+    }
+  }
+
+  .items-active {
+    height: 91%;
+    overflow-y: scroll;
+    padding: 0 24px 10px 24px;
+
+    .todo-item {
+      background-color: #fff;
+      margin: 20px 0 20px 0;
+      text-wrap: normal;
+      padding: 15px;
+      cursor: default;
+      border-right: 2px solid;
+      border-color: #f50057;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      .todo-item-title {
+        font-size: 16px;
+        text-align: left;
+        color: #595959;
+        font-weight: bold;
+      }
+      .todo-item-text {
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+        color: #595959;
+        margin: 10px 0 10px 0;
+        overflow: hidden;
+        word-wrap: break-word;
+      }
+
+      .actions-time {
+        .time {
+          display: inline-block;
+          width: 67%;
+          font-size: 14px;
+          font-weight: 500;
+          color: #a4b2b5;
+
+        }
+        .done-remove-btn {
+          width: 30%;
+          text-align: right;
+          display: inline-block;
+          li {
+            display: inline-block;
+
+          }
+          .complete-btn {
+            color: #4CAF50;
+          }
+          .delete-btn {
+            color: red;
+          }
+        }
+      }
+
+    }
+    .todo-item-completed {
+      border-color: #4CAF50;
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+  }
+}
+
+.items-completed {
+  height: 91%;
+  overflow-y: scroll;
+  padding: 0 24px 10px 24px;
+
+  .todo-item {
+    background-color: #fff;
+    margin: 20px 0 20px 0;
+    text-wrap: normal;
+    padding: 15px;
+    cursor: default;
+    border-right: 2px solid;
+    border-color: #f50057;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    .todo-item-title {
+      font-size: 16px;
+      text-align: left;
+      color: #595959;
+      font-weight: bold;
+    }
+    .todo-item-text {
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: left;
+      color: #595959;
+      margin: 10px 0 10px 0;
+    }
+
+    .actions-time {
+      .time {
+        display: inline-block;
+        width: 67%;
+        font-size: 14px;
+        font-weight: 500;
+        color: #a4b2b5;
+
+      }
+      .done-remove-btn {
+        width: 30%;
+        text-align: right;
+        display: inline-block;
+        li {
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+  .todo-item-completed {
+    border-color: #4CAF50;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+}
+
+.sidebar-open {
+  max-width: 200px;
+  -webkit-box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-close {
+  max-width: 0;
+}
+
+
+

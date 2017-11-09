@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="main">
+    <div class="top-bar">
+        <div class="logo-hamburger" id="sidebar-open-close">
+            <button class="hamburger hamburger--spin toggler">
+        <span class="hamburger-box">
+            <span class="hamburger-inner" id="hamburger-inner"></span>
+        </span>
+            </button>
+        </div>
+
+    </div>
+    <div class="sidebar sidebar-close" id="sidebar">
+        <div class="sidebar-header">
+
+        </div>
+        <ul>
+            <li id="showAll"><i class="material-icons">assignment</i>All</li>
+            <li id="showActive"><i class="material-icons">assignment_late</i>Active</li>
+            <li id="showCompleted"><i class="material-icons">assignment_turned_in</i>Completed</li>
+        </ul>
+    </div>
+    <div class="new-item-input" id="new-item-input">
+        <div>
+            <div class="group">
+                <input type="text" id="titleNew" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Title</label>
+            </div>
+            <div class="group">
+                <input type="text" id="contentNew" required>
+                <span class="highlight"></span>
+                <span class="bar"></span>
+                <label>Content</label>
+            </div>
+            <div class="new-item-btns">
+                <button id="close" onclick="closeCreateNew()">Close</button>
+                <button id="add">Add</button>
+            </div>
+        </div>
+    </div>
+    <div class="items-active" id="items-active">
+        <div class="todo-item todo-item-active">
+            <div class="todo-item-title">Welcome</div>
+            <div class="todo-item-text">
+                1.Press the create button, to add new ToDo item
+                2.You can move it to 'Completed' with
+                '<i class="material-icons" style="font-size: 14px">&#xE876;</i>'
+                button, or remove it with
+                '<i class="material-icons" style="font-size: 14px">&#xE15B;</i>'.<br/>
+                3.Press 'Hamburger' to see the sort options
+            </div>
+            <div class="actions-time">
+                <div class="time"></div>
+                <ul class="done-remove-btn">
+                    <li id="complet-btn" onclick="moveToCompleted(this)"><i class="material-icons">&#xE876;</i></li>
+                    <li id="delete-btn" onclick="removeItem(this)"><i class="material-icons">&#xE15B;</i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <button id="createNew" onclick="createNew()"><i class="material-icons">&#xE150;</i></button>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>

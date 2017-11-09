@@ -1,0 +1,221 @@
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  z-index: 10;
+  overflow: visible;
+}
+
+.hamburger-box {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  background-color: #fff;
+  margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 25px;
+  height: 2px;
+  border-radius: 2px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+ background-color: inherit;
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -7px;
+}
+.hamburger-inner::after {
+  bottom: -7px;
+}
+
+
+.hamburger--spin{
+  padding:20px  29px 20px 29px;
+
+}
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+
+.hamburger--spin-r .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin-r .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin-r .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin-r.is-active .hamburger-inner {
+  transform: rotate(-225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin-r.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.hamburger--spin-r.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+
+
+
+#createNew {
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 15px 17px;
+  font-size: 18px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+  background:#3F51B5;
+  border-radius: 50%;
+  outline: none;
+}
+
+
+#createNew{
+  position: absolute;
+  left: 370px;
+  top:460px;
+  overflow: hidden;
+
+}
+
+#create:after {
+  content: '';
+  position: absolute;
+ top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, .5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(25, 25);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(40, 40);
+  }
+}
+
+.create:focus:not(:active)::after {
+  animation: ripple 1s ease-out;
+}
+
+
+
+
+.new-item-btns{
+    text-align: right;
+  #add {
+    position: relative;
+    display: inline-block;
+    padding: 7px 22px 6px 22px ;
+    font-size: 18px;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+    background-color: #f50057;
+    color: #ecf0f1;
+
+    transition: background-color .3s;
+  }
+
+  #add:hover, .add:focus {
+    background-color:#ff80ab;
+  }
+
+  #close{
+    display: inline-block;
+    padding: 7px 22px 6px 22px ;
+    background:none;
+    border:none;
+    font-size: 18px;
+    color:  #757575;
+    transition: 0.3s;
+    outline: none;
+  }
+  #close:hover{
+    color: #f50057;
+  }
+
+}
+
+
+
+::-webkit-scrollbar-button{ display: block; height: 13px; border-radius: 0; background-color: #AAA; }
+::-webkit-scrollbar-button:hover{ background-color: #AAA; }
+::-webkit-scrollbar-thumb{ background-color: #CCC; }
+::-webkit-scrollbar-thumb:hover{ background-color: #CCC; }
+::-webkit-scrollbar-track{ background-color: #efefef; }
+::-webkit-scrollbar-track:hover{ background-color: #CCC; }
+::-webkit-scrollbar{ width: 8px; }
