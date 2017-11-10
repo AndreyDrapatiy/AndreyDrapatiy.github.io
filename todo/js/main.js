@@ -60,19 +60,27 @@ document.getElementById('showAll').addEventListener('click', function () {
     for (var classCompl = document.getElementsByClassName('todo-item-active'),
              i = 0, li = classCompl.length; i < li; i++) classCompl [i].style.display = 'block';
 });
+
+document.getElementById('clearAll').addEventListener('click', function () {
+    var container = document.getElementById('items-all');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+
+});
 //toggle view//
 
 
 // create new //
 function createNew() {
     document.getElementById('new-item-input').style.display = 'block';
-    document.getElementById('items-active').style.display = 'none';
+    document.getElementById('items-all').style.display = 'none';
     document.getElementById('createNew').style.display = 'none';
 }
 
 function closeCreateNew() {
     document.getElementById('new-item-input').style.display = 'none';
-    document.getElementById('items-active').style.display = 'block';
+    document.getElementById('items-all').style.display = 'block';
     document.getElementById('createNew').style.display = 'inline-block';
 }
 
@@ -108,11 +116,11 @@ document.getElementById('add').addEventListener('click', function () {
         '</ul>' +
         '</div>';
     if (contentNew !== '') {
-        document.getElementById('items-active').innerHTML += template;
+        document.getElementById('items-all').innerHTML += template;
         document.getElementById('titleNew').value = '';
         document.getElementById('contentNew').value = '';
         document.getElementById('new-item-input').style.display = 'none';
-        document.getElementById('items-active').style.display = 'block';
+        document.getElementById('items-all').style.display = 'block';
         document.getElementById('createNew').style.display = 'inline-block';
     }
     else {
