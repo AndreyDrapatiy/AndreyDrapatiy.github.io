@@ -135,7 +135,13 @@
   top:460px;
   overflow: hidden;
 
+  i{
+    position: relative;
+    top:2px;
+  }
+
 }
+
 
 #create:after {
   content: '';
