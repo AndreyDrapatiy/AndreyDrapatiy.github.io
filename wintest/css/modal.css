@@ -178,7 +178,7 @@ a.openModal:focus {
 @media screen and (max-width: 768px) {
     .modal > div {
         width: 100%;
-        height: 100%;
+        height: 50%;
         position: relative;
         margin: 0;
 
@@ -186,13 +186,13 @@ a.openModal:focus {
 
     h3 {
         font-size: 24px;
-        margin: 5% 0 5% 0;
+        margin: 2% 0 2% 0;
 
     }
 
     .phone {
         width: 70%;
-        margin: 4% auto;
+        margin: 1% auto;
         display: inline-block;
         text-align: center;
 
@@ -200,7 +200,7 @@ a.openModal:focus {
 
     .name {
         width: 70%;
-        margin: 5% auto;
+        margin: 2% auto;
         display: inline-block;
         text-align: center;
     }
@@ -234,7 +234,7 @@ a.openModal:focus {
     }
 
     .callmenow {
-        margin: 50px 0 0 0;
+        margin: 2% 0 0 0;
     }
 
     .callmenow a {
