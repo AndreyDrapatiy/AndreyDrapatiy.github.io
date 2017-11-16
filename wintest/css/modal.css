@@ -145,6 +145,7 @@
 }
 
 #closemodal {
+
     position: absolute;
     right: 15px;
     top: 15px;
@@ -152,12 +153,18 @@
     height: 26px;
     border-radius: 50%;
     background: #E0E0E0;
+    color: #4c4c4c;
     text-align: center;
+    line-height: 25px;
+    font-size: 14px;
 }
 
-#closemodal img {
-    padding-top: 5px;
-    padding-right: 1px;
+
+
+#closemodal:hover{
+    background: #323232;
+    color:#E5C424;
+    text-decoration: none;
 }
 
 /* Открываем модальное окно */
