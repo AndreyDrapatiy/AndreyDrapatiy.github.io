@@ -169,30 +169,27 @@ a.openModal:hover,
 a.openModal:focus {
 }
 
-.modal .modal_title {
-    display: block;
-    text-align: center;
-    font-size: 22pt;
-}
+
 
 @media screen and (max-width: 768px) {
     .modal > div {
         width: 100%;
-        height: 50%;
+        height: 40%;
         position: relative;
         margin: 0;
+        padding: 25px 0 25px 0;
 
     }
 
-    h3 {
+    #modal-title {
         font-size: 24px;
-        margin: 2% 0 2% 0;
+        margin: 0 0 0 0;
 
     }
 
     .phone {
         width: 70%;
-        margin: 1% auto;
+        margin: 0 auto;
         display: inline-block;
         text-align: center;
 
@@ -200,7 +197,7 @@ a.openModal:focus {
 
     .name {
         width: 70%;
-        margin: 2% auto;
+        margin: 0 auto;
         display: inline-block;
         text-align: center;
     }
@@ -240,7 +237,7 @@ a.openModal:focus {
     .callmenow a {
         display: inline-block;
         width: 70%;
-        margin: auto;
+        margin: 0 auto;
 
     }
 }
