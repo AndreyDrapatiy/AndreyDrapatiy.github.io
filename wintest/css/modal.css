@@ -1,0 +1,246 @@
+/* Контейнер */
+.modal {
+    /* Слой перекрытия */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(47, 47, 47, 0.81);
+    z-index: 10000;
+
+    /* Трансформации прозрачности при открытии  */
+    -webkit-transition: opacity 500ms ease-in;
+    -moz-transition: opacity 500ms ease-in;
+    transition: opacity 500ms ease-in;
+
+    /* Скрываем изначально */
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Показываем модальное окно */
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Содержание */
+.modal > div {
+    width: 700px;
+    height: 330px;
+    position: relative;
+    margin: 10% auto;
+    background: #eeeeee;
+    /* По умолчанию минимизируем анимацию */
+    -webkit-animation: minimise 500ms linear;
+
+    /* Придаем хороший вид */
+
+    padding: 45px 0 45px 0;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 #fff;
+}
+
+#modal-title {
+    font-size: 24px;
+    margin: 0 0 40px 0;
+
+}
+
+.phone {
+    width: 220px;
+    display: inline-block;
+    text-align: left;
+    margin: 0 0 0 25px;
+}
+
+.name {
+    width: 220px;
+    display: inline-block;
+    text-align: left;
+    margin: 0 25px 0 0;
+}
+
+.phone label {
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.name label {
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.phone input {
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 40px;
+}
+
+.name input {
+    width: 100%;
+    border: 1px solid #E2E2E2;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 40px;
+}
+
+.callmenow {
+    margin: 50px 0 0 0;
+}
+
+.callmenow a {
+    display: inline-block;
+    padding: 13px 0 13px 0;
+    font-size: 18px;
+    color: #323232;
+    text-decoration: none;
+    width: 240px;
+    background: linear-gradient(270deg, #E5DD24 0%, #D9D12A 104.37%);
+    border: 3px solid #F4F4F4;
+    border-radius: 30px;
+}
+
+/* Изменяем анимацию при открытии модального окна*/
+.modal:target > div {
+    -webkit-animation-name: bounce;
+}
+
+.modal h2 {
+    font-size: 36px;
+    padding: 0 0 20px;
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        -webkit-transform: scale3d(0.1, 0.1, 1);
+        -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+    }
+    55% {
+        -webkit-transform: scale3d(1.08, 1.08, 1);
+        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+    }
+    75% {
+        -webkit-transform: scale3d(0.95, 0.95, 1);
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+    }
+}
+
+@-webkit-keyframes minimise {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+    }
+    100% {
+        -webkit-transform: scale3d(0.1, 0.1, 1);
+    }
+}
+
+#closemodal {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #E0E0E0;
+    text-align: center;
+}
+
+#closemodal img {
+    padding-top: 5px;
+    padding-right: 1px;
+}
+
+/* Открываем модальное окно */
+a.openModal {
+
+}
+
+a.openModal:hover,
+a.openModal:focus {
+}
+
+.modal .modal_title {
+    display: block;
+    text-align: center;
+    font-size: 22pt;
+}
+
+@media screen and (max-width: 768px) {
+    .modal > div {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0;
+
+    }
+
+    h3 {
+        font-size: 24px;
+        margin: 5% 0 5% 0;
+
+    }
+
+    .phone {
+        width: 70%;
+        margin: 4% auto;
+        display: inline-block;
+        text-align: center;
+
+    }
+
+    .name {
+        width: 70%;
+        margin: 5% auto;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .phone label {
+        font-size: 16px;
+        margin: 0;
+        padding: 0 0 10px 0;
+    }
+
+    .name label {
+        font-size: 16px;
+        margin: 0;
+        padding: 0 0 10px 0;
+    }
+
+    .phone input {
+        width: 100%;
+        border: 1px solid #E2E2E2;
+        box-sizing: border-box;
+        border-radius: 3px;
+        height: 40px;
+    }
+
+    .name input {
+        width: 100%;
+        border: 1px solid #E2E2E2;
+        box-sizing: border-box;
+        border-radius: 3px;
+        height: 40px;
+    }
+
+    .callmenow {
+        margin: 50px 0 0 0;
+    }
+
+    .callmenow a {
+        display: inline-block;
+        width: 70%;
+        margin: auto;
+
+    }
+}
