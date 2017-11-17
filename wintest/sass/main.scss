@@ -1,0 +1,401 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+//components//
+
+a:hover {
+  color: #000;
+
+}
+
+.callme {
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  padding: 16px 40px 16px 40px;
+  background: linear-gradient(270deg, #E5DD24 0%, #D9D12A 104.37%);
+  border-radius: 30px;
+}
+.callme:hover {
+  text-decoration: none;
+  background: #E5C424;
+}
+.callme-mobile {
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  padding: 16px 15px 16px 15px;
+  background: linear-gradient(270deg, #E5DD24 0%, #D9D12A 104.37%);
+  border: 3px solid #4E4E4E;
+  border-radius: 30px;
+}
+.callme-mobile:hover {
+  text-decoration: none;
+  background: #E5C424;
+}
+.callme-light:hover {
+  text-decoration: none;
+  background: #E5C424;
+}
+
+.callme-light {
+  display: inline-block;
+  padding: 16px 0 16px 0;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  width: 240px;
+  background: linear-gradient(270deg, #E5DD24 0%, #D9D12A 104.37%);
+  border: 3px solid #F4F4F4;
+  border-radius: 30px;
+}
+.callme-light:hover {
+  text-decoration: none;
+  background: #E5C424;
+}
+
+.zamershik {
+  display: inline-block;
+  padding: 16px 0 16px 0;
+
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  width: 240px;
+  background: linear-gradient(270deg, #E5DD24 0%, #D9D12A 104.37%);
+  border: 3px solid #F4F4F4;
+  border-radius: 30px;
+}
+.zamershik:hover {
+  text-decoration: none;
+  background: #E5C424;
+}
+
+.wherebuy {
+  display: inline-block;
+  padding: 16px 0 16px 0;
+
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  width: 240px;
+  background: linear-gradient(270deg, #E5DD24 0%, #D9D12A 104.37%);
+  border: 3px solid #F4F4F4;
+  border-radius: 30px;
+}
+.wherebuy:hover {
+  text-decoration: none;
+  background: #E5C424;
+}
+.tocart {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 16px 0 16px 0;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  width: 240px;
+  background: linear-gradient(270deg, #E5DD24 0%, #D9D12A 104.37%);
+  border: 3px solid #F4F4F4;
+  border-radius: 30px;
+}
+.tocart:hover {
+  text-decoration: none;
+  background: #E5C424;
+}
+
+.carousel {
+  .carousel-control {
+    i {
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      display: inline-block;
+      margin-top: -10px;
+      color: #515151;
+      font-size: 16px;
+      border-radius: 50%;
+      background: #C4C4C4;
+      transition: 0.3s;
+    }
+    i:hover {
+      background: #323232;
+      color: #E5DD24;
+    }
+  }
+  .left {
+    i {
+      padding: 12px 16px 12px 13px;
+      left: 25%;
+      margin-left: -10px;
+    }
+  }
+  .right {
+    i {
+      padding: 12px 13px 12px 16px;
+      right: 25%;
+      margin-right: -10px;
+    }
+  }
+
+}
+
+.free-zamershik {
+  img {
+    position: relative;
+    bottom: 4px;
+    padding-right: 20px;
+  }
+  p {
+
+    font-size: 18px;
+    color: #797979;
+  }
+}
+
+.section-title {
+  font-size: 36px;
+  margin: 40px 0 40px 0;
+}
+
+.saleprice {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+  margin-left: 95px;
+  border-radius: 50%;
+  background: #EB5D5D;
+  color: white;
+  display: inline-block;
+  font-size: 23px;
+  line-height: 60px;
+
+}
+
+//components//
+
+header {
+  position: relative;
+  padding: 37px 0 37px 0;
+  background: #323232;
+}
+
+.hero {
+  padding: 50px 0 30px 0;
+  .items-btns {
+    margin: 60px 0 0 0;
+  }
+  .free-zamershik {
+    margin: 60px 0 0 0;
+  }
+
+}
+
+.sales {
+  position: relative;
+  padding: 0 0 35px 0;
+  background: #eaeaea;
+
+  .items {
+    margin: 50px 0 50px 0;
+  }
+  .win-type {
+    text-align: center;
+    width: 345px;
+
+    display: inline-block;
+    .win-img {
+      padding: 45px;
+      background: #E5E5E5;
+      overflow: visible;
+      height: 380px;
+      img {
+        display: inline-block;
+      }
+    }
+    .price {
+      margin: 35px 0 25px 0;
+      .old-prise {
+        position: relative;
+        bottom: 3px;
+        display: inline-block;
+        width: 43%;
+        font-size: 24px;
+        text-decoration: line-through;
+        color: #818181;
+      }
+      .new-prise {
+        display: inline-block;
+        width: 50%;
+        font-weight: bold;
+        line-height: normal;
+        font-size: 28px;
+        color: #FD4E11;
+
+      }
+      .balckonFix{
+        position: relative;
+        left: 20px;
+      }
+    }
+    .item-to-cart {
+      margin: 50px 0 40px 0;
+    }
+    img {
+      display: inline-block;
+    }
+  }
+
+  .win-type:hover {
+    background: #D4D4D4;
+    .win-img {
+      background: inherit;
+    }
+    a {
+      background: #E5C424;
+    }
+  }
+
+  .wide {
+    width: 390px;
+    margin: 0 20px 0 20px;
+    .saleprice {
+      margin-left: 120px;
+    }
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.advantages {
+  position: relative;
+  padding: 0 0 50px 0;
+  .advantage {
+    padding-top: 70px;
+    padding-bottom: 130px;
+    margin: 0 15px 0 15px;
+    background: #F2F2F2;
+    border-radius: 3px;
+    transition: 0.1s;
+    p {
+      margin-top: 50px;
+      font-size: 24px;
+    }
+  }
+  .advantage:hover{
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+  }
+
+}
+
+.contact-us {
+  background: #EAEAEA;
+  .items-btns {
+    margin-top: 5px;
+    margin-bottom: 55px;
+  }
+}
+
+.loyal-level {
+  padding: 50px 0 50px 0;
+}
+
+footer {
+  position: relative;
+  padding: 60px 0 60px 0;
+  background: #323232;
+}
+.carousel {
+  img {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .saleprice {
+    display: none;
+  }
+  .callme-light, .zamershik, .wherebuy, .tocart {
+    width: 200px;
+  }
+  .callme-light, .zamershik, .wherebuy, .tocart:hover {
+    text-decoration: none;
+    background: #E5C424;
+  }
+
+
+
+  .hero {
+    margin: 0;
+    padding: 50px 0 50px 0;
+    .items {
+      margin: 0;
+      .item {
+        margin: 25px 0 0 0;
+      }
+    }
+  }
+  .sales {
+    padding-bottom: 0;
+    .item-small {
+      margin: 25px 0 80px 0;
+    }
+    .win-type {
+      max-width: 46%;
+    }
+  }
+
+  .advantages {
+    .advantage {
+      margin: 0;
+      padding-bottom: 70px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .callme-light, .zamershik, .wherebuy, .tocart {
+    width: 100%;
+    margin: 12px 0 12px 0;
+  }
+  #hidden {
+    display: inline-block;
+  }
+  .carousel {
+    img {
+      min-width: 100%;
+    }
+  }
+  .sales {
+    padding-bottom: 0;
+    .section-title {
+      font-size: 24px;
+    }
+    .item-small {
+      margin: 25px 0 80px 0;
+    }
+    .win-type {
+      max-width: 90%;
+
+    }
+
+  }
+  .advantages {
+    .advantage {
+      margin: 14px 0 14px 0;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}

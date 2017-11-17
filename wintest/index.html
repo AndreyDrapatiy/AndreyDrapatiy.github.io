@@ -11,16 +11,29 @@
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/jquery.jgrowl.css">
     <script src="vendors/jquery/dist/jquery.js"></script>
     <script src="vendors/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jgrowl.js"></script>
+    <script type="text/javascript" src="js/jquery.arcticmodal.js"></script>
+    <script type="text/javascript" src="js/feedback.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(document).on('click', '.modal_btn', function(){
+                $('#small-modal').arcticmodal();
+            });
+        });
+    </script>
+    <link href="css/jquery.jgrowl.css" rel="stylesheet" type="text/css">
+    <link href="css/jquery.arcticmodal.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-<form action=mail.php method=get>
-    Ваше имя<input type=text name=name size=30>
-        Ваш e-mail<input type=text name=email size=30>
-        Ваше сообщение<textarea name=mess rows=10 cols=50></textarea>
-    <input type=submit value="Отправить сообщение">
+<form action="" name="form-1">
+    <input class="name" name="name" type="text" placeholder="Ваше имя">
+    <input class="tell" name="tell" type="text" placeholder="Ваш телефон">
+    <input class="feedback" name="send" type="button" value="Отправить">
 </form>
 <header>
     <div class="container">
@@ -314,7 +327,7 @@
     <div>
         <div class="text" align="center">
             <div id="blok_tel">
-                <form action="" method="post" class="form1">
+                <form action="" name="form-1" class="form1">
                         <h3 id="modal-title">Заказать бесплатный звонок</h3>
                     <div class="name">
                         <label for="tel">Ваше имя</label>
@@ -322,10 +335,10 @@
                     </div>
                     <div class="phone">
                         <label for="tel">Ваш номер телефона</label>
-                        <input type="text" name="tel" id="tel" class="inputbox" placeholder=" +3">
+                        <input type="text" name="tell" id="tel" class="inputbox" placeholder=" +3">
                     </div>
                     <div class="callmenow">
-                        <a href="">Перезвоните мне</a>
+                        <a href="" name="send" class="feedback">Перезвоните мне</a>
                     </div>
 
                 </form>
@@ -339,5 +352,7 @@
 <script src="js/classie.js"></script>
 <script src="js/modalEffects.js"></script>
 <script src="js/main.js"></script>
+
+
 </body>
 </html>
