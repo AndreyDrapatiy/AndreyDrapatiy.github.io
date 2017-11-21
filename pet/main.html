@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .mass{
+            border:1px solid gray;
+            height: 50px;
+        }
+        .animation{
+            height: 200px;
+            padding: 30px;
+        }
+        .animation img{
+            width: 130px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="container">
+        <div class="col-md-offset-4 col-md-4 text-center">
+            <div class="status" id="status">
+                <div class="col-md-4 health"></div>
+                <div class="col-md-4 satiety"></div>
+                <div class="col-md-4 happiness"></div>
+            </div>
+            <div class="animation"  id="animation"></div>
+            <div class="mass" id="mass"></div>
+            <div class="controls">
+                <button id="eat">Eat</button>
+                <button id="walk">Walk</button>
+                <button id="sleep">Sleep</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
