@@ -5,37 +5,62 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
+
+        .main{
+            margin: 10% auto;
+            border: 1px solid #f8f8f8;
+            padding: 20px;
+        }
+
+
         .mass{
             border:1px solid gray;
-            height: 50px;
+            height: 100px;
+            overflow-y: scroll;
         }
         .animation{
             height: 200px;
-            padding: 30px;
+            padding: 50px;
         }
         .animation img{
-            width: 130px;
+            display: inline-block;
+            margin-bottom: 20px;
+            width: 140px;
         }
+        .status{
+            font-size: 18px;
+        }
+
     </style>
 </head>
 <body>
-<div class="main">
-    <div class="container">
-        <div class="col-md-offset-4 col-md-4 text-center">
-            <div class="status" id="status">
-                <div class="col-md-4 health"></div>
-                <div class="col-md-4 satiety"></div>
-                <div class="col-md-4 happiness"></div>
+<div class="container">
+    <div class="col-md-offset-3 col-md-5 text-center main">
+            <div class="row">
+                <div class="status" id="status">
+                    <div class="col-xs-4 health" id="health"></div>
+                    <div class="col-xs-4 satiety" id="satiety"></div>
+                    <div class="col-xs-4 happiness" id="happy"></div>
+                </div>
             </div>
+
             <div class="animation"  id="animation"></div>
             <div class="mass" id="mass"></div>
             <div class="controls">
-                <button id="eat">Eat</button>
-                <button id="walk">Walk</button>
-                <button id="sleep">Sleep</button>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <button  id="eat">Eat</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button id="walk">Walk</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button id="sleep">Sleep</button>
+                    </div>
+                </div>
             </div>
 
-        </div>
+
     </div>
 </div>
 
