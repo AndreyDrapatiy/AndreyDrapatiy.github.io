@@ -8,6 +8,8 @@ function pet(name) {
 }
 
 var massDiv = document.getElementById('mass');//вывод сообщений сюда
+var massage =document.createElement('p'); //текст сообщения сюда
+
 
 pet.prototype.healthStatus = function () {
     if (this.health < 10 || this.satiety < 10) {
@@ -18,16 +20,17 @@ pet.prototype.healthStatus = function () {
 
 pet.prototype.upDateStatus = function () {
     var statusDiv = document.getElementById('status');
-    var statusTemplate = '<div class="col-md-4 health" id="health">Health: '+ this.health +'</div>' +
-        '<div class="col-md-4 satiety" id="satiety">Satiety: ' + this.satiety +'</div>'+
-        '<div class="col-md-4 happiness" id="happy">Happy: ' + this.happiness +'</div>';
-    statusDiv.innerHTML = statusTemplate;
+    var statusTemplate = '<div class="col-md-4 health" id="health"> Health '+"</br>"+ this.health +'</div>' +
+        '<div class="col-md-4 satiety" id="satiety"> Satiety '+"</br>" + this.satiety +'</div>'+
+        '<div class="col-md-4 happiness" id="happy"> Happy ' +"</br>" + this.happiness +'</div>';
+        statusDiv.innerHTML = statusTemplate;
 };
 
 pet.prototype.wellcome = function () { // работает 1 раз после запуска
     var template = '<img src="src/saluting.gif">';
     document.getElementById('animation').innerHTML = template;
-    massDiv.innerHTML += "<p>Hello! My name is 'Name', I will be your pet</p></br>";
+    massage.innerHTML = "Hello! My name is 'Name', I will be your pet";
+    massDiv.insertBefore(massage, massDiv.childNodes[0]);
 };
 
 pet.prototype.normal = function () {  // анимация по умолчанию
@@ -35,10 +38,7 @@ pet.prototype.normal = function () {  // анимация по умолчани�
     document.getElementById('animation').innerHTML = template;
 };
 
-var v = function () {
-   this.satiety--;
-   console.log(this.satiety)                            //  тут this.satiety = <div>.....
-};
+
 
 var disbleBtn = function () {
     for (var btn = document.getElementsByTagName('BUTTON'),
@@ -88,12 +88,15 @@ pet.prototype.eat = function () {
 
         var template = '<img src="src/eat.gif">';
         document.getElementById('animation').innerHTML = template;
-        massDiv.innerHTML += "<p>Om Nom Nom</p>";
+        massage.innerHTML = "Om Nom Nom";
+        massDiv.insertBefore(massage, massDiv.childNodes[0]);
+
         this.satiety += 10;
         this.fatigue += 10;
     }
     else {
-        massDiv.innerHTML += "<p>I do not want to eat now</p>";
+        massage.innerHTML = "I do not want to eat now";
+        massDiv.insertBefore(massage, massDiv.childNodes[0]);
     }
     this.healthStatus()
 
@@ -120,15 +123,17 @@ pet.prototype.walk = function () {
 
         football();
         setTimeout(jump,4000);
-        massDiv.innerHTML += "<p>YaHoo! So interesting and i am steel alive</p>";
+        massage.innerHTML = "YaHoo! So interesting and i am steel alive";
+        massDiv.insertBefore(massage, massDiv.childNodes[0]);
         this.happiness += 10;
         this.satiety -= 20;
         this.fatigue -= 20;
         if (this.satiety < 40) {
-            massDiv.innerHTML += "<p>I want eat now</p>";
+
         }
-        else if (this.fatigue < 20) {
-            massDiv.innerHTML += "<p>I'm very tired, I want to sleep</p>"
+        else if (this.fatigue < 40) {
+            massage.innerHTML = "I'm very tired, I want to sleep";
+            massDiv.insertBefore(massage, massDiv.childNodes[0]);
         }
     }
     this.healthStatus()
@@ -142,16 +147,20 @@ pet.prototype.sleep = function () {
         var i = 10;
         (function () {
             if (i > 0) {
-                massDiv.innerHTML += "<p>" + "Wait until I'm sleeping " + i + " seconds" + "</p>";
+                massage.innerHTML = "Wait until I'm sleeping " + i + " seconds";
+                massDiv.insertBefore(massage, massDiv.childNodes[0]);
                 i--;
                 setTimeout(arguments.callee, 1000);
             } else {
-                massDiv.innerHTML +='<p>I am with you again</p>';
+                massage.innerHTML = "I am with you again";
+                massDiv.insertBefore(massage, massDiv.childNodes[0]);
+
             }
         })();
     }
     else {
-        massDiv.innerHTML += "<p>I don want sleep now! go for walk with me!</p>"
+        massage.innerHTML = "I don want sleep now! go for walk with me!";
+        massDiv.insertBefore(massage, massDiv.childNodes[0]);
     }
     this.healthStatus()
 };
@@ -169,9 +178,6 @@ window.onload = function () {
     setTimeout(pet.normal,4000);
     setTimeout(enableBtn, 4000);
 
-
-
-    setInterval(v,1000);
 };
 
 
