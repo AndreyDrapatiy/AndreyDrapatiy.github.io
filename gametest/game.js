@@ -1,7 +1,7 @@
 var pjs = new PointJS('2D', 640, 480, {
 });
 pjs.system.initFullPage(); // for Full Page mode
-// pjs.system.initFullScreen(); // for Full Screen mode (only Desktop)
+pjs.system.initFullScreen(); // for Full Screen mode (only Desktop)
 
 var log    = pjs.system.log;     // log = console.log;
 var game   = pjs.game;           // Game Manager
@@ -19,6 +19,12 @@ var touch = pjs.touchControl.initTouchControl();
 
 var width  = game.getWH().w; // width of scene viewport
 var height = game.getWH().h; // height of scene viewport
+
+var v2d = pjs.vector.v2d;
+var random = pjs.math.random;
+var speed = 12;
+
+
 
 pjs.system.setTitle('PointJS Game'); // Set Title for Tab or Window
 
@@ -54,20 +60,38 @@ var gr_2 = game.newImageObject({
 var rect = game.newImageObject({
     file: 'rect.png',
     w : 50, h : 50,
-    y: 210, x: 30
+    y: height/1.7,  x: width/6
+
+});
+
+var circle = game.newCircleObject( {
+    y: height/1.7, x: 300,
+    radius : 25,
+    fillColor : "#FBFE6F",
+    visible : true
 });
 
 
 
-
+var pos = game.newTextObject({
+    x : 100,
+    y : 100,
+    text : rect.y,
+    size : 20,
+    padding : 10,
+    color : "#000000",
+    fillColor : "#FBFE6F",
+    strokeColor : "#DA4848",
+    strokeWidth : 2
+});
 
 
 var backGroundMove = function (s) {
-	bg_1.move(point(-s / 4,0));
-	bg_2.move(point(-s / 4,0));
+	bg_1.move(point(-s / 5,0));
+	bg_2.move(point(-s / 5,0));
 
-    gr_1.move(point(-s ,0));
-    gr_2.move(point(-s ,0));
+    gr_1.move(point(-s*2 ,0));
+    gr_2.move(point(-s*2 ,0));
 
 
     if(bg_1.x + bg_1.w < 0){
@@ -99,18 +123,19 @@ game.newLoopFromConstructor('myGame', function () {
 		gr_1.draw();
 		gr_2.draw();
 
-
+        circle.move(v2d(-speed,0));
+        circle.draw();
         rect.draw();
+
 
 		backGroundMove(2);
 
         if (touch.isPress()) {
-
             var count = 50;
             var up = setInterval(function () {
                 rect.y -= 2;
                 count--;
-
+                console.log(count);
 
                 if (count === 0) {
                     clearInterval(up);
@@ -128,6 +153,14 @@ game.newLoopFromConstructor('myGame', function () {
                 }
             },3);
         }
+
+        if(circle.x < -50){
+            circle.x = random(650, 3000);
+            return circle.x;
+        }
+
+
+
 
     };
 
