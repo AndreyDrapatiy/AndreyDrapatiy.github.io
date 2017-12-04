@@ -1,7 +1,7 @@
-var pjs = new PointJS('2D', 640, 480, {
+var pjs = new PointJS('2D', 320, 640, {
 });
 pjs.system.initFullPage(); // for Full Page mode
-pjs.system.initFullScreen(); // for Full Screen mode (only Desktop)
+// pjs.system.initFullScreen(); // for Full Screen mode (only Desktop)
 
 var log    = pjs.system.log;     // log = console.log;
 var game   = pjs.game;           // Game Manager
@@ -13,16 +13,16 @@ var math   = pjs.math;           // More Math-methods
 var levels = pjs.levels;         // Levels manager
 
 // var key   = pjs.keyControl.initKeyControl();
-// var mouse = pjs.mouseControl.initMouseControl();
+var mouse = pjs.mouseControl.initMouseControl();
 var touch = pjs.touchControl.initTouchControl();
-// var act   = pjs.actionControl.initActionControl();
+var act   = pjs.actionControl.initActionControl();
 
 var width  = game.getWH().w; // width of scene viewport
 var height = game.getWH().h; // height of scene viewport
 
 var v2d = pjs.vector.v2d;
 var random = pjs.math.random;
-var speed = 12;
+var speed = 16;
 
 
 
@@ -57,33 +57,22 @@ var gr_2 = game.newImageObject({
 
 
 
-var rect = game.newImageObject({
-    file: 'rect.png',
-    w : 50, h : 50,
+var rect = game.newCircleObject({
+    radius : 25,
+    fillColor : "#FBFE6F",
+    visible : true,
     y: height/1.7,  x: width/6
 
 });
 
 var circle = game.newCircleObject( {
-    y: height/1.7, x: 300,
+    y: height/1.7, x: 650,
     radius : 25,
-    fillColor : "#FBFE6F",
+    fillColor : "#000",
     visible : true
 });
 
 
-
-var pos = game.newTextObject({
-    x : 100,
-    y : 100,
-    text : rect.y,
-    size : 20,
-    padding : 10,
-    color : "#000000",
-    fillColor : "#FBFE6F",
-    strokeColor : "#DA4848",
-    strokeWidth : 2
-});
 
 
 var backGroundMove = function (s) {
@@ -117,6 +106,7 @@ game.newLoopFromConstructor('myGame', function () {
 
 	this.update = function () {
 		// Update function
+
         game.clear();
         bg_1.draw();
 		bg_2.draw();
@@ -149,9 +139,9 @@ game.newLoopFromConstructor('myGame', function () {
                         if (count === 50) {
                             clearInterval(downInterval);
                         }
-                    },9)
+                    },6)
                 }
-            },3);
+            },2);
         }
 
         if(circle.x < -50){
@@ -159,7 +149,13 @@ game.newLoopFromConstructor('myGame', function () {
             return circle.x;
         }
 
+        if (rect.isStaticIntersect(circle.getStaticBox())) {
+            if (rect.getPosition(1).x < circle.getPosition(1).x)
+                circle.move(v2d(-speed,0));
+                rect.move(v2d(-speed,0));
 
+
+        }
 
 
     };
