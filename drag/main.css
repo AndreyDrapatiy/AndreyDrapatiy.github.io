@@ -1,0 +1,48 @@
+body{
+    font-family: 'Lato', sans-serif;
+    position: relative;
+}
+#parent{
+    position:absolute;
+    border: 1px solid black;
+    width:50%;
+    height:500px;
+}
+.object{
+    position:absolute;
+    text-transform: uppercase;
+    text-align: center;
+    width: 170px;
+    background: rgba(0,0,0,0.7);
+    padding: 5px 10px 5px 10px;
+    border-radius: 4px;
+    color: #f5f5f5;
+    font-size: 20px;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.selected{
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    cursor: move;
+}
+.close{
+    padding-left: 10px;
+    display: none;
+
+    border-left: 1px solid #f5f5f5;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+.close:hover{
+    color: red;
+}
+
+@media (max-width: 768px) {
+    #parent{
+        width: 100%;
+    }
+}

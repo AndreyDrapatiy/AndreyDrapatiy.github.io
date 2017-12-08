@@ -31,8 +31,10 @@ pjs.system.setTitle('PointJS Game'); // Set Title for Tab or Window
 
 var bg_1 = game.newImageObject({
     x:0, y:0, file: 'background.jpg',
+
     onload:function () {
         bg_1.x = bg_1.x + bg_1.w;
+
     }
 });
 var bg_2 = game.newImageObject({
@@ -153,8 +155,9 @@ game.newLoopFromConstructor('myGame', function () {
             if (rect.getPosition(1).x < circle.getPosition(1).x)
                 circle.move(v2d(-speed,0));
                 rect.move(v2d(-speed,0));
-
-
+        }
+        if (rect.getPosition(1).x < 10){
+            game.setLoop('myGame')
         }
 
 
