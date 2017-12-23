@@ -3,7 +3,8 @@ body{
     position: relative;
 }
 #parent{
-    position:absolute;
+    position:relative;
+    margin: auto;
     border: 1px solid black;
     width:50%;
     height:500px;

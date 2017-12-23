@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/reset.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/jquery-ui-1.12.1.custom/jquery-ui.css">
+
+    <link href="css/main.css" rel="stylesheet">
+    <script src="vendors/jquery/dist/jquery.js"></script>
+    <script src="vendors/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+
+    <script src="vendors/bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+        $( function() {
+            $( "table > tbody > tr:first-child>td" ).resizable({
+
+            });
+        } );
+    </script>
+
+</head>
+<body>
+<div class="panel-head">
+    <div class="container">
+        <h1>GeekhubSheets</h1>
+
+    </div>
+</div>
+<div class="panel-styles">
+    <div class="container">
+        <div class="dropdown" style="display: inline-block">
+            <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                Set text color<i class="fa fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <span class="color-items green" data-atr="rgb(76, 175, 80)" onclick="setStyle(this)"></span>
+                <span class="color-items orange" data-atr="rgb(255, 193, 7)" onclick="setStyle(this)"></span>
+                <span class="color-items blue" data-atr="rgb(33, 150, 243)" onclick="setStyle(this)"></span>
+                <span class="color-items white" data-atr="rgb(255,255,255)" onclick="setStyle(this)"></span>
+                <span class="color-items red" data-atr="rgb(244, 67, 54)" onclick="setStyle(this)"></span>
+                <span class="color-items purple" data-atr="rgb(103, 58, 183)" onclick="setStyle(this)"></span>
+                <span class="color-items black" data-atr="rgb(0, 0, 0)" onclick="setStyle(this)"></span>
+            </div>
+        </div>
+        <div class="dropdown" style="display: inline-block">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Set background color<i class="fa fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <span class="background-items green" data-atr="rgb(76, 175, 80)" onclick="setStyle(this)"></span>
+                <span class="background-items orange" data-atr="rgb(255, 193, 7)" onclick="setStyle(this)"></span>
+                <span class="background-items blue" data-atr="rgb(33, 150, 243)" onclick="setStyle(this)"></span>
+                <span class="background-items white" data-atr="rgb(255,255,255)" onclick="setStyle(this)"></span>
+                <span class="background-items red" data-atr="rgb(244, 67, 54)" onclick="setStyle(this)"></span>
+                <span class="background-items purple" data-atr="rgb(103, 58, 183)" onclick="setStyle(this)"></span>
+                <span class="background-items black" data-atr="rgb(0, 0, 0)" onclick="setStyle(this)"></span>
+            </div>
+        </div>
+        <div class="dropdown" style="display: inline-block">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Set font size<i class="fa fa-angle-down" aria-hidden="true"></i>
+
+            </button>
+            <div class="dropdown-menu fontsize" aria-labelledby="dropdownMenuButton2">
+                <span class="font-items font14" data-atr="14px" onclick="setStyle(this)">Aa</span>
+                <span class="font-items font16" data-atr="16px" onclick="setStyle(this)">Aa</span>
+                <span class="font-items font18" data-atr="18px" onclick="setStyle(this)">Aa</span>
+                <span class="font-items font20" data-atr="20px" onclick="setStyle(this)">Aa</span>
+                <span class="font-items font22" data-atr="22px" onclick="setStyle(this)">Aa</span>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<div class="empty-space">
+</div>
+<table></table>
+<script src="script.js"></script>
+
+</body>
+</html>
