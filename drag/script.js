@@ -22,17 +22,27 @@ function drag(thisElem) {
     function touchMove(e) {
         if (thisElem.classList.contains('selected')) {
             thisElem.style.left = Math.max(Math.min(e.changedTouches[0].pageX - 70, thisElem.parentNode.clientWidth - thisElem.clientWidth), 0) + 'px';
-            console.log(thisElem.style.left);
             thisElem.style.top = Math.max(Math.min(e.changedTouches[0].pageY - 25, thisElem.parentNode.clientHeight - thisElem.clientHeight), 0) + 'px';
-            console.log(thisElem.style.top);
+            var elemPosition = Math.max(Math.min(e.pageX - 70, thisElem.parentNode.clientWidth - thisElem.clientWidth), 0);
+            if ((thisElem.parentNode.clientWidth - thisElem.clientWidth) === elemPosition ){
+                thisElem.childNodes[1].style.left = '0px';
+            }
+            else if((thisElem.parentNode.clientWidth - thisElem.clientWidth) !== elemPosition ){
+                thisElem.childNodes[1].style.left = '160px';
+            }
         }
     }
     function mouseMove(e) {
         if (thisElem.classList.contains('selected')) {
             thisElem.style.left = Math.max(Math.min(e.pageX - 70, thisElem.parentNode.clientWidth - thisElem.clientWidth), 0) + 'px';
-            console.log(thisElem.style.left);
             thisElem.style.top = Math.max(Math.min(e.pageY - 25, thisElem.parentNode.clientHeight - thisElem.clientHeight), 0) + 'px';
-            console.log(thisElem.style.top);
+            var elemPosition = Math.max(Math.min(e.pageX - 70, thisElem.parentNode.clientWidth - thisElem.clientWidth), 0);
+            if ((thisElem.parentNode.clientWidth - thisElem.clientWidth) === elemPosition ){
+                thisElem.childNodes[1].style.left = '0px';
+            }
+            else if((thisElem.parentNode.clientWidth - thisElem.clientWidth) !== elemPosition ){
+                thisElem.childNodes[1].style.left = '160px';
+            }
         }
     }
 
