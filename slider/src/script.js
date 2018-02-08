@@ -42,6 +42,9 @@ function dragStart() {
     }
 
     function moveEnd() {
+
+        slider.classList.add('transition');
+
         var endX = event.clientX;
 
         document.removeEventListener('mousemove', mouseMove);
@@ -64,9 +67,13 @@ function dragStart() {
                 slider.style.marginLeft = -maxMargin + 'px';
             }
         }
+
         currentMarginFn();
     }
+    slider.classList.remove('transition');
+
     currentMarginFn();
+
 }
 
 

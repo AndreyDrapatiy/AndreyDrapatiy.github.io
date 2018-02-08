@@ -15,6 +15,9 @@
       align-items: flex-start;
       position: absolute;
       width: 9999px;
+
+
+
       img {
         display: inline-block;
         margin-right: -4px;
@@ -23,4 +26,9 @@
       }
     }
   }
+}
+
+
+.transition{
+  transition: 250ms ease-in all;
 }
