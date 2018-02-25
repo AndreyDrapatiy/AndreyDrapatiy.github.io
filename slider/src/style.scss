@@ -9,13 +9,16 @@
     height: 380px;
     overflow: hidden;
     position: relative;
+    .indicators{
+      position: absolute;
+      z-index: 1001;
+    }
     .content {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
       position: absolute;
       width: 9999px;
-
 
 
       img {
