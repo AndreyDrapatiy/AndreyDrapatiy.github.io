@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/hamburgers-master/dist/hamburgers.css">
+    <link href="vendors/air-datepicker-master/css/datepicker.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="vendors/jquery/dist/jquery.js"></script>
+    <script src="js/jquery.tablesorter.min.js"></script>
+    <script src="js/echarts.common.min.js"></script>
+    <script src="js/sortable.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="vendors/air-datepicker-master/js/datepicker.js"></script>
+    <script>// vertical align for sidebar-nav
+
+
+    </script>
+</head>
+<body>
+
+<div class="top-nav-bar">
+
+
+    <ul class="user-info">
+        <li class="dropdown-wrapper">
+            <a href="#" class="dropdown-trigger trigger-top">
+                <img width="38px" height="38px" src="img/user-foto.png" class="img-circle special-img"><img
+                    class="user-menu-dropdown-caret" src="img/caret-down.svg">
+            </a>
+            <ul class="dropdown">
+                <li class="dropdown__triangle-top"></li>
+                <li class="dropdown__list">
+                <li style="width: 100%" class="dropdown__list-item"><a href="#">Edit Item</a></li>
+                <li style="width: 100%" class="dropdown__list-item"><a href="#">Copy</a></li>
+                <li style="width: 100%" class="dropdown__list-item"><a href="#">Remove</a></li>
+            </ul>
+        </li>
+        <li class="missed-container"><a href="#">
+            <ul class="missed">
+                <li class="inbox">7</li>
+                <li>
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg width="22px" height="16px" viewBox="0 0 20 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+                        <title>inbox-download-path</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1">
+                            <g id="Desktop-HD-0" transform="translate(-1279.000000, -60.000000)">
+                                <g id="1" transform="translate(33.000000, 35.000000)">
+                                    <g id="main">
+                                        <g id="top-panel" transform="translate(85.000000, 0.000000)">
+                                            <g id="ico-inbox" transform="translate(1161.000000, 16.000000)">
+                                                <path d="M19.0200195,15.4 L15.5200195,9.8 L11.2,9.8 L11.2,9 L16,9 L20,15.4 L20,16.2 L20,22.6 L0,22.6 L0,15.4 L4,9 L11.2,9 L11.2,9.8 L4.47998047,9.8 L0.979980472,15.4 L6.4,15.4 L6.4,17 C6.4,17.8836556 7.11668624,18.6 7.99791336,18.6 L12.0020866,18.6 C12.8845898,18.6 13.6,17.8898163 13.6,17 L13.6,15.4 L19.0200195,15.4 Z"
+                                                      id="inbox-download-path"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </li>
+            </ul>
+        </a></li>
+        <li class="bell" onclick="sidebarRightOpen()">
+            <span class="bell-circle blink" id="blink"></span>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg id="tossing" class="tossing" width="21px" height="18px" viewBox="0 0 16 17" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+                <title>Shape</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1">
+                    <g id="Desktop-HD-0" transform="translate(-1234.000000, -58.000000)">
+                        <g id="1" transform="translate(33.000000, 35.000000)">
+                            <g id="main">
+                                <g id="top-panel" transform="translate(85.000000, 0.000000)">
+                                    <g id="ico-motif-HOVER" transform="translate(1116.000000, 23.000000)">
+                                        <path d="M15.2029849,13.2868633 C14.1024934,13.2868633 13.2103849,12.4121922 13.2103849,11.3329667 L13.2103849,6.64337057 C13.2103849,4.19873924 11.4395033,2.15771769 9.08023898,1.6726039 C9.15352199,1.52083783 9.19589653,1.35147568 9.19589653,1.17221575 C9.19602116,0.524949325 8.66048185,0 8.00006232,0 C7.33964278,0 6.80435274,0.524949325 6.80435274,1.17282673 C6.80435274,1.35208666 6.84660264,1.5214488 6.91988565,1.67321488 C4.56087055,2.15832866 2.78998902,4.19935021 2.78998902,6.64398154 L2.78998902,11.3334555 C2.78998902,12.412681 1.89775586,13.2873521 0.797139719,13.2873521 C0.356818483,13.2873521 0,13.6373183 0,14.0689107 C0,14.500381 0.356693852,14.8504694 0.797139719,14.8504694 L2.78998902,14.8504694 L6.40565825,14.8504694 C6.40565825,16.0377151 7.1196691,17 8.00006232,17 C8.88045553,17 9.59434175,16.0377151 9.59434175,14.8504694 L13.2103849,14.8504694 L15.2029849,14.8504694 C15.6434308,14.8498584 16,14.5001366 16,14.068422 C16,13.6373183 15.6434308,13.2868633 15.2029849,13.2868633 Z"
+                                              id="Shape"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </li>
+
+    </ul>
+</div>
+
+<div class="sidebar-left" id="sidebar-left">
+    <button class="hamburger hamburger--spin toggler" id="hamburger" onclick="sidebarOpen()">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+    <ul class="sidebar-nav" id="sidebar-nav">
+        <li><a href="#" class="tooltips-right">
+            <i>Home</i>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="21px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+                <title>Shape</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1">
+                    <g id="Desktop-HD" transform="translate(-64.000000, -180.000000)">
+                        <g id="1" transform="translate(33.000000, 35.000000)">
+                            <g id="left-menu-small">
+                                <g id="icons" transform="translate(31.000000, 145.000000)">
+                                    <g id="home">
+                                        <path d="M21.9745172,10.8373571 L11.6641724,0.623071429 C11.354069,0.315857143 10.8528276,0.315857143 10.5427241,0.623071429 L0.23237931,10.8373571 C-0.0777241379,11.1445714 -0.0777241379,11.6411429 0.23237931,11.9483571 C0.542482759,12.2555714 1.04372414,12.2555714 1.35382759,11.9483571 L11.1034483,2.28957143 L17.4593793,8.58628571 C17.4585862,8.60592857 17.4482759,8.62321429 17.4482759,8.64285714 L17.4482759,20.4285714 L4.75862069,20.4285714 L4.75862069,12.5714286 C4.75862069,12.1369286 4.40331034,11.7857143 3.96551724,11.7857143 C3.52772414,11.7857143 3.17241379,12.1369286 3.17241379,12.5714286 L3.17241379,21.2142857 C3.17241379,21.6487857 3.52772414,22 3.96551724,22 L18.2413793,22 C18.6799655,22 19.0344828,21.6487857 19.0344828,21.2142857 L19.0344828,10.1467143 L20.853069,11.9483571 C21.0077241,12.1015714 21.2107586,12.1785714 21.4137931,12.1785714 C21.6168276,12.1785714 21.8198621,12.1015714 21.9745172,11.9483571 C22.2846207,11.6411429 22.2846207,11.1445714 21.9745172,10.8373571 Z"
+                                              id="Shape"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <span id="openanchor" class="close-item-left">Home</span>
+        </a></li>
+        <li><a href="#" class="tooltips-right">
+            <i>Dashboard</i>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="21px" height="22px" viewBox="0 0 23 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Shape</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1">
+                    <g id="Desktop-HD" transform="translate(-64.000000, -257.000000)">
+                        <g id="1" transform="translate(33.000000, 35.000000)">
+                            <g id="left-menu-small">
+                                <g id="icons" transform="translate(31.000000, 145.000000)">
+                                    <g id="circle" transform="translate(0.000000, 77.000000)">
+                                        <path d="M11.8965517,22 C8.93034483,22 6.14258621,20.856 4.04562069,18.7777857 C0.617827586,15.3827143 -0.196689655,10.2339286 2.02003448,5.9675 C2.22068966,5.58171429 2.69813793,5.43007143 3.08834483,5.62807143 C3.47855172,5.82607143 3.63162069,6.29985714 3.43096552,6.68642857 C1.53068966,10.3431429 2.22862069,14.7557143 5.16706897,17.6667857 C6.96424138,19.448 9.35386207,20.4285714 11.8965517,20.4285714 C14.4384483,20.4285714 16.8288621,19.448 18.6260345,17.6667857 C20.4232069,15.8855714 21.4137931,13.5182143 21.4137931,11 C21.4137931,8.481 20.424,6.11364286 18.6260345,4.33321429 C16.828069,2.55278571 14.4392414,1.57142857 11.8965517,1.57142857 C9.35386207,1.57142857 6.96424138,2.55278571 5.16706897,4.33321429 C4.85696552,4.64042857 4.35572414,4.64042857 4.04562069,4.33321429 C3.73551724,4.026 3.73551724,3.52942857 4.04562069,3.22221429 C6.14258621,1.14478571 8.93034483,0 11.8965517,0 C14.8627586,0 17.6513103,1.14478571 19.7474828,3.22221429 C21.8452414,5.29964286 23,8.06142857 23,11 C23,13.9377857 21.8452414,16.7003571 19.7474828,18.7777857 C17.6513103,20.856 14.8627586,22 11.8965517,22 Z M11.8965517,14.1428571 C11.0495172,14.1428571 10.2524483,13.816 9.65286207,13.222 C8.41562069,11.9962857 8.41562069,10.0029286 9.65286207,8.778 C10.6497931,7.79035714 15.4203103,5.91878571 16.3664828,5.55342857 C16.6607241,5.44028571 16.9930345,5.50942857 17.2151034,5.73021429 C17.4371724,5.951 17.5077586,6.28021429 17.3935517,6.57092857 C17.0247586,7.50828571 15.1355862,12.2351429 14.1386552,13.222 C13.5406552,13.816 12.7435862,14.1428571 11.8965517,14.1428571 Z M15.218069,7.71021429 C13.2725862,8.51792857 11.2017931,9.46628571 10.7751034,9.889 C10.1564828,10.5018571 10.1564828,11.4981429 10.7751034,12.111 C11.3746897,12.705 12.4192069,12.705 13.0187931,12.111 C13.4446897,11.6875 14.4027586,9.63757143 15.218069,7.71021429 Z"
+                                              id="Shape"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <span class="close-item-left ">Dashboard</span>
+        </a></li>
+        <li><a href="#" class="tooltips-right">
+            <i>Status</i>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="21px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                <title>Group</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1">
+                    <g id="Desktop-HD" transform="translate(-64.000000, -334.000000)">
+                        <g id="1" transform="translate(33.000000, 35.000000)">
+                            <g id="left-menu-small">
+                                <g id="icons" transform="translate(31.000000, 145.000000)">
+                                    <g id="pointer" transform="translate(0.000000, 154.000000)">
+                                        <g id="Group">
+                                            <path d="M11,19.6428571 C10.8192857,19.6428571 10.6377857,19.5807857 10.4908571,19.4558571 C10.3007143,19.294 5.82214286,15.4487143 3.95371429,11.2545714 C3.77692857,10.8585714 3.95528571,10.3934286 4.35207143,10.2174286 C4.74728571,10.0414286 5.21242857,10.219 5.38921429,10.6157857 C6.75557143,13.684 9.77114286,16.665 10.9866429,17.7893571 C13.1316429,15.7072143 17.2857143,11.0542143 17.2857143,8.03785714 C17.2857143,4.47228571 14.4657857,1.57142857 11,1.57142857 C7.53421429,1.57142857 4.71428571,4.47228571 4.71428571,8.03785714 C4.71428571,8.47157143 4.36228571,8.82357143 3.92857143,8.82357143 C3.49485714,8.82357143 3.14285714,8.47157143 3.14285714,8.03785714 C3.14285714,3.60564286 6.66757143,0 11,0 C15.3324286,0 18.8571429,3.60564286 18.8571429,8.03785714 C18.8571429,12.683 11.8297143,19.1627857 11.5303571,19.437 C11.3802857,19.5737143 11.1901429,19.6428571 11,19.6428571 Z"
+                                                  id="Shape"></path>
+                                            <path d="M11,11 C9.26671429,11 7.85714286,9.59042857 7.85714286,7.85714286 C7.85714286,6.12385714 9.26671429,4.71428571 11,4.71428571 C12.7332857,4.71428571 14.1428571,6.12385714 14.1428571,7.85714286 C14.1428571,9.59042857 12.7332857,11 11,11 Z M11,6.28571429 C10.1333571,6.28571429 9.42857143,6.9905 9.42857143,7.85714286 C9.42857143,8.72378571 10.1333571,9.42857143 11,9.42857143 C11.8666429,9.42857143 12.5714286,8.72378571 12.5714286,7.85714286 C12.5714286,6.9905 11.8666429,6.28571429 11,6.28571429 Z"
+                                                  id="Shape"></path>
+                                            <path d="M21.2142857,22 L0.785714286,22 C0.506,22 0.246714286,21.8515 0.106071429,21.6087143 C-0.0345714286,21.3659286 -0.0353571429,21.0681429 0.103714286,20.8245714 L3.24657143,15.3245714 C3.46185714,14.9482143 3.94192857,14.8162143 4.31828571,15.0322857 C4.69464286,15.2475714 4.82585714,15.7276429 4.61057143,16.104 L2.1395,20.4285714 L19.8597143,20.4285714 L17.3886429,16.104 C17.1733571,15.7276429 17.3045714,15.2475714 17.6809286,15.0322857 C18.0572857,14.8154286 18.5373571,14.9482143 18.7526429,15.3245714 L21.8955,20.8245714 C22.0345714,21.0681429 22.0337857,21.3659286 21.8931429,21.6087143 C21.7532857,21.8515 21.494,22 21.2142857,22 Z"
+                                                  id="Shape"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <span class="close-item-left">Status</span>
+        </a></li>
+        <li><a href="#" class="tooltips-right">
+            <i>Flag</i>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="21px" height="22px" viewBox="0 0 21 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+                <title>Shape</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1">
+                    <g id="Desktop-HD" transform="translate(-66.000000, -413.000000)">
+                        <g id="1" transform="translate(33.000000, 35.000000)">
+                            <g id="left-menu-small">
+                                <g id="icons" transform="translate(31.000000, 145.000000)">
+                                    <g id="flag" transform="translate(2.000000, 233.000000)">
+                                        <path d="M16.4098846,6.28571429 L20.8045385,1.29721429 C21.0105,1.06464286 21.0573462,0.736214286 20.9248846,0.457285714 C20.7940385,0.179142857 20.5081154,0 20.1923077,0 L0.807692308,0 C0.361846154,0 0,0.352 0,0.785714286 C0,1.21942857 0.361846154,1.57142857 0.807692308,1.57142857 L18.4363846,1.57142857 L14.7331154,5.77421429 C14.4738462,6.06885714 14.4738462,6.50257143 14.7331154,6.79721429 L18.4363846,11 L3.23076923,11 L3.23076923,7.85714286 L3.23076923,3.92857143 C3.23076923,3.49485714 2.86892308,3.14285714 2.42307692,3.14285714 C1.97723077,3.14285714 1.61538462,3.49485714 1.61538462,3.92857143 L1.61538462,7.85714286 L1.61538462,11.7857143 L1.61538462,20.4285714 L0.807692308,20.4285714 C0.361846154,20.4285714 0,20.7797857 0,21.2142857 C0,21.6487857 0.361846154,22 0.807692308,22 L4.03846154,22 C4.48430769,22 4.84615385,21.6487857 4.84615385,21.2142857 C4.84615385,20.7797857 4.48430769,20.4285714 4.03846154,20.4285714 L3.23076923,20.4285714 L3.23076923,12.5714286 L20.1923077,12.5714286 C20.5081154,12.5714286 20.7940385,12.3922857 20.9256923,12.1141429 C21.0573462,11.836 21.0105,11.5075714 20.8053462,11.2742143 L16.4098846,6.28571429 Z"
+                                              id="Shape"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <span class="close-item-left">Flag</span>
+        </a></li>
+        <li><a href="#" class="tooltips-right">
+            <i>Research</i>
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg width="21px" height="14px" viewBox="0 0 22 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+                <title>eye</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1">
+                    <g id="Desktop-HD" transform="translate(-64.000000, -491.000000)">
+                        <g id="1" transform="translate(33.000000, 35.000000)">
+                            <g id="left-menu-small">
+                                <g id="icons" transform="translate(31.000000, 145.000000)">
+                                    <g id="eye" transform="translate(0.000000, 311.000000)">
+                                        <path d="M11,14 C7.64892857,14 4.47778571,12.5945556 2.06878571,10.0426667 C1.77257143,9.72922222 1.78985714,9.23688889 2.1065,8.94366667 C2.42392857,8.65044444 2.9205,8.66755556 3.2175,8.981 C5.32557143,11.2147778 8.08892857,12.4444444 11,12.4444444 C14.7423571,12.4444444 18.1885,10.4183333 20.3028571,7 C18.1892857,3.58166667 14.7423571,1.55555556 11,1.55555556 C7.12014286,1.55555556 3.55771429,3.73411111 1.46928571,7.38344444 C1.25557143,7.75755556 0.774714286,7.88977778 0.398357143,7.67666667 C0.0204285714,7.46511111 -0.111571429,6.99066667 0.102142857,6.61655556 C2.47264286,2.47333333 6.54735714,0 11,0 C15.4534286,0 19.5273571,2.47333333 21.8978571,6.61655556 C22.0337857,6.85455556 22.0337857,7.14544444 21.8978571,7.38266667 C19.5273571,11.5258889 15.4534286,14 11,14 Z"
+                                              id="Shape"></path>
+                                        <path d="M11,10.8888889 C8.83378571,10.8888889 7.07142857,9.14433333 7.07142857,7 C7.07142857,4.85566667 8.83378571,3.11111111 11,3.11111111 C13.1662143,3.11111111 14.9285714,4.85566667 14.9285714,7 C14.9285714,9.14433333 13.1662143,10.8888889 11,10.8888889 Z M11,4.66666667 C9.70042857,4.66666667 8.64285714,5.71355556 8.64285714,7 C8.64285714,8.28644444 9.70042857,9.33333333 11,9.33333333 C12.2995714,9.33333333 13.3571429,8.28644444 13.3571429,7 C13.3571429,5.71355556 12.2995714,4.66666667 11,4.66666667 Z"
+                                              id="Shape"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <span class="close-item-left">Research</span>
+        </a></li>
+    </ul>
+</div>
+
+<div class="sidebar-right " id="sidebar-right">
+    <div class="sidebar-fixed-header">
+        <div class="menu-head">
+            <span class="menu-title">Menu</span>
+            <span class="menu-close" onclick="sidebarRightClose()"><img src="img/ico%20closecloseicon.png"></span>
+        </div>
+        <div class="download-item">
+            <div class="download-img">
+                <img src="img/download-image.jpg">
+            </div>
+            <div class="download-progress">
+                <div>DOWNLOADING<span class="download-name">river.png</span></div>
+                <div class="progres"><span></span></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="comments" id="comments">
+        <div class="comment-item">
+            <div class="status-line"></div>
+            <div class="comment-text">
+                Amazing photo bro! I’am realy love it, you the best man!
+            </div>
+            <div class="autor-time">
+                <div class="autor">
+                    <div class="autor-logo">AD</div>
+                    Andrey Drapatiy
+                </div>
+                <div class="time">10 min ago</div>
+            </div>
+        </div>
+        <div class="comment-item">
+            <div class="status-line"></div>
+            <div class="comment-text">
+                Amazing photo bro! I’am realy love it, you the best man!
+            </div>
+            <div class="autor-time">
+                <div class="autor">
+                    <div class="autor-logo">AD</div>
+                    Andrey Drapatiy
+                </div>
+                <div class="time">11 min ago</div>
+            </div>
+        </div>
+        <div class="comment-item">
+            <div class="status-line"></div>
+            <div class="comment-text">
+                Amazing photo bro! I’am realy love it, you the best man!
+            </div>
+            <div class="autor-time">
+                <div class="autor">
+                    <div class="autor-logo">AD</div>
+                    Andrey Drapatiy
+                </div>
+                <div class="time">12 min ago</div>
+            </div>
+        </div>
+        <div class="comment-item">
+            <div class="status-line"></div>
+            <div class="comment-text">
+                Amazing photo bro! I’am realy love it, you the best man!
+            </div>
+            <div class="autor-time">
+                <div class="autor">
+                    <div class="autor-logo">AD</div>
+                    Andrey Drapatiy
+                </div>
+                <div class="time">12 min ago</div>
+            </div>
+        </div>
+        <div class="comment-item">
+            <div class="status-line"></div>
+            <div class="comment-text">
+                Amazing photo bro! I’am realy love it, you the best man!
+            </div>
+            <div class="autor-time">
+                <div class="autor">
+                    <div class="autor-logo">AD</div>
+                    Andrey Drapatiy
+                </div>
+                <div class="time">12 min ago</div>
+            </div>
+        </div>
+        <div class="comment-item">
+            <div class="status-line"></div>
+            <div class="comment-text">
+                Amazing photo bro! I’am realy love it, you the best man!
+            </div>
+            <div class="autor-time">
+                <div class="autor">
+                    <div class="autor-logo">AD</div>
+                    Andrey Drapatiy
+                </div>
+                <div class="time">12 min ago</div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="chinachart">
+            <div class="chart-header">
+                <h2 class="section-title">Recent views</h2>
+                <a class="tooltips-bottom info"><span> I am tooltip</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>ico</title>
+                        <g id="Canvas" transform="translate(-598 -233)">
+                            <g id="ico">
+                                <use xlink:href="#path0_fill" transform="translate(598 233)"></use>
+                            </g>
+                        </g>
+                        <defs>
+                            <path id="path0_fill" fill-rule="evenodd"
+                                  d="M 10 0C 4.46667 0 0 4.46666 0 10C 0 15.5333 4.46667 20 10 20C 15.5333 20 20 15.5333 20 10C 20 4.46666 15.5333 0 10 0ZM 10 15.5555C 9.33331 15.5555 8.79999 15.0222 8.79999 14.3555C 8.79999 13.6889 9.33331 13.1555 10 13.1555C 10.6666 13.1555 11.2 13.6889 11.2 14.3555C 11.2 15.0222 10.6666 15.5555 10 15.5555ZM 12.2667 9.31111C 12.4222 9.15555 12.5778 8.97777 12.7111 8.79999C 13.0444 8.37778 13.2222 7.82222 13.2444 7.26666C 13.2444 6.37778 12.9556 5.66666 12.3777 5.17776C 11.7556 4.66666 10.9556 4.39999 10.1555 4.44444C 9.3111 4.42221 8.51111 4.68889 7.86664 5.22221C 7.24445 5.75555 6.86664 6.53333 6.79999 7.35555L 8.66663 7.35555C 8.6889 7 8.84442 6.64444 9.11108 6.39999C 9.37775 6.15555 9.73334 6.02222 10.0889 6.04443C 10.4445 6.04443 10.8 6.17776 11.0444 6.42221C 11.2889 6.66666 11.4222 7 11.4222 7.35555C 11.4222 7.71111 11.3111 8.04443 11.0667 8.31111L 9.95557 9.42221C 9.6889 9.66666 9.48889 9.93333 9.3111 10.2222C 9.1778 10.5333 9.1333 10.8444 9.15552 11.1555L 9.15552 12.0889L 10.8889 12.0889L 10.8889 11.4C 10.8666 11.0667 10.9556 10.7111 11.1555 10.4444C 11.2222 10.3555 11.3333 10.2444 11.4445 10.1333C 11.5555 10 11.6889 9.86665 11.8666 9.71111C 11.9735 9.58899 12.0699 9.49832 12.1558 9.41751C 12.1949 9.38068 12.2319 9.3459 12.2667 9.31111Z"></path>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <span class="red-line"></span>
+            <div id="mainchart" style=" height: 300px"></div>
+        </div>
+        <div class="chinachart-bar">
+            <div class="chart-header">
+                <h2 class="section-title">Recent views</h2>
+                <a class="tooltips-bottom info"><span> I am tooltip</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>ico</title>
+                        <g id="Canvas" transform="translate(-598 -233)">
+                            <g id="ico">
+                                <use xlink:href="#path0_fill" transform="translate(598 233)"></use>
+                            </g>
+                        </g>
+                        <defs>
+                            <path id="path0_fill" fill-rule="evenodd"
+                                  d="M 10 0C 4.46667 0 0 4.46666 0 10C 0 15.5333 4.46667 20 10 20C 15.5333 20 20 15.5333 20 10C 20 4.46666 15.5333 0 10 0ZM 10 15.5555C 9.33331 15.5555 8.79999 15.0222 8.79999 14.3555C 8.79999 13.6889 9.33331 13.1555 10 13.1555C 10.6666 13.1555 11.2 13.6889 11.2 14.3555C 11.2 15.0222 10.6666 15.5555 10 15.5555ZM 12.2667 9.31111C 12.4222 9.15555 12.5778 8.97777 12.7111 8.79999C 13.0444 8.37778 13.2222 7.82222 13.2444 7.26666C 13.2444 6.37778 12.9556 5.66666 12.3777 5.17776C 11.7556 4.66666 10.9556 4.39999 10.1555 4.44444C 9.3111 4.42221 8.51111 4.68889 7.86664 5.22221C 7.24445 5.75555 6.86664 6.53333 6.79999 7.35555L 8.66663 7.35555C 8.6889 7 8.84442 6.64444 9.11108 6.39999C 9.37775 6.15555 9.73334 6.02222 10.0889 6.04443C 10.4445 6.04443 10.8 6.17776 11.0444 6.42221C 11.2889 6.66666 11.4222 7 11.4222 7.35555C 11.4222 7.71111 11.3111 8.04443 11.0667 8.31111L 9.95557 9.42221C 9.6889 9.66666 9.48889 9.93333 9.3111 10.2222C 9.1778 10.5333 9.1333 10.8444 9.15552 11.1555L 9.15552 12.0889L 10.8889 12.0889L 10.8889 11.4C 10.8666 11.0667 10.9556 10.7111 11.1555 10.4444C 11.2222 10.3555 11.3333 10.2444 11.4445 10.1333C 11.5555 10 11.6889 9.86665 11.8666 9.71111C 11.9735 9.58899 12.0699 9.49832 12.1558 9.41751C 12.1949 9.38068 12.2319 9.3459 12.2667 9.31111Z"></path>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <span class="red-line"></span>
+            <div id="mainchart-bar" style=" height: 300px"></div>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="table">
+                <thead>
+                <tr id="table-head">
+                    <th class="table-checkbox"><label class="control control-checkbox">
+                        <input type="checkbox" class="check-box" id="check-all" onclick="checkAll()"/>
+                        <div class="control_indicator"></div>
+                    </label>
+                    </th>
+                    <th class="table-castomers"><span>Customer<i></i></span></th>
+                    <th class="table-status"><span>Status<i></i></span></th>
+                    <th class="table-description">Description</th>
+                    <th>Email</th>
+                    <td class="table-more"><div class="more-btn"><img src="img/icon-more.png"></div></td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="table-checkbox"><label class="control control-checkbox">
+                        <input type="checkbox" class="check-box" onclick="checkThis(this)"/>
+                        <div class="control_indicator"></div>
+                    </label>
+                    </td>
+                    <td class="autor-name">
+                        <div class="autor-time">
+                            <div class="autor">
+                                <div class="autor-logo">AD</div>
+                                Andrey Drapatiy
+                            </div>
+                        </div>
+                    </td>
+                    <td class="table-status"><span class="done">Done</span></td>
+                    <td class="table-description">
+                        <span class="description-bold">Getting the most from your cast iron cookware</span><br/>
+                        <span class="description-thin">There should be a lot of cheerful and spicy remark about project </span>
+                    </td>
+                    <td class="table-email">morrison.phil@gmail.com</td>
+                    <td class="table-more">
+                        <div class="dropdown-wrapper">
+                            <a class="dropdown-trigger"><div class="more-btn"><img src="img/icon-more.png"></div></a>
+                            <div class="dropdown" id="drop">
+                                <div class="dropdown__triangle-top"></div>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__list-item"><a href="#">Edit Item</a></li>
+                                    <li class="dropdown__list-item"><a href="#">Copy</a></li>
+                                    <li class="dropdown__list-item"><a href="#">Remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table-checkbox"><label class="control control-checkbox">
+                        <input type="checkbox" class="check-box" onclick="checkThis(this)"/>
+                        <div class="control_indicator"></div>
+                    </label>
+                    </td>
+                    <td class="autor-name">
+                        <div class="autor-time">
+                            <div class="autor">
+                                <div class="autor-logo">VS</div>
+                                Vikto Shiller
+                            </div>
+
+                        </div>
+                    </td>
+                    <td class="table-status"><span class="error">Error</span></td>
+                    <td class="table-description">
+                        <span class="description-bold">A World of  Infinite Opportunites</span><br/>
+                        <span class="description-thin">There should be a lot of cheerful and spicy remark about project  </span>
+                    </td>
+                    <td class="table-email">shiller@gmail.com</td>
+                    <td class="table-more">
+                        <div class="dropdown-wrapper">
+                            <a class="dropdown-trigger"><div class="more-btn"><img src="img/icon-more.png"></div></a>
+                            <div class="dropdown">
+                                <div class="dropdown__triangle-top"></div>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__list-item"><a href="#">Edit Item</a></li>
+                                    <li class="dropdown__list-item"><a href="#">Copy</a></li>
+                                    <li class="dropdown__list-item"><a href="#">Remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="table-checkbox"><label class="control control-checkbox">
+                        <input type="checkbox" class="check-box" onclick="checkThis(this)"/>
+                        <div class="control_indicator"></div>
+                    </label>
+                    </td>
+                    <td class="autor-name">
+                        <div class="autor-time">
+                            <div class="autor">
+                                <div class="autor-logo">JN</div>
+                                John Nagmail
+                            </div>
+                        </div>
+                    </td>
+                    <td class="table-status"><span class="done">Done</span></td>
+                    <td class="table-description">
+                        <span class="description-bold">What if they let you run the Hubble?</span><br/>
+                        <span class="description-thin">There should be a lot of cheerful and spicy remark about project </span>
+                    </td>
+                    <td class="table-email">jhon_n@gmail.com</td>
+                    <td class="table-more">
+                        <div class="dropdown-wrapper">
+                            <a class="dropdown-trigger"><div class="more-btn"><img src="img/icon-more.png"></div></a>
+                            <div class="dropdown">
+                                <div class="dropdown__triangle-top"></div>
+                                <ul class="dropdown__list">
+                                    <li class="dropdown__list-item"><a href="#">Edit Item</a></li>
+                                    <li class="dropdown__list-item"><a href="#">Copy</a></li>
+                                    <li class="dropdown__list-item"><a href="#">Remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="chinachart-line">
+            <div class="chart-header">
+                <h2 class="section-title">Recent views</h2>
+                <input class="datepickerair" data-range="true" data-multiple-dates-separator=" - " type="text" id="datepickerair"  placeholder="13 days">
+                <a class="tooltips-bottom info"><span> I am tooltip</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>ico</title>
+                        <g id="Canvas" transform="translate(-598 -233)">
+                            <g id="ico">
+                                <use xlink:href="#path0_fill" transform="translate(598 233)"></use>
+                            </g>
+                        </g>
+                        <defs>
+                            <path id="path0_fill" fill-rule="evenodd"
+                                  d="M 10 0C 4.46667 0 0 4.46666 0 10C 0 15.5333 4.46667 20 10 20C 15.5333 20 20 15.5333 20 10C 20 4.46666 15.5333 0 10 0ZM 10 15.5555C 9.33331 15.5555 8.79999 15.0222 8.79999 14.3555C 8.79999 13.6889 9.33331 13.1555 10 13.1555C 10.6666 13.1555 11.2 13.6889 11.2 14.3555C 11.2 15.0222 10.6666 15.5555 10 15.5555ZM 12.2667 9.31111C 12.4222 9.15555 12.5778 8.97777 12.7111 8.79999C 13.0444 8.37778 13.2222 7.82222 13.2444 7.26666C 13.2444 6.37778 12.9556 5.66666 12.3777 5.17776C 11.7556 4.66666 10.9556 4.39999 10.1555 4.44444C 9.3111 4.42221 8.51111 4.68889 7.86664 5.22221C 7.24445 5.75555 6.86664 6.53333 6.79999 7.35555L 8.66663 7.35555C 8.6889 7 8.84442 6.64444 9.11108 6.39999C 9.37775 6.15555 9.73334 6.02222 10.0889 6.04443C 10.4445 6.04443 10.8 6.17776 11.0444 6.42221C 11.2889 6.66666 11.4222 7 11.4222 7.35555C 11.4222 7.71111 11.3111 8.04443 11.0667 8.31111L 9.95557 9.42221C 9.6889 9.66666 9.48889 9.93333 9.3111 10.2222C 9.1778 10.5333 9.1333 10.8444 9.15552 11.1555L 9.15552 12.0889L 10.8889 12.0889L 10.8889 11.4C 10.8666 11.0667 10.9556 10.7111 11.1555 10.4444C 11.2222 10.3555 11.3333 10.2444 11.4445 10.1333C 11.5555 10 11.6889 9.86665 11.8666 9.71111C 11.9735 9.58899 12.0699 9.49832 12.1558 9.41751C 12.1949 9.38068 12.2319 9.3459 12.2667 9.31111Z"></path>
+                        </defs>
+                    </svg>
+                </a></div>
+            <span class="red-line"></span>
+            <div id="mainchart-line" style="height: 300px"></div>
+        </div>
+        <div class="chinachart-line">
+            <div class="chart-header">
+                <h2 class="section-title">Recent views</h2>
+                <a class="tooltips-bottom info"><span> I am tooltip</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <title>ico</title>
+                        <g id="Canvas" transform="translate(-598 -233)">
+                            <g id="ico">
+                                <use xlink:href="#path0_fill" transform="translate(598 233)"></use>
+                            </g>
+                        </g>
+                        <defs>
+                            <path id="path0_fill" fill-rule="evenodd"
+                                  d="M 10 0C 4.46667 0 0 4.46666 0 10C 0 15.5333 4.46667 20 10 20C 15.5333 20 20 15.5333 20 10C 20 4.46666 15.5333 0 10 0ZM 10 15.5555C 9.33331 15.5555 8.79999 15.0222 8.79999 14.3555C 8.79999 13.6889 9.33331 13.1555 10 13.1555C 10.6666 13.1555 11.2 13.6889 11.2 14.3555C 11.2 15.0222 10.6666 15.5555 10 15.5555ZM 12.2667 9.31111C 12.4222 9.15555 12.5778 8.97777 12.7111 8.79999C 13.0444 8.37778 13.2222 7.82222 13.2444 7.26666C 13.2444 6.37778 12.9556 5.66666 12.3777 5.17776C 11.7556 4.66666 10.9556 4.39999 10.1555 4.44444C 9.3111 4.42221 8.51111 4.68889 7.86664 5.22221C 7.24445 5.75555 6.86664 6.53333 6.79999 7.35555L 8.66663 7.35555C 8.6889 7 8.84442 6.64444 9.11108 6.39999C 9.37775 6.15555 9.73334 6.02222 10.0889 6.04443C 10.4445 6.04443 10.8 6.17776 11.0444 6.42221C 11.2889 6.66666 11.4222 7 11.4222 7.35555C 11.4222 7.71111 11.3111 8.04443 11.0667 8.31111L 9.95557 9.42221C 9.6889 9.66666 9.48889 9.93333 9.3111 10.2222C 9.1778 10.5333 9.1333 10.8444 9.15552 11.1555L 9.15552 12.0889L 10.8889 12.0889L 10.8889 11.4C 10.8666 11.0667 10.9556 10.7111 11.1555 10.4444C 11.2222 10.3555 11.3333 10.2444 11.4445 10.1333C 11.5555 10 11.6889 9.86665 11.8666 9.71111C 11.9735 9.58899 12.0699 9.49832 12.1558 9.41751C 12.1949 9.38068 12.2319 9.3459 12.2667 9.31111Z"></path>
+                        </defs>
+                    </svg>
+                </a></div>
+            <span class="red-line"></span>
+            <div id="mainchart-line-2" style=" height: 300px"></div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+
+
+    var el = document.getElementById('comments');
+    var sortable = Sortable.create(el, {
+        ghostClass: 'ui-state-highlight-1',
+        draggable: ".comment-item",
+        scroll: true,
+        animation: 300,
+        scrollSensitivity: 200, // px, how near the mouse must be to an edge to start scrolling.
+        scrollSpeed: 10, // px
+        chosenClass: "sortable-chosen",  // Class name for the chosen item
+        dragClass: "sortable-drag"
+    });
+</script>
+<script src="js/charts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,912 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+
+.wrapper
+	width: 100%
+
+.sidebar
+	color: #fff
+	position: fixed
+	top: 0
+	left: 0
+	width: 70px
+	height: 100%
+	background-color: $bg-sidebar
+	z-index: 100
+
+
+.sidebar--open
+	width: 200px
+
+.editor
+	display: none
+	position: fixed
+	left: 70px
+	background-color: #fff
+	z-index: 3
+	height: 100%
+	overflow: hidden
+
+
+.editor-panels-wrapper
+	height: 100%
+	overflow: hidden
+	padding:
+		left: 40px
+		right: 40px
+		top: 0
+		bottom: 67px
+
+
+
+
+.editor--open
+	display: block
+
+.editor--width-xs
+	width: 420px
+
+.editor--width-md
+	width: 700px
+
+.editor--width-xl
+	width: calc(100% - 70px)
+
+.editor--sidebar-open-and-width-xl
+	width: calc(100% - 200px)
+
+.editor--sidebar-open
+	left: 200px
+
+.btn-editor-close
+	position: absolute
+	left: 20px
+	top: 24px
+	width: 10px
+	height: 10px
+	background: url(../img/icon-close.png) no-repeat center
+
+
+.btn-editor-prev
+	position: absolute
+	right: 25px
+	top: 22px
+	width: 8px
+	height: 13px
+	background: url(../img/icon-arrow-right.png) no-repeat center
+	transform: rotate(180deg)
+
+.btn-editor-next
+	position: absolute
+	right: 10px
+	top: 22px
+	width: 8px
+	height: 13px
+	background: url(../img/icon-arrow-right.png) no-repeat center
+
+.editor-panel
+	padding-top: 15px
+	border-bottom: 1px solid #e4e4e4
+
+.editor-panel__header
+	position: relative
+	margin-bottom: 15px
+
+	.lable
+		margin-bottom: 0
+
+	.panel__content-montage-status
+		position: absolute
+		left: 50%
+		top: -3px
+		transform: translateX(-50%)
+
+.editor-panel__actions-btn
+	position: absolute
+	right: 0
+	top: 2px
+	width: 15px
+	height: 10px
+
+.editor-panel__actions-collaps
+	background: url(../img/icon-arrow-up.png) no-repeat center
+
+.editor-panel__actions-expand
+	background: url(../img/icon-arrow-up.png) no-repeat center
+	transform: rotate(180deg)
+
+.editor__header
+	position: relative
+	padding: 15px 20px
+	transition: box-shadow .1s linear
+
+.editor__header--scroll
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1)
+	z-index: 1
+
+.editor__panel-timer
+	width: 255px
+	margin: 0 auto
+	text-align: center
+
+	.timer-time
+		display: inline-block
+		padding: 5px 7px
+		background-color: #2f323a
+		color: #fff
+
+		span:first-child
+			color: #36a24d
+
+
+.editor-panel__body
+
+	padding-bottom: 15px
+
+	.row
+		margin-bottom: 25px
+
+		&:last-child
+			margin-bottom: 0
+
+
+
+
+.block
+	box-shadow: 0 0 30px #d1d1d6
+	border-radius: 3px
+	margin-bottom: 20px
+
+	&:last-child
+		margin-bottom: 0
+
+.block__header
+	position: relative
+	background-color: #f4f8f9
+	padding:
+		top: 23px
+		bottom: 23px
+		right: 50px
+		left: 135px
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+	font-weight: 500
+	color: #454545
+
+	span
+		display: block
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
+	img
+		border-radius: 3px
+
+	.block__header__delete
+		display: block
+		position: absolute
+		right: 20px
+		top: 25px
+		width: 10px
+		height: 10px
+		background: url(../img/icon-close-2.png) center no-repeat
+
+.prev-image-title
+	position: absolute
+	left: 4px
+	top: 3px
+	width: 110px
+	height: 55px
+
+.block__body
+	padding: 20px 10px
+	background-color: #fff
+	border-bottom-left-radius: 3px
+	border-bottom-right-radius: 3px
+	
+
+.block__content-wrapper
+	border: 1px solid #ebebeb
+	border-radius: 3px
+	padding:
+		top: 15px
+		bottom: 10px
+		left: 12px
+		right: 12px
+	margin-bottom: 19px
+
+	&:last-child
+		margin-bottom: 0
+
+
+.block__content-headline
+	color: #7b7a7a
+	margin-bottom: 23px
+
+.block__content
+	color: #464646
+	padding: 10px
+	background-color: #f3f7f8
+	line-height: 18px
+
+
+
+
+.editor-panel
+
+	h5
+		color: #4566ed
+		margin-bottom: 18px
+		font-size: 14px
+		font-weight: 400
+
+	video
+		width: 100%
+		height: auto
+
+
+
+.bin-trash__header
+	position: relative
+
+.bin-trash__btn-add-video
+	width: 25px
+	height: 25px
+	line-height: 25px
+	font-weight: 700
+	position: absolute
+	right: 0
+	top: -5px
+	padding: 0
+
+.bin-trash
+	padding: 10px
+	background-color: #fff
+	box-shadow: 0 0 30px #d1d1d6
+	border-radius: 3px
+
+.bin-trash__item
+	position: relative
+	border-radius: 3px
+	background-color: #f3f7f8
+	margin-bottom: 10px
+	transition: all .2s linear
+
+	&:last-child
+		margin-bottom: 0
+
+	&:hover
+		background-color: #74aae8
+		color: #fff
+
+		.bin-trash__item-delete
+			background: url(../img/icon-close-2-white.png) center no-repeat
+
+	img
+		border-top-left-radius: 3px
+		border-bottom-left-radius: 3px
+		vertical-align: top
+
+
+	.bin-trash__file-name
+		display: inline-block
+		padding-left: 20px
+		padding-right: 20px
+		line-height: 55px
+		vertical-align: top
+		width: 190px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
+	.bin-trash__file-duration
+		display: none
+		width: 55px
+		line-height: 55px
+		vertical-align: top
+
+	.bin-trash__file-desc
+		display: none
+		width: 580px
+		line-height: 55px
+		vertical-align: top
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
+
+
+.bin-trash__item-delete
+	display: block
+	position: absolute
+	right: 16px
+	top: 23px
+	width: 10px
+	height: 10px
+	background: url(../img/icon-close-2.png) center no-repeat
+	transition: background .2s linear
+
+
+.btn--mounting-done
+	background-color: #2fc688
+
+	&:hover
+		background: darken(#2fc688, 5%)
+
+	&:active
+		background: darken(#2fc688, 5%)
+
+
+
+.editor-panel__row
+	margin-bottom: 30px
+	margin-left: -15px
+	margin-right: -15px
+
+	&:last-child
+		margin-bottom: 0
+
+	@include clearfix
+
+.editor-panel-col
+	padding-left: 15px
+	padding-right: 15px
+	float: left
+
+.ep__wrap-input-name
+	width: 100%
+
+.ep__wrap-select-responsible
+	width: 50%
+	margin-bottom: 30px
+
+.ep__wrap-input-chronometry
+	width: 50%
+	margin-bottom: 30px
+
+.ep__wrap-select-type
+	width: 50%
+
+.ep__wrap-select-status
+	width: 50%
+
+.ep__wrap-textarea-text
+	width: 100%
+	
+	.lable
+		position: relative
+
+.ep__wrap-textarea-text__link-print
+	position: absolute
+	top: -7px
+	left: 40px
+	width: 30px
+	height: 30px
+	background: url(../img/icon-print.png) no-repeat center center
+	transition: background .2s linear
+
+	&:hover
+		background-image: url(../img/print-ico-hover.png)
+
+	
+
+.ep__wrap-div-block
+	width: 100%
+
+.ep__wrap-btn-add-titles
+	//width: 100%
+
+.ep__wrap-video
+	width: 100%
+	margin-bottom: 30px
+
+.ep__wrap-textarea-desc
+	width: 100%
+
+	textarea
+		height: 170px
+
+.ep__wrap-bin-trash
+	width: 100%
+
+.ep__wrap-input-upload
+	width: 100%
+
+
+/////////////////////////////////
+
+
+.editor--width-md
+
+	.bin-trash__file-name
+		width: 360px
+	
+	.bin-trash__file-duration
+		display: inline-block
+
+
+
+/////////////////////////////////
+
+
+.editor--width-xl, .editor--sidebar-open-and-width-xl
+
+	.ep__wrap-select-responsible,
+	.ep__wrap-input-chronometry,
+	.ep__wrap-select-type,
+	.ep__wrap-select-status
+		width: 25%
+		margin-bottom: 0
+
+	.panel__content-montage-status
+		left: 60px
+		transform: translateX(0%)
+
+	.ep__wrap-video
+		width: 40%
+
+	.ep__wrap-textarea-desc
+		width: 60%
+
+		textarea
+			min-height: 260px
+
+	.bin-trash__file-name
+		width: 235px
+	
+	.bin-trash__file-duration
+		display: inline-block
+		margin-right: 160px
+
+	.bin-trash__file-desc
+		display: inline-block
+
+
+
+
+/////////////////////////////////////////////
+
+
+
+
+.editor--sidebar-open-and-width-xl
+	.ep__wrap-textarea-desc
+		textarea
+			min-height: 231px
+
+	.bin-trash__file-desc
+		width: 450px
+
+
+
+
+/////////////////////////////////////////////
+
+
+
+.content
+	width: calc(100% - 70px)
+	margin-left: 70px
+	background-color: $bg-main
+	padding: 40px
+
+
+
+
+/////////////////////////////////////////////
+
+
+.content--sidebar-open
+	margin-left: 200px
+	width: calc(100% - 200px)
+
+	.panel-header__status
+		margin-right: 435px
+
+	.panel__content-headline
+		width: 240px
+
+	.panel__content-preview
+		width: 415px
+
+
+
+
+/////////////////////////////////////////////
+
+
+
+
+.content--editor--xs-open
+	margin-left: 490px
+	width: calc(100% - 490px)
+
+
+	.panel-header__status
+		margin-right: 235px
+
+	.panel__content-headline
+		width: 190px
+		margin-right: 30px
+
+	.panel__content-preview
+		margin-right: 30px
+		width: 325px
+
+	.panel__timer
+		width: 180px
+		margin-right: 30px
+
+	.panel__responsible-name
+		width: 200px
+		margin-right: 30px
+
+
+
+
+
+
+/////////////////////////////////////////////
+
+
+
+.content--editor--md-open
+	margin-left: 770px
+	width: calc(100% - 770px)
+
+
+	.panel-header__status
+		margin-right: 25px
+
+	.panel-header__timer
+		width: 160px
+
+	.panel__timer
+		width: 150px
+		margin-right: 20px
+
+	.panel__content-headline
+		width: 110px
+		margin-right: 20px
+
+	.panel__content-preview
+		width: 200px
+		margin-right: 20px
+
+	.panel__responsible-name
+		width: 195px
+		margin-right: 20px
+
+	.header-program__title
+		margin-right: 20px
+
+	.header-program__status
+		margin-right: 20px
+
+	.header-program__responsible
+		margin-right: 20px
+
+	.header-program__full-time
+		display: none
+
+
+
+
+
+
+/////////////////////////////////////////////
+
+
+
+
+
+
+.content--sidebar-and-editor-xs-open
+	margin-left: 620px
+	width: calc(100% - 620px)
+
+	.panel-header__status
+		margin-right: 121px
+
+	.panel__content-headline
+		width: 150px
+		margin-right: 30px
+
+	.panel__content-preview
+		margin-right: 30px
+		width: 245px
+
+	.panel__timer
+		width: 170px
+		margin-right: 30px
+
+	.panel__responsible-name
+		width: 200px
+		margin-right: 30px
+
+
+
+
+/////////////////////////////////////////////
+
+
+
+.content--sidebar-and-editor-md-open
+	margin-left: 900px
+	width: calc(100% - 900px)
+
+	.header-program__full-time
+		display: none
+
+	.panel__timer
+		display: none
+
+	.panel-header__timer
+		display: none
+
+
+	.panel-header__status
+		margin-right: 50px
+
+	.panel__content-preview
+		width: 205px
+		margin-right: 20px
+
+	.panel__responsible-name
+		width: 190px
+		margin-right: 20px
+
+
+	.panel__content-headline
+		width: 150px
+		margin-right: 20px
+
+
+
+/////////////////////////////////////////////
+
+.content--editor--xl-open
+	display: none
+
+
+
+
+
+#btn-toggle
+	width: 20px
+	height: 12px
+	position: absolute
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	cursor: pointer
+	left: 25px
+	top: 25px
+
+	span
+		display: block
+		position: absolute
+		height: 2px
+		width: 100%
+		background: #fff
+		opacity: 1
+		left: 0
+		transform: rotate(0deg)
+		transition: .25s ease-in-out
+
+
+#btn-toggle span:nth-child(1)
+	top: 0px
+	transform-origin: left center
+
+
+#btn-toggle span:nth-child(2)
+	top: 5px
+	transform-origin: left center
+
+
+#btn-toggle span:nth-child(3)
+	top: 10px
+	transform-origin: left center
+
+
+#btn-toggle.btn-sidebar-close span:nth-child(1)
+	transform: rotate(45deg)
+	top: 0px
+	left: 3px
+
+
+#btn-toggle.btn-sidebar-close span:nth-child(2)
+	width: 0%
+	opacity: 0
+
+
+#btn-toggle.btn-sidebar-close span:nth-child(3)
+	transform: rotate(-45deg)
+	top: 14px
+	left: 3px
+
+
+
+
+.nav
+	margin-top: 115px
+
+.nav__item-link
+	position: relative
+	display: block
+	font-size: 0
+	width: 100%
+	height: 40px
+	padding-left: 25px
+	transition: background-color .2s ease-in-out
+
+	span
+		position: absolute
+		left: 80px
+		top: 50%
+		width: 130px
+		height: 40px
+		font-size: 14px
+		line-height: 40px
+		text-align: center
+		padding: 0 12px
+		border-radius: 3px
+		background-color: #2f323a
+		transform: translateY(-50%)
+		visibility: hidden
+		opacity: 0
+		transition: opacity .3s linear
+		
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			border-top: 5px solid transparent
+			border-bottom: 5px solid transparent
+			border-right: 5px solid #2f323a
+			left: -5px
+
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 0px
+		height: 100%
+		background-color: #0065c4
+
+	&:hover
+		background-color: #24272e
+
+		span
+			opacity: 1
+			visibility: visible
+
+		&:before
+			width: 3px
+
+		.nav__item-icon, span
+			opacity: 1
+
+
+.nav__item-icon
+	display: inline-block
+	width: 20px
+	height: 40px
+	background-repeat: no-repeat
+	background-position: center
+	opacity: .55
+	transition: opacity .2s ease-in-out
+
+
+
+.nav__item-link--active
+	background-color: #24272e
+
+	&:before
+		width: 3px
+
+	.nav__item-icon, span
+		opacity: 1
+
+
+.sidebar--open
+
+	.nav__item-link
+
+		span
+			position: relative
+			top: 0
+			left: 0
+			opacity: .55
+			visibility: visible
+			width: inherit
+			text-align: left
+			font-size: 14px
+			//display: inline-block
+			height: 40px
+			line-height: 40px
+			margin-left: 25px
+			vertical-align: top
+			opacity: .55
+			transition: opacity .2s ease-in-out
+			padding-right: 15px
+			transform: none
+			padding: 0
+			border-radius: 0
+			background-color: inherit
+
+		&:hover
+			span
+				opacity: 1
+
+	.nav__item-link--active
+		span
+			opacity: 1
+
+	.sidebar-user-avatar
+		.sidebar-user-name
+			display: inline
+
+	.sidebar-logo
+		display: block
+
+	#btn-toggle
+		right: 25px
+		left: initial
+
+
+.sidebar-user-avatar
+	position: absolute
+	bottom: 19px
+	left: 19px
+
+	.avatar-wrapper
+		margin-right: 0
+
+		&:after
+			box-shadow: 0 0 0 2px #2f323a
+			background-color: #68cc3d
+
+
+	.sidebar-user-name
+		display: none
+		margin-left: 15px
+
+.sidebar-mobile-icon
+	display: none
+	position: absolute
+	bottom: 28px
+	right: 25px
+	width: 25px
+	height: 25px
+	background: url(../img/ico-sidebar-dropdown.png) no-repeat center
+
+.sidebar-logo
+	display: none
+	position: absolute
+	left: 25px
+	top: 25px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+
+
+.list-page-panel
+	padding: 25px
+
+.list-page-panel__header
+	background-color: #f3f8f9
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+	padding: 13px 25px
+
+.list-page-panel__headline
+	transition: all .2s linear
+
+.list-page-panel__row
+	position: relative
+	padding: 
+		left: 20px
+		right: 40px
+		top: 16px
+		bottom: 16px
+	border: 1px solid #e5e4e4
+	border-radius: 3px
+	margin-top: -1px
+	transition: all .2s linear
+
+	&:hover
+		background-color: #74aae8
+		
+		border: 1px solid #74aae8
+
+		.list-page-panel__headline
+			color: #fff
+
+	.dropdown
+		right: 15px
+
+.list-page-panel__delete
+	display: block
+	position: absolute
+	top: 50%
+	right: 15px
+	width: 10px
+	height: 10px
+	background: url(../img/icon-close-3.png) no-repeat center
+	transform: translateY(-50%)
+
+
+.list-page-panel__more
+	display: block
+	position: absolute
+	top: 50%
+	right: 15px
+	width: 30px
+	height: 30px
+	background: url(../img/icon-more.png) no-repeat center
+	transform: translateY(-50%)
+
+
+.list-page-panel__btn
+	margin-top: 25px

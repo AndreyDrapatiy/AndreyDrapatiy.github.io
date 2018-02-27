@@ -1,0 +1,101 @@
+@@include('../sections/head.html') @@include('../sections/sidebar.html')
+
+
+
+<div id="main-page-content-wrapper">
+	<div class="content" role="main">
+
+		<header>
+			<h2 class="header-page">Додати користувача</h2>
+		</header>
+
+		<div class="add-user-wrapper block--white">
+
+			<div class="add-user__col col-1">
+				<div class="add-user__photo-wrap">
+					<img class="add-user__photo-img" src="img/add_user/photo.png" alt="User Photo">
+					<a class="add-user__photo-link" href="#">Обрати</a>
+				</div>
+			</div>
+
+			<div class="add-user__col col-2">
+
+				<div class="add-user__input-wrap">
+					<label class="add-user__lable" for="input_add_user_name">ПІБ</label>
+					<input type="text" class="add-user__input input" id="input_add_user_name" name="add_user_name" placeholder="Прізвище, ім’я"
+					    autocomplete="off">
+				</div>
+
+				<div class="add-user__input-wrap">
+					<label class="add-user__lable" for="input_add_user_login">Логін</label>
+					<input type="text" class="add-user__input input" id="input_add_user_login" name="add_user_login" placeholder="Логін"
+					    autocomplete="off">
+				</div>
+
+				<div class="add-user__input-wrap">
+					<label class="add-user__lable" for="input_add_user_email">Email</label>
+					<input type="text" class="add-user__input input" id="input_add_user_email" name="add_user_email" placeholder="Email"
+					    autocomplete="off">
+				</div>
+			</div>
+
+			<div class="add-user__col col-3">
+
+				<div class="add-user__row">
+
+					<div class="add-user__col col-4">
+
+						<div class="add-user__input-wrap">
+							<label class="add-user__lable" for="input_add_user_password">Пароль</label>
+							<input type="text" class="add-user__input input" id="input_add_user_password" name="add_user_password"
+							    placeholder="Пароль" autocomplete="off">
+						</div>
+
+						<div class="add-user__input-wrap">
+							<label class="add-user__lable" for="input_add_user_password_confirm">Підтвердження паролю</label>
+							<input type="text" class="add-user__input input" id="input_add_user_password_confirm" name="add_user_password_confirm" placeholder="Пароль" autocomplete="off">
+						</div>
+
+
+
+					</div>
+
+					<div class="add-user__col col-5">
+						<div class="add-user__input-wrap">
+							<label class="add-user__lable" for="input_add_user_password_confirm">Роль</label>
+
+							<select class="add-user__select select">
+								<option class="select--null" value="">Вибрати</option>
+								<option>Пункт 1</option>
+								<option>Пункт 2</option>
+							</select>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="add-user__row">
+					<div class="add-user__checkbox-wrap">
+						<input type="checkbox" class="add-user__checkbox checkbox" id="checkbox_add_user_password_locked" />
+						<label for="checkbox_add_user_password_locked">Заблокований</label>
+					</div>
+
+					<div class="add-user__checkbox-wrap">
+						
+						<input type="checkbox" class="add-user__checkbox checkbox" id="checkbox_add_user_force_password_change" />
+						<label for="checkbox_add_user_force_password_change">Примусова зміна паролю</label>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<a href="#" class="btn add-user__btn">Додати корисутвача</a>
+
+	</div>
+	<!-- .content -->
+</div>
+<!-- .content-wrapper -->
+
+@@include('../sections/footer.html')

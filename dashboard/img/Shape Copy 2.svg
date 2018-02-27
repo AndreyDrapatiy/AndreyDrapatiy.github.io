@@ -1,0 +1,12 @@
+<svg width="6" height="11" viewBox="0 0 6 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Shape Copy 2</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-2183 -1383)">
+<g id="Shape Copy 2">
+<use xlink:href="#path0_fill" transform="matrix(6.12323e-17 1 -1 6.12323e-17 2189 1384)" fill="#8D9EA2"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0.090625 0.771875L 0.146875 0.8375L 4.39687 5.72813C 4.54063 5.89375 4.75625 5.99687 4.99687 5.99687C 5.2375 5.99687 5.45312 5.89062 5.59688 5.72813L 9.84375 0.846875L 9.91562 0.765625C 9.96875 0.6875 10 0.59375 10 0.49375C 10 0.221875 9.76875 0 9.48125 0L 0.51875 0C 0.23125 0 0 0.221875 0 0.49375C 0 0.596875 0.034375 0.69375 0.090625 0.771875Z"/>
+</defs>
+</svg>

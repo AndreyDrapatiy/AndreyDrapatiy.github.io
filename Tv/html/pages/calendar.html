@@ -1,0 +1,47 @@
+@@include('../sections/head.html') 
+
+@@include('../sections/sidebar.html')
+
+<div id="calendar-content-wrapper">
+
+	<div class="content" role="main">
+
+		<header id="header-calendar">
+			<h2 class="header-page">Выпуск программ</h2>
+
+			<select class="select calendar-select__month">
+				<option class="select--null" value="">Березень</option>
+				<option>Пункт 1</option>
+				<option>Пункт 2</option>
+			</select>
+
+			<select class="select calendar-select__year">
+				<option class="select--null" value="">2017</option>
+				<option>2017</option>
+				<option>2016</option>
+				<option>2015</option>
+				<option>2014</option>
+			</select>
+
+			<a href="#" class="btn"><span class="btn-text--full">Створити програму</span><span class="btn-text--small">+</span></a>
+		</header>
+
+		<div class="calendar-wrapper">
+
+			<div class="calendar-row calendar-ajax-content">
+
+			</div>
+
+			<div class="calendar-nav">
+				<a href="#" class="calendar-nav__arrow calendar-nav__prev"></a>
+				<a href="#" class="calendar-nav__arrow calendar-nav__next"></a>
+			</div>
+
+		</div>
+		<!-- .content -->
+	</div>
+	<!-- .content-wrapper -->
+
+</div>
+
+@@include('../sections/footer.html')

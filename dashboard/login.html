@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<script>// vertical align for form
+    var height = window.innerHeight;
+    var formHeight = 400; // form height
+    var paddingTop = (height - formHeight) * 0.5;
+    function verticalCentering() {
+        if(height >= 400){
+            document.body.style.paddingTop =  paddingTop+'px';
+        }
+        else {
+            document.body.style.paddingTop =  '0px';
+        }
+    }
+    verticalCentering();
+</script>
+<div class="top-left-circle"></div>
+<div class="bottom-right-circle"></div>
+    <form class="login-form" id="form">
+
+        <div class="circle"><img src="img/H.png"></div>
+
+        <label for="login">username</label>
+        <input type="text" id="login">
+
+
+        <label for="password">password</label>
+        <input type="text" id="password">
+
+        <input type="submit" class="login-btn" value="LOGIN">
+    </form>
+</body>
+</html>

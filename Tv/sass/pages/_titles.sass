@@ -1,0 +1,218 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+
+
+.titles-header
+	margin-bottom: 25px
+
+	.btn
+		float: right
+
+	@include clearfix
+
+.titles-search-wraper
+	//width: 270px
+	float: left
+
+	@include clearfix
+
+.titles-search__input
+	width: 200px
+	float: left
+	border-right: none
+	border-top-right-radius: 0
+	border-bottom-right-radius: 0
+
+
+.titles-search__btn
+	width: 100px
+	height: 38px
+	float: left
+	border-top-left-radius: 0
+	border-bottom-left-radius: 0
+
+
+.titles-nav
+	margin-bottom: 25px
+	
+.titles__btn-cards,
+.titles__btn-list
+	display: inline-block
+	width: 30px
+	height: 30px
+	background-repeat: no-repeat
+	background-position: center center
+	transition: background .2s linear
+
+.titles__btn-cards
+	position: relative
+	background-image: url(../img/icon-items-cards.png)
+	margin-right: 15px
+
+
+	&:hover
+		background-image: url(../img/icon-items-cards-hover.png)
+
+	&:after
+		content: ''
+		position: absolute
+		top: 50%
+		right: -11px
+		display: block
+		width: 1px
+		height: 80%
+		background-color: #b9baba
+		transform: translateY(-50%)
+
+.titles__btn-list
+	background-image: url(../img/icon-items-lists.png)
+
+	&:hover
+		background-image: url(../img/icon-items-lists-hover.png)
+
+
+	
+
+
+.titles-wrapper
+	@include clearfix
+
+.titles-wrapper--list
+	background-color: #fff
+	padding: 20px
+	border-radius: 3px
+	box-shadow: 0 0 30px rgba(139, 139, 139, 0.35)
+
+.title-item
+
+.title-item__img
+	background-repeat: no-repear
+	background-size: cover
+	background-position: center
+
+.title-item--card
+	border-radius: 3px
+	background-color: #fff
+	float: left
+	width: 23%
+	margin-bottom: 30px
+	margin-right: 2.6666%
+	transition: box-shadow .2s linear
+
+	&:hover
+		box-shadow: 0 0 30px rgba(139, 139, 139, 0.35)
+
+	&:nth-child(4n+4)
+		margin-right: 0
+
+	.title-item__img
+		height: 180px
+		width: 100%
+		background-repeat: no-repear
+		background-size: cover
+		background-position: center
+		border-top-left-radius: 3px
+		border-top-right-radius: 3px
+
+
+	.title-item__content
+		position: relative
+		padding:
+			top: 20px
+			bottom: 20px
+			left: 15px
+			right: 50px
+
+		.dropdown
+			top: 55px
+			right: 15px
+
+	.title-item__name
+		margin-bottom: 7px
+
+	.title-item__desc
+		color: #9c9c9e
+
+	.title-item__btn-more
+		display: block
+		position: absolute
+		right: 15px
+		top: 50%
+		width: 30px
+		height: 30px
+		background: url(../img/icon-more.png) no-repeat center
+		transform: translateY(-50%)
+
+
+
+.title-item--list
+	margin-bottom: 15px
+
+	&:hover
+		.title-item__content
+			background-color: #74aae8
+
+		.title-item__name
+			color: #fff
+
+		.title-item__desc
+			color: #fff
+
+	&:last-child
+		margin-bottom: 0
+
+	@include clearfix
+
+	.title-item__img
+		float: left
+		width: 10%
+		height: 55px
+		border-top-left-radius: 3px
+		border-bottom-left-radius: 3px
+
+
+	.title-item__content
+		float: left
+		width: 90%
+		position: relative
+		padding:
+			top: 18px
+			bottom: 18px
+			left: 22px
+			right: 50px
+		background-color: #f3f7f8
+		border-top-right-radius: 3px
+		border-bottom-right-radius: 3px
+		line-height: 19px
+		transition: background-color .2s linear, color .2s linear
+
+		@include clearfix
+
+		.dropdown
+			top: 45px
+			right: 15px
+
+	.title-item__name
+		float: left
+		width: 50%
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		padding-right: 15px
+
+	.title-item__desc
+		float: left
+		width: 50%
+		color: #9c9c9e
+		transition: all .2s linear
+
+	.title-item__btn-more
+		display: block
+		position: absolute
+		right: 15px
+		top: 50%
+		width: 30px
+		height: 30px
+		background: url(../img/icon-more.png) no-repeat center
+		transform: translateY(-50%)

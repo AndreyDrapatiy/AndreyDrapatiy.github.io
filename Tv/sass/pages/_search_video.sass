@@ -1,0 +1,416 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+#search-video-content-wrapper
+
+	.content
+		padding: 30px 20px
+
+.search-video__table
+	box-shadow: 0 0 30px rgba(139, 139, 139, 0.35)
+	border-radius: 3px
+	table-layout: fixed
+
+	thead
+		background-color: #f3f8f9
+
+		tr:hover
+			background-color: inherit
+			color: inherit
+
+		th:first-child
+			border-top-left-radius: 3px
+
+		th:last-child
+			border-top-right-radius: 3px
+
+	tbody
+		background-color: #fff
+
+		tr:last-child
+
+			td:first-child
+				border-bottom-left-radius: 3px
+
+			td:last-child
+				border-bottom-right-radius: 3px
+
+	th
+		font-weight: 500
+		vertical-align: middle
+
+	td
+		vertical-align: top
+
+		&:first-child
+			font-weight: 500
+			color: #124679
+
+		&:last-child
+			vertical-align: middle
+
+
+		&:nth-child(10)
+			display: block
+			width: 250px
+			overflow: hidden
+			position: relative
+			line-height: 1.2em
+			max-height: 3.6em
+			text-align: justify
+			padding: 0
+			margin: 15px 5px
+			margin-right: -1em
+			padding-right: 1em
+
+			&:before
+				content: '...'
+				position: absolute
+				right: 0
+				bottom: 2px
+
+			&:after
+				content: ''
+				position: absolute
+				right: 0
+				width: 1em
+				height: 1em
+				margin-top: 0.2em
+				background: #fff
+
+
+
+	th,td
+		padding: 15px 5px
+		text-align: left
+
+		&:first-child
+			padding-left: 15px
+
+		&:last-child
+			padding-right: 15px
+
+	tr
+		border-bottom: 1px solid #eff0f2
+		//transition: all .2s linear
+
+		&:hover
+			background-color: #74aae8
+			color: #fff
+
+			td:first-child
+				background-color: #74aae8
+				color: #fff
+
+			.search-video__btn-add-to-cart
+				background: url(../img/to-cart-white.png) no-repeat center
+
+
+
+.search-video__table-id
+	width: 138px
+
+.search-video__table-chanel
+	width: 90px
+
+.search-video__table-date
+	width: 88px
+
+.search-video__table-name
+	width: 120px
+
+.search-video__table-duration
+	width: 116px
+
+.search-video__table-topic
+	width: 124px
+
+.search-video__table-audience
+	width: 110px
+
+.search-video__table-issues
+	width: 101px
+
+.search-video__table-guests
+	width: 162px
+
+.search-video__table-description
+	width: 127px
+
+.search-video__table-add-to-cart
+	width: 75px
+
+
+.search-video__btn-add-to-cart
+	display: block
+	width: 30px
+	height: 30px
+	background: url(../img/to-cart.png) no-repeat center
+	margin: 0 auto
+	//transition: all .2s linear
+
+
+.search-video__btn-sort
+	display: inline-block
+	width: 20px
+	height: 10px
+	background: url(../img/icon-arrow-down-select.png) no-repeat center
+	vertical-align: middle
+
+
+.search-video__top-content
+	margin-bottom: 30px
+	margin-left: -15px
+	margin-right: -15px
+
+	@include clearfix
+
+.search-video__preview
+	width: 35%
+	float: left
+	padding: 0 15px
+
+	video
+		width: 100%
+		border-radius: 3px
+		box-shadow: 0 0 30px rgba(139, 139, 139, 0.35)
+
+.search-video__input-group
+	width: 65%
+	float: left
+	padding: 0 15px
+
+.search-video__input-group-row
+	margin-bottom: 20px
+	font-size: 0
+
+.search-video__input-search
+	width: calc(100% - 115px)
+	margin-right: 15px
+
+.search-video__btn-reset
+	float: right
+	width: 100px
+
+.search-video__btn-seatch
+	width: 100px
+
+
+.search-video__input-date-1,
+.search-video__input-date-2
+	display: inline-block
+	position: relative
+	width: 150px
+	margin-right: 15px
+
+	input
+		padding-right: 35px
+
+	&:before
+		content: ""
+		display: block
+		width: 20px
+		height: 20px
+		position: absolute
+		top: 50%
+		right: 10px
+		background: url(../img/icon-calendar.png) no-repeat center
+		transform: translateY(-50%)
+
+
+#search-video-date-1-mobile,
+#search-video-date-2-mobile
+	display: none
+
+
+.ui-datepicker
+	margin-top: 3px
+	color: #464646
+	box-shadow: 0 0 20px rgba(139, 139, 139, 0.25)
+	border-radius: 3px
+
+	table
+		font-family: 'Roboto', sans-serif
+		font-size: 14px
+		font-weight: 400
+		color: #464646
+
+	td
+
+		a
+			text-align: center
+			border-radius: 3px
+			color: #464646
+			margin-bottom: 5px
+	
+		
+
+	.ui-state-default
+		border: 0
+		background-color: #fff
+		transition: all .1s linear
+
+		&:hover
+			background-color: #0065c4
+			color: #fff
+
+	.ui-state-highlight
+		background-color: #ff7d00
+		color: #fff
+		font-weight: 500
+
+		&:hover
+			background-color: #ff5012
+
+	.ui-priority-secondary
+		opacity: .5
+
+		&:hover
+			opacity: 1
+
+	.ui-state-active
+		background-color: #68cc3d
+		font-weight: 500
+
+		&:hover
+			background-color: darken(#68cc3d, 10%)
+
+.ui-datepicker
+	.ui-datepicker-header
+		background-color: #fff
+		border: 0
+		border-bottom: 1px solid #f5f4f4
+		border-radius: 3px
+		padding: .2em 0 5px
+		margin-bottom: 5px
+
+.ui-widget.ui-widget-content
+	border: 1px solid #ececec
+
+.ui-widget-header .ui-icon
+	background-image: url(../img/icon-arrow-right.png)
+	background-position: center center
+
+.ui-icon-circle-triangle-w
+	transform: rotate(180deg)
+
+.ui-datepicker .ui-datepicker-next-hover, .ui-datepicker .ui-datepicker-next-hover
+	right: 2px
+	top: 2px
+
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-prev-hover
+	left: 2px
+	top: 2px
+
+.ui-datepicker
+	.ui-datepicker-next-hover, .ui-datepicker-prev-hover
+		background: #fff
+		border: 1px solid #ededed
+
+
+
+
+
+
+.search-video__select
+	display: inline-block
+	float: none
+	width: 150px
+
+.search-video__list-filters
+	display: inline-block
+	font-size: 14px
+
+	li
+		position: relative
+		display: inline-block
+		color: #fff
+		background-color: #006ec8
+		padding:
+			top: 6px
+			bottom: 6px
+			left: 15px
+			right: 30px
+		border-radius: 50px
+		margin-right: 10px
+
+.search-video__filter-delete
+	position: absolute
+	right: 10px
+	top: 50%
+	width: 10px
+	height: 10px
+	background: url(../img/search-filter-ico-close.png) no-repeat center
+	transform: translateY(-50%)
+
+.search-video__filter-add
+	font-weight: 700
+	display: inline-block
+	width: 26px
+	height: 26px
+	border-radius: 50%
+	background-color: #006ec8
+	color: #fff
+	text-align: center
+	line-height: 26px
+	vertical-align: top
+	font-size: 14px
+
+
+
+.search-video__btn-bin-trash
+	position: relative
+	background-color: #9aa1b2
+	padding-right: 45px
+	padding-left: 15px
+	font-size: 16px
+
+	&:hover
+		background-color: darken(#9aa1b2, 5%)
+
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		right: 15px
+		top: 50%
+		width: 20px
+		height: 20px
+		background: url(../img/to-cart-white.png) no-repeat center
+		transform: translateY(-50%)
+
+	&:after
+		content: attr(data-bin-count)
+		display: block
+		position: absolute
+		right: -10px
+		top: 50%
+		width: 20px
+		height: 20px
+		font-size: 12px
+		line-height: 19px
+		text-align: center
+		color: #fff
+		background-color: #d44512
+		border-radius: 50%
+		transform: translateY(-50%)
+		box-shadow: 0 0 0 2px #f3f8f9
+
+
+.content--sidebar-open
+	.search-video__table
+		table-layout: auto
+
+
+
+
+
+.video-js .vjs-big-play-button
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+.my-video-dimensions
+	width: 100%
+	height: 250px
+	border-radius: 3px

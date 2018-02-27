@@ -1,0 +1,189 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+
+.users-header
+	.header-page
+		margin-right: 20px
+		float: left
+
+	div
+		float: left
+		font-size: 16px
+		color: #878787
+
+	a
+		float: right
+		margin-left: 20px
+
+	.btn
+		.btn-text--small
+			display: none
+
+	.list-users-export
+		position: relative
+		font-size: 16px
+		color: #0065c4
+		padding-left: 30px
+		text-decoration: underline
+
+		&:hover
+			color: darken(#0065c4, 10%)
+			text-decoration: none
+
+		&:before
+			content: ""
+			display: block
+			width: 20px
+			height: 20px
+			position: absolute
+			top: 50%
+			left: 0
+			background: url(../img/list-users-export.png) no-repeat center
+			transform: translateY(-50%)
+
+
+	line-height: 36px
+	@include clearfix
+
+
+
+.list-users-panel
+	padding: 0
+
+	.list-page-panel__row
+		padding: 
+			top: 10px
+			bottom: 10px
+
+		transition: all .2s linear
+
+		@include clearfix
+
+		div
+			float: left
+			vertical-align: top
+			line-height: 32px
+
+		.avatar-wrapper:after,
+		.list-page-panel__delete
+			transition: all .2s linear
+
+		&:hover
+			background-color: #74aae8
+			color: #fff
+			border-color: #74aae8
+
+			.avatar-wrapper:after
+				box-shadow: 0 0 0 2px #74aae8
+
+			.list-page-panel__delete
+				background: url(../img/icon-close-3-white.png) no-repeat center
+
+
+
+
+.list-page-panel__header
+
+	@include clearfix
+
+	div
+		float: left
+		vertical-align: top
+
+
+	.list-users__input-name
+		width: 190px
+		margin-right: 115px
+
+	.list-users__select-role
+		width: 150px
+		margin-right: 60px
+
+	.list-users__select-status
+		width: 150px
+		margin-right: 60px
+
+		.select-status
+			padding-left: 18px
+
+		.current.status-lable
+			margin-left: -8px
+
+	.list-users__input-email
+		width: 190px
+		margin-right: 60px
+
+	.list-users__btn
+		float: right
+
+		.btn
+			height: 38px
+
+		.btn-text--small
+			display: none
+
+
+.list-users-panel__user-wrap
+	width: 230px
+	margin-right: 55px
+
+.list-users-panel__user-name
+
+.list-users-panel__user-role
+	width: 150px
+	margin-right: 60px
+	text-align: center
+
+.list-users-panel__user-status
+	width: 150px
+	margin-right: 60px
+	text-align: center
+
+	span
+		width: 100px
+
+.list-users-panel__user-email
+	width: 250px
+	padding-left: 15px 0
+
+
+
+.page-pagination
+	width: 150px
+	margin: 30px auto
+
+.pagination-list
+
+	li
+		display: inline-block
+		margin-right: 5px
+
+		a
+			display: block
+			padding: 10px 13px
+			border-radius: 3px
+			transition: all .2s linear
+
+		&:hover
+			a
+				background-color: #0065c4
+				color: #fff
+
+	.active
+		a
+			background-color: #0065c4
+			color: #fff
+
+
+
+
+
+.content--sidebar-open
+	.list-page-panel__header
+
+		div
+			margin-right: 45px
+
+			&:last-child
+				margin-right: 0

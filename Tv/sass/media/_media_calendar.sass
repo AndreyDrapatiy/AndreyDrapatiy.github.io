@@ -1,0 +1,135 @@
+@import "elements/vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1366px)
+	/**/
+
+	#calendar-content-wrapper
+		.content--sidebar-open
+
+			.calendar-item__responsible-avatar
+				display: none
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1280px)
+	/**/
+
+	#calendar-content-wrapper
+		.calendar-item__responsible-avatar
+			display: none
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1152px)
+	/**/
+
+	#calendar-content-wrapper
+		.calendar-col
+			width: 20%
+
+		.calendar-item__responsible-avatar
+			display: inline-block
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+	#calendar-content-wrapper
+		margin-top: 50px
+
+		.content
+			width: 100%
+
+		.calendar-col
+			width: 25%
+
+		.content--sidebar-open
+			width: 100%
+
+			.calendar-item__responsible-avatar
+				display: inline-block
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 667px)
+	/**/
+
+
+	.calendar-item__responsible-avatar,
+	.content--sidebar-open .calendar-item__responsible-avatar
+		//display: none
+
+	#header-calendar
+		.btn
+			padding: 11px 14px
+
+			.btn-text--full
+				display: none
+
+			.btn-text--small
+				display: inline
+
+	#calendar-content-wrapper
+		.calendar-col
+			width: 33.333%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 575px)
+	/**/
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+	#header-calendar
+		margin-bottom: 30px
+
+		.header-page
+			width: 100%
+			margin-right: 0
+			margin-bottom: 20px
+			line-height: 1
+
+		.calendar-select__month,
+		.calendar-select__year
+			width: calc(50% - 10px)
+			margin-bottom: 20px
+
+		.btn
+			float: none
+			width: 100%
+
+			.btn-text--small
+				display: none
+
+			.btn-text--full
+				display: inline
+
+	#calendar-content-wrapper
+		.calendar-col
+			float: none
+			width: 100%
+			padding-left: 40px
+			padding-right: 40px
+
+		.calendar-item__responsible-full-name-wrap
+			width: calc(100% - 46px)
+
+/* Айфон 6 */
+@media only screen and (max-width : 375px)
+	/**/
+
+
+/* Меньше Айфона 6 */
+@media only screen and (max-width : 374px)
+	/**/
+
+
+/* Custom, iPhone 5-4 */
+@media only screen and (max-width : 320px)
+	/**/

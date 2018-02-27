@@ -1,0 +1,162 @@
+@@include('../sections/head.html') @@include('../sections/sidebar.html')
+
+
+
+<div id="users-page-content-wrapper">
+	<div class="content" role="main">
+
+		<header class="users-header">
+			<h2 class="header-page">Користувачі</h2>
+			<div class="">Dsisplaying 3 of 34</div>
+			<a class="btn" href="#"><span class="btn-text--small">+</span><span class="btn-text--full">Додати корисутвача</span></a>
+			<a class="list-users-export" href="#">Список користувачів в CSV</a>
+		</header>
+
+		<div class="users-wrapper">
+
+			<div class="list-page-panel list-users-panel block--white">
+
+				<div class="list-page-panel__header">
+
+					<div class="list-users__input-name">
+						<input type="text" class="input" name="users-filter-name" placeholder="Иващенко">
+					</div>
+
+					<div class="list-users__select-role">
+						<select class="select" style="display: none;" >
+							<option class="select--null" value="">Обрати роль</option>
+							<option>Адміністратор</option>
+							<option>Журналіст</option>
+						</select>
+					</div>
+
+					<div class="list-users__select-status">
+						<select class="select select-status" style="display: none;" >
+							<option class="select--null" value="">Обрати статус</option>
+							<option class="status-lable status--user-active" data-status="user-active">Active</option>
+							<option class="status-lable status--user-blocked" data-status="user-blocked">Blocked</option>
+						</select>
+					</div>
+
+					<div class="list-users__input-email">
+						<input type="text" class="input" name="users-filter-email" placeholder="Email">
+					</div>
+
+					<div class="list-users__btn">
+						<a class="btn" href="#"><span class="btn-text--full">Применить фильтр</span><span class="btn-text--small">Применить</span></a>
+					</div>
+					
+
+				</div>
+
+				<div class="list-page-panel__body-wrapper">
+				<div class="list-page-panel__body">
+
+					<div class="list-page-panel__row">
+						<div class="list-users-panel__user-wrap">
+							<div class="list-users-panel__user-avatar avatar-wrapper">
+								<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+							</div>
+
+							<div class="list-users-panel__user-name">Дмитрий Иващенко</div>
+						</div>
+
+						<div class="list-users-panel__user-role">Адміністратор</div>
+
+						<div class="list-users-panel__user-status status-lable status--user-active">
+							<span>Active</span>
+						</div>
+
+						<div class="list-users-panel__user-email">betauser@gmail.com</div>
+
+						<a href="#" class="list-page-panel__delete"></a>
+
+					</div>
+
+					<div class="list-page-panel__row">
+						<div class="list-users-panel__user-wrap">
+							<div class="list-users-panel__user-avatar avatar-wrapper">
+								<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+							</div>
+
+							<div class="list-users-panel__user-name">Дмитрий Иващенко</div>
+						</div>
+
+						<div class="list-users-panel__user-role">Журналіст</div>
+
+						<div class="list-users-panel__user-status status-lable status--user-blocked">
+							<span>Blocked</span>
+						</div>
+
+						<div class="list-users-panel__user-email">betauser@gmail.com</div>
+
+						<a href="#" class="list-page-panel__delete"></a>
+
+					</div>
+
+					<div class="list-page-panel__row">
+						<div class="list-users-panel__user-wrap">
+							<div class="list-users-panel__user-avatar avatar-wrapper">
+								<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+							</div>
+
+							<div class="list-users-panel__user-name">Дмитрий Иващенко</div>
+						</div>
+
+						<div class="list-users-panel__user-role">Адміністратор</div>
+
+						<div class="list-users-panel__user-status status-lable status--user-active">
+							<span>Active</span>
+						</div>
+
+						<div class="list-users-panel__user-email">betauser@gmail.com</div>
+
+						<a href="#" class="list-page-panel__delete"></a>
+
+					</div>
+
+					<div class="list-page-panel__row">
+						<div class="list-users-panel__user-wrap">
+							<div class="list-users-panel__user-avatar avatar-wrapper">
+								<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+							</div>
+
+							<div class="list-users-panel__user-name">Дмитрий Иващенко</div>
+						</div>
+
+						<div class="list-users-panel__user-role">Журналіст</div>
+
+						<div class="list-users-panel__user-status status-lable status--user-active">
+							<span>Active</span>
+						</div>
+
+						<div class="list-users-panel__user-email">betauser@gmail.com</div>
+
+						<a href="#" class="list-page-panel__delete"></a>
+
+					</div>
+
+				</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<nav class="page-pagination" aria-label="page navigation">
+			<ul class="pagination-list">
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+			</ul>
+		</nav>
+
+
+
+	</div>
+	<!-- .content -->
+</div>
+<!-- .content-wrapper -->
+
+@@include('../sections/footer.html')

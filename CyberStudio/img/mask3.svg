@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="560px" viewBox="0 0 1440 560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="98.1490604%" y1="1.85093957%" x2="5.42490434%" y2="94.5750957%" id="linearGradient-1">
+            <stop stop-color="#4E5ACD" offset="0%"></stop>
+            <stop stop-color="#4D6CD4" offset="29.5749782%"></stop>
+            <stop stop-color="#4C98E5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(0.000000, -2902.000000)" fill="url(#linearGradient-1)">
+            <g id="partners" transform="translate(0.000000, 2902.000000)">
+                <path d="M2.40245111e-13,-1.13686838e-13 L1440,-1.13686838e-13 C1440,222.977295 1440,407.950258 1440,554.918889 C790.003906,589.639813 462.117188,272.949655 1.40585763e-13,560 C2.1379567e-15,456.449069 3.53577392e-14,269.782402 2.40245111e-13,-1.13686838e-13 Z" id="bg"></path>
+            </g>
+        </g>
+    </g>
+</svg>

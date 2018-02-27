@@ -1,0 +1,143 @@
+
+@media (min-width: 1152px){
+
+  .table-wrapper{
+    overflow: visible;
+  }
+
+}
+
+@media (max-width: 1150px){
+
+  .table-wrapper{
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1152px) {
+
+}
+
+@media (max-width: 768px){
+
+  .main-content{
+    max-width: 92%;
+    margin: 0 auto;
+    top:80px;
+    .table-wrapper{
+      width: 100%;
+    }
+  }
+  .sidebar-left{
+    left: -85px;
+    .hamburger{
+      position: fixed;
+      left: 0;
+    }
+  }
+  .sidebar-left-open-mobile{
+    left:0;
+    width: 100%;
+    box-shadow: none;
+  }
+  .sidebar-right-open { /* For JS open bar */
+    padding: 0;
+    max-width: 100%;
+  }
+  .sidebar-right{
+    width: 100%;
+    .menu-head{
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .download-item {
+      padding: 8px;
+
+      margin-left: auto;
+      margin-right: auto;
+      .download-name {
+        display: inline-block;
+        font-size: 14px;
+        color: #797979;
+        text-transform: lowercase;
+        padding: 0 2% 0 2%;
+      }
+
+      .download-img {
+        display: inline-block;
+      }
+
+      .download-progress {
+        display: inline-block;
+        min-width: 200px;
+
+      }
+    }
+    .comment-item{
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .chinachart{
+    width: 100%;
+  }
+  .chinachart-bar{
+    width: 100%;
+  }
+  .chinachart-line{
+    width: 100%;
+  }
+
+  .datepicker{
+    display: none;
+  }
+
+}
+
+@media (max-width: 480px){
+  .sidebar-right{
+    width: 100%;
+
+
+    .comment-item{
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+}
+
+@media (max-width: 320px){
+  .top-nav-bar{
+    .user-info{
+      padding: 0 15px 0 10px;
+    }
+  }
+
+  .sidebar-right{
+    width: 100%;
+    .menu-head{
+      width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .download-item {
+      width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+    .comment-item{
+      width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

@@ -1,0 +1,515 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+
+
+.header-program
+	margin-bottom: 40px
+	width: 100%
+
+.header-program__title
+	display: inline-block
+	margin-right: 40px
+
+
+.header-program__headline
+	font-size: 18px
+	font-weight: 400
+	margin-bottom: 10px
+
+.header-program__time
+	display: inline-block
+	color: #fff
+	background-color: $blue
+	padding: 5px 8px
+	border-radius: 3px
+	margin-right: 5px
+
+.header-program__date
+	font-weight: 500
+
+
+.header-program__status
+	display: inline-block
+	color: #fff
+	background-color: #757575
+	padding: 5px 10px
+	border-radius: 3px
+	margin-right: 40px
+	vertical-align: top
+
+.header-program__responsible
+	display: inline-block
+	margin-right: 50px
+	vertical-align: top
+	color: #7c7b7b
+
+.header-program__responsible-avatar
+	vertical-align: top
+
+	&:after
+		box-shadow: 0 0 0 2px #f3f8f9 !important
+
+.header-program__responsible-name
+	display: inline-block
+
+.header-program__full-time
+	display: inline-block
+	width: 200px
+	vertical-align: top
+
+.header-program__panel__actions
+	float: right
+
+	.btn
+		vertical-align: top
+
+		.btn-text--small
+			display: none
+
+.header-program__switch
+	//width: 90px
+	display: inline-block
+	margin-right: 15px
+	margin-top: 3px
+
+	label
+		width: 90px
+		height: 30px
+		border-radius: 15px
+		color: #fff
+		background: #909090
+
+		&:before
+			height: 20px
+			width: 20px
+			top: 5px
+			left: 7px
+
+		&:after
+			content: "ON AIR"
+			display: block
+			color: #fff
+			position: absolute
+			right: 14px 
+			font-weight: 500
+			line-height: 30px
+			//transition: right .2s ease-in-out
+
+	input:checked + label
+		&:before
+			transform: translateX(58px)
+
+		&:after
+			color: #fff
+			right: 33px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.panels-wrapper
+	position: relative
+	padding: 0 !important
+	overflow: visible !important
+
+
+.panel
+	position: relative
+	box-shadow: 0 0 30px rgba(139, 139, 139, 0.35)
+	margin-bottom: 20px
+	transition: opacity .2s linear
+	opacity: 1
+	border-radius: 3px
+
+	&:last-child
+		margin-bottom: 0
+
+
+
+.panel-header
+	display: flex
+	align-items: center
+	background-color: $bg-main
+	height: 60px
+	padding: 13px 25px
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+
+.panel__body
+	padding: 20px 25px
+	background-color: #fff
+	border-bottom-left-radius: 3px
+	border-bottom-right-radius: 3px
+
+
+
+.panel__body--active
+	.panel__content,
+	.panel__footer
+		opacity: 1
+
+.panel__body--disable
+
+	.panel_row
+		user-select: none
+		opacity: .5
+
+
+		.dropdown-trigger,
+		.tooltip-text
+			pointer-events: none
+
+.panel__footer
+	margin-top: 15px
+	transition: opacity .2s ease-in-out
+
+.panel-header__headline
+	display: inline-block
+	font-size: 14px
+	font-weight: 500
+	margin-right: 30px
+
+.panel-header__btn-group
+	margin-right: 30px
+
+	.panel__btn
+		display: inline-block
+		height: 20px
+		width: 20px
+		transition: background .2s linear
+
+	.panel__btn-change
+		background: url(../img/icon-pencil.png) no-repeat center
+
+		&:hover
+			background: url(../img/icon-pencil-hover.png) no-repeat center
+
+	.panel__btn-preview
+		background: url(../img/icon-eye.png) no-repeat center
+
+		&:hover
+			background: url(../img/icon-eye-hover.png) no-repeat center
+
+.panel-header__status
+	color: #fff
+	background-color: $orange
+	padding: 5px 10px
+	border-radius: 3px
+	margin-right: 565px
+
+
+.panel-header__timer
+	width: 210px
+
+.panel-header__switch
+	margin-right: 30px
+
+
+.timer-time
+	background-color: #eceeee
+	padding: 5px 15px
+	margin-bottom: 7px
+	text-align: center
+	border-radius: 3px
+
+	transition: background-color .2s linear, color .2s linear
+
+	.panel__timer--timeout
+		color: #ff5214
+
+		transition: color .2s linear
+
+.timer-progresbar
+	position: relative
+	width: 100%
+	height: 6px
+	background-color: #f1f0f0
+	border-radius: 3px
+
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 65%
+		height: 6px
+		background: #a6ee87
+		background: linear-gradient(to right, #a6ee87 0%,#6ace41 100%)
+		border-radius: 3px
+
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		right: 0
+		top: 0
+		height: 6px
+		border-top-right-radius: 3px
+		border-bottom-right-radius: 3px
+
+.timer-progresbar--gray:before
+	width: 20%
+	background: #b0b0b0
+	background: linear-gradient(to right, #b0b0b0 0%,#919191 100%)
+
+
+.timer-progresbar--full
+
+	&:before
+		width: 80%
+		border-top-right-radius: 0
+		border-bottom-right-radius: 0
+
+	&:after
+		width: 20%
+		background: #e13440
+
+
+.panel__actions
+	position: absolute
+	right: 25px
+
+.panel__actions-btn
+	display: inline-block
+	height: 30px
+	width: 30px
+
+.panel__actions-more
+	background: url(../img/icon-more.png) no-repeat center
+	transition: background-color .2s linear
+
+
+.panel__actions-collaps
+	background: url(../img/icon-arrow-up.png) no-repeat center
+
+.panel__actions-expand
+	background: url(../img/icon-arrow-up.png) no-repeat center
+	transform: rotate(180deg)
+
+
+.panel_row
+	display: flex
+	align-items: center
+	position: relative
+	padding:
+		top: 11px
+		bottom: 11px
+		left: 27px
+		right: 60px
+	border: 1px solid #ededed
+	background-color: #fff
+	border-radius: 3px
+	margin-top: -1px
+
+	transition: background-color .2s linear, opacity .2s ease-in-out
+
+	&:hover
+		background-color: #74aae8
+
+		.panel__content-headline
+			color: #fff
+
+		.panel__content-preview
+			background-color: #74aae8
+			color: #fff
+			box-shadow: inset 0 0 0 1px #fff
+		
+		.timer-time
+			background-color: #74aae8
+			color: #fff
+
+			.panel__timer--timeout
+				color: #fff
+
+		.avatar-wrapper:after
+			box-shadow: 0 0 0 2px #74aae8
+
+		.panel__content-user
+			color: #fff
+
+		.panel__content-montage-wrapper
+			background-color: #74aae8
+			//box-shadow: 0 0 0 1px #fff
+
+		.panel__actions-more
+			background: url(../img/icon-more-hover.png) no-repeat center
+
+		.panel__content-montage-icon
+			background: url(../img/icon-montage-hover.png) no-repeat center
+		
+
+
+
+.panel__timer
+	width: 210px
+	margin-right: 55px
+
+	.timer-time
+		background-color: #fff
+		margin-bottom: 0
+		padding: 0
+		margin-bottom: 7px
+
+		transition: background-color .2s linear, color .2s linear
+
+.panel__responsible-name
+	width: 220px
+	margin-right: 55px
+	text-align: left
+
+.panel__content-actions
+	position: absolute
+	right: 15px
+
+.panel__content-sortable
+	.ui-state-highlight
+		height: 62px
+		border-radius: 3px
+		background-color: #fdfdfd
+		border: 2px dashed #ededed
+		margin: 3px 0
+
+.panel-row--status-red
+	border-left: 3px solid $red
+
+.panel-row--status-orange
+	border-left: 3px solid $orange
+
+.panel-row--status-green
+	border-left: 3px solid $green
+
+.panel__content
+	position: relative
+	min-height: 62px
+	transition: opacity .2s ease-in-out
+	
+
+.panel__content-headline
+	color: #7c7b7b
+	font-size: 14px
+	font-weight: 400
+	margin-right: 55px
+	width: 270px
+
+	transition: color .2s linear
+
+	span:first-child
+		display: block
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
+.panel__content-headline-abbr
+	display: none
+
+.panel__content-preview
+	background-color: #f3f8f9
+	padding: 12px 15px
+	width: 515px
+	margin-right: 55px
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	border-radius: 3px
+
+	transition: background-color .2s linear, color .2s linear, box-shadow .2s linear
+
+.avatar-wrapper
+	position: relative
+	display: inline-block
+	margin-right: 15px
+	border-radius: 50%
+
+	&:after
+		content: ""
+		display: block
+		position: absolute
+		right: 0
+		top: 0
+		width: 8px
+		height: 8px
+		box-shadow: 0 0 0 2px #fff
+		border-radius: 50%
+		background-color: #909090
+
+		transition: box-shadow .2s linear
+
+
+.avatar__image
+	width: 32px
+	height: 32px
+	border-radius: 50%
+
+.panel__content-user
+	display: inline-block
+	color: #7c7b7b
+
+	transition: color .2s linear
+
+
+.panel__content-montage-wrapper
+	background-color: #f3f8f9
+	border-top-left-radius: 50px
+	border-bottom-left-radius: 50px
+	border-top-right-radius: 3px
+	border-bottom-right-radius: 3px
+	width: 195px
+
+	transition: background-color .2s linear
+
+.panel__content-montage-avatar
+	display: inline-block
+	margin-right: 15px
+
+.panel__content-montage-icon
+	display: inline-block
+	width: 16px
+	height: 16px
+	background: url(../img/icon-montage.png) no-repeat center
+	vertical-align: middle
+	margin-right: 15px
+	transition: background-color .2s linear
+
+.panel__content-montage-status
+	display: inline-block
+	width: 100px
+	font-size: 12px
+	padding: 4px 0px
+	color: #fff
+	text-align: center
+	border-radius: 3px
+	vertical-align: middle
+
+.panel__content-montage-status--corrected
+	background-color: $blue
+
+.panel__content-montage-status--compleated
+	background-color: $green
+
+.panel__content-montage-status--edit
+	background-color: $orange
+

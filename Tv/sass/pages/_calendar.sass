@@ -1,0 +1,212 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+
+#calendar-content-wrapper
+	.content
+		width: calc(100% - 70px)
+		padding: 30px
+
+#header-calendar
+	@include clearfix
+
+	.header-page
+		float: left
+		margin-right: 30px
+		line-height: 38px
+
+	.nice-select
+		float: left
+		clear: none
+
+	.calendar-select__month
+		width: 150px
+		margin-right: 20px
+
+	.calendar-select__year
+		width: 100px
+
+	.btn
+		float: right
+		margin-top: 1px
+
+		.btn-text--small
+			display: none
+
+.calendar-row
+	margin-left: -10px
+	margin-right: -10px
+	
+	@include clearfix
+
+.calendar-col
+	width: 14.2857%
+	float: left
+	padding-left: 10px
+	padding-right: 10px
+
+
+.calendar-header-item
+	padding: 10px
+	margin-bottom: 15px
+	text-align: center
+	border-radius: 3px
+
+.calendar-header-item--active
+	background-color: #00c359
+
+	.calendar-header-item__day,
+	.calendar-header-item__date
+		color: #fff
+
+.calendar-header-item__day
+	font-size: 18px
+	color: #7c7c7d
+	margin-bottom: 10px
+
+.calendar-header-item__date
+	color: #b3b4b4
+
+
+
+.calendar-item
+	position: relative
+	background-color: #fff
+	border-radius: 3px
+	padding-top: 22px
+	padding-bottom: 22px
+	padding-left: 12px
+	padding-right: 12px
+	border-left: 3px solid
+	margin-bottom: 15px
+	transition: box-shadow .2s ease-in-out
+
+	&:hover
+		box-shadow: 0 0 20px rgba(168, 169, 178, 0.7)
+
+	.dropdown
+		top: 50px
+		right: 8px
+
+.calendar-item--on-air
+	border-bottom-left-radius: 0
+	border-bottom-right-radius: 0
+	margin-bottom: 40px
+	z-index: 2
+
+	&:after
+		content: "ON AIR"
+		display: block
+		position: absolute
+		bottom: -25px
+		left: -3px
+		text-transform: uppercase
+		color: #fff
+		height: 25px
+		width: 102%
+		line-height: 25px
+		text-align: center
+		border-bottom-left-radius: 3px
+		border-bottom-right-radius: 3px
+		background-color: #ff5012
+		//box-shadow: 0 0 20px rgba(168, 169, 178, 0.7)
+		z-index: 1
+
+
+.calendar-item__broadcast_time
+	font-size: 20px
+	margin-bottom: 15px
+	font-weight: 300
+	padding-right: 35px
+
+.calendar-item__more
+	display: inline-block
+	position: absolute
+	right: 12px
+	top: 22px
+	height: 20px
+	width: 20px
+	background: url(../img/icon-more.png) no-repeat center
+
+.calendar-item__name
+	font-weight: 500
+	margin-bottom: 5px
+
+.calendar-item__broadcast_length
+	color: #7c7c7d
+	margin-bottom: 25px
+
+.calendar-item__responsible
+
+
+.calendar-item__responsible-avatar
+	margin-right: 10px
+
+.calendar-item__responsible-full-name-wrap
+	width: 79px
+	display: inline-block
+	vertical-align: middle
+
+.calendar-item__responsible-name
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+
+.calendar-item__responsible-second-name
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	
+
+
+
+
+.calenrar-item--status-red
+	border-color: #e94141
+
+.calenrar-item--status-orange
+	border-color: #fe8829
+
+.calenrar-item--status-green
+	border-color: #00c359
+
+
+.calendar-wrapper
+	position: relative
+
+.calendar-nav__arrow
+	display: block
+	width: 30px
+	height: 30px
+	border: 1px solid #d0d0d0
+	border-radius: 3px
+	position: absolute
+	top: 10px
+	background: #fff url(../img/calendar-arrow.png) no-repeat center
+	transition: all .2s linear
+
+	&:hover
+		border-color: #74aae8
+		background: #74aae8 url(../img/calendar-arrow-white.png) no-repeat center
+		
+
+
+.calendar-nav__prev
+	left: -15px
+	transform: rotate(180deg)
+
+.calendar-nav__next
+	right: -15px
+
+
+
+#calendar-content-wrapper
+	.content--sidebar-open
+		width: calc(100% - 200px)
+
+		.calendar-item__responsible-avatar
+			//display: none
+
+
+
+

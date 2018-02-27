@@ -1,0 +1,117 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+
+.element-type-wrapper
+
+	.btn
+		margin-top: 30px
+		float: right
+
+	.element-type__row
+		margin-left: -15px
+		margin-right: -15px
+		height: 202px
+
+		@include clearfix
+
+	.element-type__col
+		width: 25%
+		padding-left: 15px
+		padding-right: 15px
+		float: left
+
+		@include clearfix
+
+	.col-1
+	.col-2
+	.col-3
+		//min-width: 320px
+
+
+
+.element-type__input-wrap
+	margin-bottom: 15px
+
+	&:last-child
+		margin-bottom: 0
+
+.element-type__lable
+	font-size: 16px
+	color: #828282
+	margin-bottom: 10px
+
+.element-type__textarea
+	height: 117px
+
+.element-type__checkbox-wrap
+	display: inline-block
+	width: 128px
+	margin-bottom: 11px
+
+	&:last-child
+		margin-bottom: 0
+
+	&:nth-last-child(-2n+2)
+		margin-bottom: 0
+
+
+.element-type__radio-wrap
+	margin-bottom: 13px
+
+	&:last-child
+		margin-bottom: 0
+
+
+.element-type__block-collapse
+	margin-top: 26px
+
+.block-collapse
+	border-radius: 3px
+	box-shadow: 0 0 30px rgba(139, 139, 139, 0.5)
+	transition: box-shadow .2s linear
+
+.block-collapse--expand
+	box-shadow: 0 0 30px rgba(139, 139, 139, 0.2)
+
+.block-collapse--collaps
+	box-shadow: 0 0 30px rgba(139, 139, 139, 0.5)
+
+.block-collapse__header
+	position: relative
+	padding: 15px
+	background-color: #f3f8f9
+	border-top-left-radius: 3px
+	border-top-right-radius: 3px
+
+.block-collapse__body
+	padding: 15px
+	background-color: #fff
+	border-bottom-left-radius: 3px
+	border-bottom-right-radius: 3px
+
+.block-collapse__title
+	display: inline-block
+	padding-right: 20px
+
+
+.block-collapse__btn
+	display: block
+	position: absolute
+	top: 15px
+	right: 11px
+	height: 14px
+	width: 14px
+
+
+.block-collapse--expand
+	.block-collapse__header
+		border-bottom-left-radius: 3px
+		border-bottom-right-radius: 3px
+
+.block-collapse__btn--collaps
+	background: url(../img/icon-arrow-up.png) no-repeat center
+
+.block-collapse__btn--expand
+	background: url(../img/icon-arrow-up.png) no-repeat center
+	transform: rotateX(180deg)

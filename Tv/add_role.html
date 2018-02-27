@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Dashboard TV</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs.js"></script>
+	<script src="js/common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper"> <div class="sidebar">
+
+	<div class="sidebar-logo">Logotype</div>
+
+	<div id="btn-toggle" class="btn-sidebar-open">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<div class="nav" role="navigation">
+		<ul class="nav__list">
+			<li class="nav__item nav__item-1">
+				<a class="nav__item-link nav__item-link--active" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 1</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-2">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 2</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-3">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 3</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-4">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 4</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-5">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 5</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-6">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 6</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-7">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 7</span>
+				</a>
+			</li>
+
+		</ul>
+
+	</div>
+
+	<div class="sidebar-user-avatar">
+
+		<div class="avatar-wrapper dropdown-trigger">
+			<img class="avatar__image mCS_img_loaded" src="img/avatar-1.jpg" alt="">
+		</div>
+
+		<div class="dropdown">
+			<div class="dropdown__triangle-top"></div>
+			<ul class="dropdown__list">
+				<li class="dropdown__list-item"><a href="#">Профіль</a></li>
+				<li class="dropdown__list-item"><a href="#">Налаштування</a></li>
+				<li class="dropdown__list-item"><a href="#">Вихід</a></li>
+			</ul>
+			<div class="dropdown__triangle-bottom"></div>
+		</div>
+
+		<span class="sidebar-user-name">Иван Иванов</span>
+
+	</div>
+
+	<div class="sidebar-mobile-icon"></div>
+
+</div>
+
+
+
+<div id="main-page-content-wrapper">
+	<div class="content" role="main">
+
+		<header>
+			<h2 class="header-page">Додати роль</h2>
+		</header>
+
+		<div class="add-role-wrapper">
+
+			<div class="add-role__row">
+				<div class="add-role__col col-1">
+
+					<div class="add-role__input-wrap">
+						<label class="add-role__lable" for="input_element_type_name">Назва</label>
+						<input type="text" class="add-role__input input" id="input_element_type_name" name="element_type_name" autocomplete="off">
+					</div>
+
+				</div>
+			</div>
+
+			<div class="add-role__row">
+
+				<div class="add-role__col col-2">
+
+					<div class="block-collapse add-role__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Титри</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+							<div class="add-role__checkbox-wrap">
+								<input type="checkbox" class="add-role__checkbox checkbox" id="checkbox_add_role_1" />
+								<label for="checkbox_add_role_1">Створення та влкадення титрів</label>
+							</div>
+
+							<div class="add-role__checkbox-wrap">
+								<input type="checkbox" class="add-role__checkbox checkbox" id="checkbox_add_role_2" />
+								<label for="checkbox_add_role_2">Перелік титрів</label>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="block-collapse add-role__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Користувачі</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+							<div class="add-role__checkbox-wrap">
+								<input type="checkbox" class="add-role__checkbox checkbox" id="checkbox_add_role_3" />
+								<label for="checkbox_add_role_3">Створення, видалення, редагування користувачів</label>
+							</div>
+
+							<div class="add-role__checkbox-wrap">
+								<input type="checkbox" class="add-role__checkbox checkbox" id="checkbox_add_role_4" />
+								<label for="checkbox_add_role_4">Перегляд переліку користувачів</label>
+							</div>
+
+							<div class="add-role__checkbox-wrap">
+								<input type="checkbox" class="add-role__checkbox checkbox" id="checkbox_add_role_5" />
+								<label for="checkbox_add_role_5">Заміна свтого паролю</label>
+							</div>
+
+							<div class="add-role__checkbox-wrap">
+								<input type="checkbox" class="add-role__checkbox checkbox" id="checkbox_add_role_6" />
+								<label for="checkbox_add_role_6">Скачувати список користувачів в CSV</label>
+							</div>
+
+							
+
+						</div>
+
+					</div>
+
+
+					<div class="block-collapse add-role__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Програми</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="add-role__col col-3">
+
+					<div class="block-collapse add-role__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Ролі</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+						</div>
+
+					</div>
+
+					<div class="block-collapse add-role__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Вікно редагування програми</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+						</div>
+
+					</div>
+
+
+				</div>
+
+				<div class="add-role__col col-4">
+
+					<div class="block-collapse add-role__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Вікно редагування елементів в статусі “Готовий”</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+
+						</div>
+
+					</div>
+
+					<div class="block-collapse add-role__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Вікно редагування блоку</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="add-role__col col-5">
+
+					<div class="block-collapse add-role__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Вікно редагування елементів<br>“Без коментарів”, “БЗ”, “Сюжет” “Графіка”, “Синхрон” в статусь “Новий” або “В процесі”</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+						</div>
+
+					</div>
+
+
+					<div class="block-collapse add-role__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Вікно редагування інших елементів в статусі “Новий” або “В процесі”</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<a href="#" class="btn">Зберегти</a>
+
+		</div>
+
+
+
+	</div>
+	<!-- .content -->
+</div>
+<!-- .content-wrapper -->
+
+</div>
+<!-- #wrapper -->
+
+</body>
+
+</html>

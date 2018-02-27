@@ -1,0 +1,61 @@
+
+@@include('../sections/head.html')
+
+<div id="login-page-wrapper">
+
+
+	<div class="login-container">
+
+		<h2 class="login-headline">Log in</h2>
+
+		<form id="form-login" class="login-form">
+			
+			<div class="login-input-group">
+
+				<label class="login-lable" for="login-input-name">Логин</label>
+
+				<input
+					type="text"
+					id="login-input-name"
+					class="login-input input"
+					name="login-input-name"
+					
+					data-validation="length" 
+					data-validation-length="3-12" 
+					data-validation-error-msg="Невірний логін"
+				/>
+
+			</div>
+
+			<div class="login-input-group">
+
+				<label class="login-lable" for="login-input-password">Пароль</label>
+				<input
+
+					type="password"
+					id="login-input-password" 
+					class="login-input input"
+					name="login-input-password"
+
+					data-validation="length"
+					data-validation-length="min5"
+					data-validation-error-msg="Невірний пароль"
+				/>
+
+			</div>
+
+			<button type="submit" class="btn btn--full">Увійти</button>
+
+			<a class="login-link" href="#">Забули пароль?</a>
+
+		</form>
+
+
+	</div>
+
+
+
+</div>
+<!-- .content-wrapper -->
+
+@@include('../sections/footer.html')

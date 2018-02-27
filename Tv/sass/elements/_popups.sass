@@ -1,0 +1,394 @@
+@import "vars"
+@import "../mixins/mixins"
+
+.popup-wrapper
+	position: relative
+	padding: 30px
+	background-color: #f3f7f8
+	width: 580px
+	margin: 40px auto
+	border-radius: 3px
+
+.popup-headline
+	margin-bottom: 20px
+
+	h4
+		font-size: 16px
+		font-weight: 400
+		color: #464646
+
+
+
+.popup-content
+
+	.popup-input-group
+		margin-right: -15px
+		margin-left: -15px
+		margin-bottom: 25px
+	
+		@include clearfix
+
+	.group
+		position: relative
+		float: left
+		padding-right: 15px
+		padding-left: 15px
+
+	.select
+		float: left
+		clear: none
+
+	.popup-image
+		margin-bottom: 20px
+
+		img
+			width: 100%
+			border-radius: 3px
+
+
+.popup-footer
+
+	margin-top: 30px
+
+	@include clearfix
+
+	.btn
+		float: right
+
+
+.popup-lable
+	color: #0065c4
+	line-height: 38px
+	float: left
+
+.popup-input
+	float: left
+
+
+
+#program-add-block
+	.group-1
+		lable
+			width: 135px
+		input
+			width: 385px
+
+	.group-2
+		lable
+			width: 68px
+
+		.select
+			margin-left: 24px
+			width: 155px
+
+	.group-3
+		lable
+			width: 100px
+			line-height: 18px
+			margin-right: 20px
+
+		input
+			width: 123px
+			text-align: center
+
+
+#program-add
+	width: 800px
+
+	.group-1,
+	.group-5,
+	.group-6
+		lable
+			width: 120px
+			margin-right: 20px
+
+		input, .select
+			width: 600px
+
+
+	.group-2
+		lable
+			width: 50px
+			margin-right: 20px
+
+		.select
+			width: 150px
+
+	.group-3
+		lable
+			width: 65px
+			margin-right: 20px
+			line-height: 18px
+
+		input
+			width: 155px
+			text-align: center
+
+	.group-4
+		lable
+			width: 90px
+			margin-right: 20px
+			line-height: 18px
+	
+		input
+			width: 110px
+			text-align: center
+
+	.group-6
+		lable
+			line-height: 18px
+
+
+#title-add-1
+	width: 650px
+
+	.group-1,
+	.group-2
+		lable
+			width: 130px
+			margin-right: 20px
+
+		input
+			width: 440px
+
+#title-edit
+	width: 650px
+
+	.group-1
+		padding:
+			top: 8px
+			bottom: 8px
+
+	.group-2
+		float: right
+
+		.custom-file-upload
+			padding: 0
+			text-align: right
+			width: 458px
+
+			.custom-file-upload__name
+				color: #b5b5b5
+
+	.group-3,
+	.group-4
+		lable
+			width: 130px
+			margin-right: 20px
+
+		input
+			width: 440px
+
+	.group-5
+		input
+			width: 300px
+
+	.group-6
+		input
+			width: 220px
+			padding-right: 45px
+
+	.title-edit__btn-add-field
+		float: left
+
+	.title-edit__btn-delete-field
+		display: block
+		width: 10px
+		height: 38px
+		background: url(../img/icon-close-2.png) center no-repeat
+
+	.title-edit__input-count
+		position: absolute
+		right: 27px
+		top: 50%
+		transform: translateY(-50%)
+		color: #b5b5b5
+
+
+
+
+#title-add-2
+	width: 630px
+
+
+	.popup-titles-nav
+		margin-bottom: 20px
+
+	.popup-titles__btn-cards
+
+	.popup-titles__btn-list
+
+	.popup-titles-wrapper
+		height: 330px
+		margin-right: -30px
+
+		@include clearfix
+
+	.popup-title-item
+
+	.popup-title-item--card
+		float: left
+		width: 30.888%
+		margin-bottom: 30px
+		margin-right: 3.666%
+
+		&:nth-child(3n+3) 
+			margin-right: 0
+
+
+		.popup-title-item__img
+			height: 120px
+			width: 100%
+			margin-bottom: 10px
+
+
+	.popup-title-item__img
+		border-radius: 3px
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+
+
+	.popup-title-item--list
+		position: relative
+		width: 100%
+		height: 60px
+		box-shadow: 0 0 30px rgba(139, 139, 139, 0.35)
+		margin-bottom: 10px
+		border-radius: 3px
+		padding-right: 50px
+		transition: background-color .2s linear, color .2s linear
+
+		&:hover
+			background-color: #74aae8
+			color: #fff
+
+		&:last-child
+			margin-bottom: 0
+
+		.popup-title-item__img
+			display: inline-block
+			width: 110px
+			height: 60px
+			vertical-align: middle
+			margin-right: 20px
+			border-top-left-radius: 3px
+			border-bottom-left-radius: 3px
+			border-top-right-radius: 0
+			border-bottom-right-radius: 3px
+
+		.popup-title-item__content
+			display: inline-block
+			vertical-align: middle
+
+		.popup-title-item__btn-delete
+			display: block
+		
+		.popup-title-item__name
+			max-width: 383px
+			overflow: hidden
+			white-space: nowrap
+			text-overflow: ellipsis
+
+	.popup-title-item__content
+
+	.popup-title-item__name
+		font-weight: 500
+
+	.popup-title-item__btn-delete
+		display: none
+		position: absolute
+		top: 50%
+		right: 10px
+		height: 30px
+		width: 30px
+		background: url(../img/icon-close-2.png) no-repeat center
+		transform: translateY(-50%)
+
+
+	.mCSB_inside>.mCSB_container
+
+		@include clearfix
+
+	.mCSB_scrollTools
+		right: 5px
+
+
+
+
+
+
+
+
+
+
+
+#popup-window
+	width: 500px
+
+	.popup-content
+		margin-bottom: 30px
+
+		p
+			color: #8e8e8e
+			font-size: 16px
+			line-height: 18px
+
+	.popup-btn__yes
+
+	.popup-btn__no
+		margin-right: 15px
+		background-color: #737575
+
+		&:hover
+			background-color: darken(#737575, 10%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sweet-alert
+	background-color: #e13440
+	color: #fff
+	font-family: 'Roboto', sans-serif
+	top: 140px
+	padding: 0
+	border-radius: 3px
+	//transform: translateY(100%)
+
+	h2
+		font-size: 16px
+		font-weight: 400
+		color: #fff
+		margin: 0
+		line-height: 50px
+
+.sweet-alert .sa-icon.sa-error
+	border-color: rgb(255, 255, 255)
+
+.sweet-alert .sa-icon.sa-error .sa-line
+	background-color: #fff
+
+.sweet-alert[data-has-confirm-button=false][data-has-cancel-button=false]
+	padding-bottom: 0
+
+
+.sweet-alert .sa-button-container
+	display: none
+
+

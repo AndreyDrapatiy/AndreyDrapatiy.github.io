@@ -1,0 +1,260 @@
+@import "elements/vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1280px)
+	/**/
+
+
+	#users-page-content-wrapper
+
+		.list-page-panel__header
+			.list-users__input-name,
+			.list-users__select-role,
+			.list-users__select-status,
+			.list-users__input-email
+				margin-right: 50px
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1152px)
+	/**/
+
+
+	#users-page-content-wrapper
+
+		.users-header div
+			display: none
+
+		.list-page-panel__header
+			.list-users__input-name,
+			.list-users__select-role,
+			.list-users__select-status,
+			.list-users__input-email
+				margin-right: 20px
+
+
+		.list-users-panel
+			.list-page-panel__row
+				div
+					margin-right: 25px
+
+					&:last-child
+						margin-right: 0
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1024px)
+	/**/
+
+	#users-page-content-wrapper
+		.users-header
+			.header-page
+				width: 150px
+
+			.btn
+				margin-left: 70px
+
+			.list-users-export
+				margin-left: 30px
+
+
+		.list-page-panel__header
+			.list-users__input-name,
+			.list-users__select-role,
+			.list-users__select-status,
+			.list-users__input-email
+				margin-right: 12px
+
+		.list-users-panel
+			.list-page-panel__row
+				div
+					margin-right: 15px
+
+					&:last-child
+						margin-right: 0
+
+		.list-users__btn
+
+			.btn-text--full
+				display: none
+
+			.btn-text--small
+				display: inline
+
+
+		.list-users-panel__user-wrap
+			width: 220px
+			margin-right: 20px
+
+		.list-users-panel__user-role
+			margin-right: 20px
+
+		.list-users-panel__user-status
+			margin-right: 20px
+
+		.list-users-panel__user-email
+			width: 200px
+
+
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+	#users-page-content-wrapper
+		margin-top: 50px
+
+		.list-users-export
+			display: none
+
+
+		.list-page-panel
+			position: relative
+
+
+		.list-page-panel__header
+			div
+				width: 100%
+				margin-bottom: 10px
+
+				&:last-child
+					margin-bottom: 0
+
+		.list-users__btn
+
+			.btn
+				width: 100%
+
+			.btn-text--full
+				display: inline
+
+			.btn-text--small
+				display: none
+
+		.list-page-panel__body-wrapper
+			overflow-x: scroll
+			overflow-y: visible
+			margin-left: 220px
+
+
+		.list-page-panel__body
+			width: 100%
+			display: table
+			table-layout: fixed
+			border-collapse: collapse
+			//margin: 15px
+			padding: 0
+
+
+		.list-page-panel__row
+			display: table-row
+			padding: 0
+
+			&:last-child
+				.list-users-panel__user-wrap
+					border-bottom: 1px solid #e5e4e4
+					padding: 8px 12px 7px 12px
+
+		.list-page-panel__delete
+			position: relative
+			right: initial
+			top: initial
+			width: 50px
+			height: auto
+			transform: none
+
+		.list-users-panel__user-wrap,
+		.list-users-panel__user-role,
+		.list-users-panel__user-status,
+		.list-users-panel__user-email,
+		.list-page-panel__delete
+			display: table-cell
+			float: none
+			margin-right: 0
+			padding: 8px 12px
+
+
+		.list-users-panel__user-role
+			width: 200px
+
+		.list-users-panel__user-email
+			width: 250px
+
+		.list-users-panel__user-wrap
+			position: absolute
+			left: 0
+			margin-top: -1px
+			border-top: 1px solid #e5e4e4
+			border-right: 1px solid #e5e4e4
+
+
+		.page-pagination
+			width: 105px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 667px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 575px)
+	/**/
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+	#users-page-content-wrapper
+
+		.users-header
+			.header-page
+				width: calc(100% - 36px)
+				margin-right: 0
+				margin-bottom: 30px
+
+			.btn
+				margin-left: 0
+				padding: 11px 14px
+
+				.btn-text--full
+					display: none
+
+				.btn-text--small
+					display: inline
+
+		.list-page-panel__header
+			padding: 20px
+
+		.list-users-panel__user-avatar
+			display: none
+
+		.list-users-panel__user-wrap
+			width: 140px
+
+		.list-page-panel__body-wrapper
+			margin-left: 140px
+
+		.list-users-panel__user-name
+			line-height: 16px
+
+/* Айфон 6 */
+@media only screen and (max-width : 375px)
+	/**/
+
+
+/* Меньше Айфона 6 */
+@media only screen and (max-width : 374px)
+	/**/
+
+
+/* Custom, iPhone 5-4 */
+@media only screen and (max-width : 320px)
+	/**/

@@ -1,0 +1,119 @@
+@@include('../sections/head.html') @@include('../sections/sidebar.html')
+
+
+
+<div id="main-page-content-wrapper">
+	<div class="content" role="main">
+
+		<header>
+			<h2 class="header-page">Тип элемента</h2>
+		</header>
+
+		<div class="element-type-wrapper">
+
+			<div class="element-type__row">
+				<div class="element-type__col col-1">
+
+					<div class="element-type__input-wrap">
+						<label class="element-type__lable" for="input_element_type_name">Назва</label>
+						<input type="text" class="element-type__input input" id="input_element_type_name" name="element_type_name" autocomplete="off">
+					</div>
+
+					<div class="element-type__input-wrap">
+						<label class="element-type__lable" for="input_element_type_abbr">Скорочення</label>
+						<input type="text" class="element-type__input input" id="input_element_type_abbr" name="element_type_abbr" autocomplete="off">
+					</div>
+
+				</div>
+
+				<div class="element-type__col col-2">
+
+					<div class="element-type__textarea-wrap">
+						<label class="element-type__lable">Опис</label>
+						<textarea class="element-type__textarea textarea"></textarea>
+					</div>
+
+				</div>
+
+				<div class="element-type__col col-3">
+
+					<div class="block-collapse element-type__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Елеменет ключає в себе:</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+							<div class="element-type__checkbox-wrap">
+								<input type="checkbox" class="element-type__checkbox checkbox" id="checkbox_element_type_text" />
+								<label for="checkbox_element_type_text">Текст</label>
+							</div>
+
+							<div class="element-type__checkbox-wrap">
+								<input type="checkbox" class="element-type__checkbox checkbox" id="checkbox_element_type_video" />
+								<label for="checkbox_element_type_video">Відео</label>
+							</div>
+
+							<div class="element-type__checkbox-wrap">
+								<input type="checkbox" class="element-type__checkbox checkbox" id="checkbox_element_type_titles" />
+								<label for="checkbox_element_type_titles">Титри</label>
+							</div>
+
+							<div class="element-type__checkbox-wrap">
+								<input type="checkbox" class="element-type__checkbox checkbox" id="checkbox_element_type_infograph" />
+								<label for="checkbox_element_type_infograph">Інфографіку</label>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="element-type__col col-4">
+					<div class="block-collapse element-type__block-collapse">
+
+						<div class="block-collapse__header">
+							<div class="block-collapse__title">Підрахунок хронометражу:</div>
+							<a href="#" class="block-collapse__btn block-collapse__btn--collaps"></a>
+						</div>
+						<div class="block-collapse__body">
+
+							<div class="element-type__radio-group">
+
+								<div class="element-type__radio-wrap">
+									<input type="radio" class="element-type__radio radio" name="counting_timing" id="radio_element_type_only_text" />
+									<label for="radio_element_type_only_text">Тільки по тексту</label>
+								</div>
+
+								<div class="element-type__radio-wrap">
+									<input type="radio" class="element-type__radio radio" name="counting_timing" id="radio_element_type_only_video" />
+									<label for="radio_element_type_only_video">Тільки по відео</label>
+								</div>
+
+								<div class="element-type__radio-wrap">
+									<input type="radio" class="element-type__radio radio" name="counting_timing" id="radio_element_type_other" />
+									<label for="radio_element_type_other">По більш довгому</label>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+			<a href="#" class="btn">Зберегти</a>
+
+		</div>
+
+
+
+	</div>
+	<!-- .content -->
+</div>
+<!-- .content-wrapper -->
+
+@@include('../sections/footer.html')

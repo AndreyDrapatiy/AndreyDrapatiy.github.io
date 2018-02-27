@@ -1,0 +1,57 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+
+.language-table-wrapper
+	position: relative
+	width: 600px
+	box-shadow: 0 0 30px rgba(139, 139, 139, 0.5)
+	border-radius: 3px
+
+.language-table-content
+	border-radius: 3px
+	margin-bottom: 15px
+
+	.input
+		height: 30px
+
+	.language__select
+		width: 125px
+		height: 30px
+		line-height: 28px
+		both: none
+		float: none
+
+	table
+		width: 100%
+		border-radius: 3px
+		font-size: 16px
+
+	tr
+		&:nth-child(odd)
+			background-color: #f3f8f9
+
+		&:nth-child(even)
+			background-color: #fff
+
+	td,th
+		padding-top: 15px
+		padding-bottom: 15px
+		vertical-align: middle
+
+		&:nth-child(1)
+			width: 175px
+			padding-left: 30px
+			border-radius: 3px
+
+		&:nth-child(2)
+			width: 145px
+
+		&:nth-child(3)
+			width: 220px
+			padding-right: 30px
+			border-radius: 3px
+
+	th
+		font-weight: 400
+		line-height: 60px

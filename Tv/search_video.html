@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Dashboard TV</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs.js"></script>
+	<script src="js/common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper"> 
+
+<div class="sidebar">
+
+	<div class="sidebar-logo">Logotype</div>
+
+	<div id="btn-toggle" class="btn-sidebar-open">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<div class="nav" role="navigation">
+		<ul class="nav__list">
+			<li class="nav__item nav__item-1">
+				<a class="nav__item-link nav__item-link--active" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 1</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-2">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 2</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-3">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 3</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-4">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 4</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-5">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 5</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-6">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 6</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-7">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 7</span>
+				</a>
+			</li>
+
+		</ul>
+
+	</div>
+
+	<div class="sidebar-user-avatar">
+
+		<div class="avatar-wrapper dropdown-trigger">
+			<img class="avatar__image mCS_img_loaded" src="img/avatar-1.jpg" alt="">
+		</div>
+
+		<div class="dropdown">
+			<div class="dropdown__triangle-top"></div>
+			<ul class="dropdown__list">
+				<li class="dropdown__list-item"><a href="#">Профіль</a></li>
+				<li class="dropdown__list-item"><a href="#">Налаштування</a></li>
+				<li class="dropdown__list-item"><a href="#">Вихід</a></li>
+			</ul>
+			<div class="dropdown__triangle-bottom"></div>
+		</div>
+
+		<span class="sidebar-user-name">Иван Иванов</span>
+
+	</div>
+
+	<div class="sidebar-mobile-icon"></div>
+
+</div>
+
+<div id="search-video-content-wrapper">
+
+	<div class="content" role="main">
+
+		<header id="header-search-video">
+			<h2 class="header-page">Пошук відео</h2>
+		</header>
+
+		<div class="search-video__top-content">
+
+			<div class="search-video__preview">
+
+
+				<video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+					<source src="video/mov_bbb.mp4" type='video/mp4'>
+					<source src="video/mov_bbb.ogg" type='video/ogg'>
+				</video>
+			</div>
+
+			<div class="search-video__input-group">
+				<form>
+					<div class="search-video__input-group-row">
+						<input type="search" class="search-video__input-search input" name="search-video-input" placeholder="Пошук">
+						<button type="submit" class="btn search-video__btn-seatch">Пошук</button>
+					</div>
+
+					<div class="search-video__input-group-row">
+
+						<div class="search-video__input-date-1">
+							<input id="search-video-date-1" type="text" class="input" name="search-video-date-1" placeholder="Дата з">
+							<input id="search-video-date-1-mobile" type="date" class="input" name="search-video-date-1-mobile" placeholder="Дата з">
+						</div>
+
+						<div class="search-video__input-date-2">
+							<input id="search-video-date-2" type="text" class="input" name="search-video-date-2-mobile" placeholder="Дата до">
+							<input id="search-video-date-2-mobile" type="date" class="input" name="search-video-date-1-mobile" placeholder="Дата з">
+						</div>
+
+						<select class="select search-video__select">
+							<option class="select--null" value="">Діапазон</option>
+							<option>Пункт 1</option>
+							<option>Пункт 2</option>
+						</select>
+
+						<button type="reset" class="btn search-video__btn-reset">Очистити</button>
+					</div>
+				</form>
+
+				<div class="search-video__input-group-row">
+					<span>Фільтри:</span>
+					<ul class="search-video__list-filters">
+						<li>
+							<span>Головні</span>
+							<a href="#" class="search-video__filter-delete"></a>
+						</li>
+						<li>
+							<span>Головні</span>
+							<a href="#" class="search-video__filter-delete"></a>
+						</li>
+					</ul>
+					<a href="#" class="search-video__filter-add">+</a>
+				</div>
+
+				<div class="search-video__input-group-row">
+					<a href="#" class="btn search-video__btn-bin-trash" data-bin-count="3">BIN-кошик</a>
+				</div>
+				
+
+			</div>
+
+		</div>
+
+
+
+		<div class="search-video__bottom-content">
+
+			<div class="search-video__table-wrapper">
+			<table class="search-video__table">
+
+				<thead>
+					<tr>
+						<th class="search-video__table-id">
+							ID
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-chanel">
+							Канал
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-date">
+							Дата <span class="hidden">ефіру</span>
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-name">
+							Назва
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-duration">
+							Тривалість
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-topic">
+							Теми
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-audience">
+							Аудиторія
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-issues">
+							Питання <span class="hidden">передачі</span>
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-guests">
+							Гості <span class="hidden">передачі</span>
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-description">
+							Опис
+							<a href="#" class="search-video__btn-sort"></a>
+						</th>
+						<th class="search-video__table-add-to-cart">
+							<span class="hidden">Додати</span>В кошик
+						</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Sl 121220 kbm</td>
+						<td>Інтер</td>
+						<td>26.04.2017</td>
+						<td>Шустер Live</td>
+						<td>01:56:02:32</td>
+						<td>Осень выбора. Согласится ли Украина на условия России?</td>
+						<td>Вся Украина Професура</td>
+						<td>Каким путем должна идти Украина?</td>
+						<td>Александр Ефремов Ппетр Порошенко Инна Богословская</td>
+						<td>Тайга в центре Москвы! В Зарядье высаживают сотни деревьев и кустарников из самых разных заповедных мест страны.</td>
+						<td><a href="#" class="search-video__btn-add-to-cart"></a></td>
+					</tr>
+					<tr>
+						<td>Sl 121220 kbm</td>
+						<td>Інтер</td>
+						<td>26.04.2017</td>
+						<td>Шустер Live</td>
+						<td>01:56:02:32</td>
+						<td>Осень выбора. Согласится ли Украина на условия России?</td>
+						<td>Вся Украина Професура</td>
+						<td>Каким путем должна идти Украина?</td>
+						<td>Александр Ефремов Ппетр Порошенко Инна Богословская</td>
+						<td>"Екатерина. Взлет" - это продолжение линии судьбы великой императрицы, начатой в фильме "Екатерина". </td>
+						<td><a href="#" class="search-video__btn-add-to-cart_active"></a></td>
+					</tr>
+					<tr>
+						<td>Sl 121220 kbm</td>
+						<td>Інтер</td>
+						<td>26.04.2017</td>
+						<td>Шустер Live</td>
+						<td>01:56:02:32</td>
+						<td>Осень выбора. Согласится ли Украина на условия России?</td>
+						<td>Вся Украина Професура</td>
+						<td>Каким путем должна идти Украина?</td>
+						<td>Александр Ефремов Ппетр Порошенко Инна Богословская</td>
+						<td>Голосование «Центрального телевидения»: о чем кроме главных тем недели вы хотите узнать в эту субботу, в 19:00?</td>
+						<td><a href="#" class="search-video__btn-add-to-cart"></a></td>
+					</tr>
+				</tbody>
+
+			</table>
+
+		</div>
+		</div>
+
+		<!-- .content -->
+	</div>
+	<!-- .content-wrapper -->
+
+</div>
+
+</div>
+<!-- #wrapper -->
+
+</body>
+
+</html>

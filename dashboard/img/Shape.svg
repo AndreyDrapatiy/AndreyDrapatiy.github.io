@@ -1,0 +1,75 @@
+<svg width="6" height="11" viewBox="0 0 6 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Shape</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1267 -264)">
+<rect x="1267" y="264" width="6" height="6" fill="#FFFFFF"/>
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 180 42L 1620 42L 1620 1987L 180 1987L 180 42Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="Desktop HD 0" clip-path="url(#clip-0)">
+<g id="bg">
+<use xlink:href="#path0_fill" transform="translate(148 43)" fill="#4F4F4F"/>
+</g>
+<g id="1">
+<g id="main">
+<g id="bg" filter="url(#filter0_d)">
+<use xlink:href="#path1_fill" transform="translate(197 80)" fill="#FFFFFF"/>
+</g>
+<g id="cols">
+<g id="bg" filter="url(#filter1_d)">
+<use xlink:href="#path2_fill" transform="translate(672 214)" fill="#FFFFFF"/>
+</g>
+<g id="cols copy">
+<g id="cols">
+</g>
+</g>
+</g>
+</g>
+<g id="right menu">
+<g id="bg" filter="url(#filter2_d)">
+<use xlink:href="#path3_fill" transform="translate(1235 140)" fill="#F8F8F8"/>
+</g>
+<g id="name">
+<g id="Shape">
+<use xlink:href="#path4_fill" transform="matrix(6.12323e-17 -1 1 6.12323e-17 1267 274.998)" fill="#8D9EA2"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="182" y="67" width="1405" height="1912" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="2"/>
+<feGaussianBlur stdDeviation="7.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.186384 0 0 0 0 0.186384 0 0 0 0 0.186384 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter1_d" filterUnits="userSpaceOnUse" x="608" y="152" width="957" height="449" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="2"/>
+<feGaussianBlur stdDeviation="32"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.70456 0 0 0 0 0.70456 0 0 0 0 0.70456 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter2_d" filterUnits="userSpaceOnUse" x="1201" y="108" width="405" height="1889" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="2"/>
+<feGaussianBlur stdDeviation="17"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.313271 0 0 0 0 0.313271 0 0 0 0 0.313271 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<path id="path0_fill" fill-rule="evenodd" d="M 0 0L 1472 0L 1472 2004L 0 2004L 0 0Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 0 3C 0 1.34315 1.34315 0 3 0L 1372 0C 1373.66 0 1375 1.34315 1375 3L 1375 1879C 1375 1880.66 1373.66 1882 1372 1882L 3 1882C 1.34315 1882 0 1880.66 0 1879L 0 3Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 0 3C 0 1.34315 1.34315 0 3 0L 826 0C 827.657 0 829 1.34315 829 3L 829 318C 829 319.657 827.657 321 826 321L 3 321C 1.34315 321 0 319.657 0 318L 0 3Z"/>
+<path id="path3_fill" fill-rule="evenodd" d="M 0 0L 337 0L 337 1818C 337 1819.66 335.657 1821 334 1821L 0 1821L 0 0Z"/>
+<path id="path4_fill" d="M 0.090625 0.771875L 0.146875 0.8375L 4.39687 5.72813C 4.54063 5.89375 4.75625 5.99687 4.99687 5.99687C 5.2375 5.99687 5.45312 5.89062 5.59688 5.72813L 9.84375 0.846875L 9.91562 0.765625C 9.96875 0.6875 10 0.59375 10 0.49375C 10 0.221875 9.76875 0 9.48125 0L 0.51875 0C 0.23125 0 0 0.221875 0 0.49375C 0 0.596875 0.034375 0.69375 0.090625 0.771875Z"/>
+</defs>
+</svg>

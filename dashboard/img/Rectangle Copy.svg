@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="17px" viewBox="0 0 24 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-64.000000, -57.000000)" fill="#2F2F2F">
+            <g id="1" transform="translate(33.000000, 35.000000)">
+                <g id="left-menu-small">
+                    <g id="ico-humburger" transform="translate(31.000000, 22.000000)">
+                        <path d="M0,7 L24,7 L24,10 L0,10 L0,7 Z M0,14 L24,14 L24,17 L0,17 L0,14 Z M0,0 L24,0 L24,3 L0,3 L0,0 Z" id="Rectangle-Copy"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

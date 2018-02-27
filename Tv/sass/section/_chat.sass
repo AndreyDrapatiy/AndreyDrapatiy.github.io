@@ -1,0 +1,274 @@
+@import "elements/vars"
+@import "../mixins/mixins"
+
+
+
+#global-chat
+	position: absolute
+	right: 25px
+	bottom: 90px
+	width: 350px
+	visibility: hidden
+	z-index: 999
+
+
+.chat-trigger
+	position: fixed
+	right: 30px
+	bottom: 20px
+	display: block
+	width: 60px
+	height: 60px
+	border-radius: 50%
+	background-color: #0065c4
+	z-index: 999
+	transition: transform .1s ease-in-out, background-color .2s ease-in-out, box-shadow .2s ease-in-out
+
+	&:before
+		content: attr(data-chat-post-count)
+		display: block
+		width: 20px
+		height: 20px
+		position: absolute
+		top: 0
+		right: 0
+		background-color: #ff5012
+		color: #fff
+		line-height: 20px
+		text-align: center
+		border-radius: 50%
+	
+	&:hover
+		background-color: #014e96
+		box-shadow: 0 2px 20px rgba(0, 22, 43, 0.3)
+
+
+.chat-trigger__icon
+	position: absolute
+	left: 0
+	top: 0
+	display: block
+	width: 60px
+	height: 60px
+	border-radius: 50%
+	background-position: center center
+	background-repeat: no-repeat
+	transition: transform .2s ease-in-out
+
+.chat-trigger__icon-open
+	background-image: url(../img/chat-trigger-bg.png)
+
+.chat-trigger__icon-close
+	background-image: url(../img/ico_close.svg)
+	background-size: 20px
+	transform: scale(0)
+
+.chat-trigger--open
+	.chat-trigger__icon-open
+		transform: scale(0)
+
+	.chat-trigger__icon-close
+		transform: scale(1)
+
+
+.chat-wrapper
+	width: 100%
+	background-color: #fff
+	border-radius: 3px
+	border: 1px solid #0065c4
+	transform-origin: right bottom
+	transform: scale(0.75) translateY(-21px)
+	transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out
+	box-shadow: 0 5px 40px rgba(0,0,0,.16)
+	opacity: 0
+	visibility: hidden
+	z-index: 9
+
+
+.chat--open
+
+	.chat-wrapper
+		opacity: 1
+		transform: scale(1) translateY(0)
+		visibility: visible
+
+
+.chat__header
+	display: none
+	position: relative
+	width: 100%
+	height: 40px
+	background-color: #f3f8f9
+	text-align: center
+	z-index: 10
+	box-shadow: 0 0 30px 0 rgba(105, 105, 105, 0.25)
+
+	h4
+		color: #0065c4
+		font-size: 16px
+		font-weight: 500
+		line-height: 55px
+
+
+.chat-trigger__close
+	position: absolute
+	left: 10px
+	top: 50%
+	width: 10px
+	height: 10px
+	padding: 20px
+	background: url(../img/icon-close.png) no-repeat center
+	transform: translateY(-50%)
+
+.chat__body
+	padding:
+		right: 30px
+		left: 20px
+	max-height: 350px
+	overflow: hidden
+
+
+.chat__list-wrapper
+	padding: 20px 0
+
+.chat__list-posts
+
+.chat-post
+	margin-bottom: 25px
+
+	&:last-child
+		margin-bottom: 0
+
+
+.chat-post--my
+	.chat-post__user-avatar
+		float: right
+		margin-left: 20px
+
+	.chat-post__content
+		float: left
+
+	.chat-post__footer
+		padding-right: 55px
+
+	.chat-post__user-name
+		float: right
+		margin-left: 10px
+	
+	.chat-post__time
+		float: right
+
+	.chat-post__content
+		&:before
+			border-top: 8px solid transparent
+			border-bottom: 8px solid transparent
+			border-left: 8px solid #f3f8f9
+			right: -8px 
+
+.chat-post--others
+	.chat-post__user-avatar
+		float: left
+		margin-right: 20px
+
+	.chat-post__content
+		float: right
+
+	.chat-post__footer
+		padding-left: 55px
+
+	.chat-post__user-name
+		float: left
+		margin-right: 10px
+	
+	.chat-post__time
+		float: left
+
+	.chat-post__content
+		&:before
+			border-top: 8px solid transparent
+			border-bottom: 8px solid transparent
+			border-right: 8px solid #f3f8f9
+			left: -8px 
+
+.chat-post__body
+	@include clearfix
+
+.chat-post__user-avatar
+	width: 35px
+	height: 35px
+	border-radius: 50%
+	
+	background-color: #4c36b4
+
+.chat-post__content
+	position: relative
+	width: 243px
+	padding: 20px
+	border-radius: 3px
+	background-color: #f3f8f9
+	line-height: 16px
+	margin-bottom: 7px
+
+	&:before
+		content: ''
+		display: block
+		width: 0
+		height: 0
+		position: absolute
+		top: 10px
+
+.chat-post__footer
+	font-size: 12px
+	color: #b0acac
+
+	@include clearfix
+
+.chat-post__user-name
+	display: inline-block
+
+.chat-post__time
+	isplay: inline-block
+
+
+.chat__footer
+
+.chat-textarea-wrapper
+	position: relative
+
+.chat-textarea
+	width: 100%
+	resize: none
+	overflow: hidden
+	border: 0
+	padding-top: 20px
+	padding-left: 20px
+	padding-right: 55px
+	padding-bottom: 20px
+	margin-bottom: -2px
+	background-color: #f3f8f9
+	transition: all .2s ease-in-out
+
+	&:focus
+		background-color: #fff
+		box-shadow: 0 0 100px 0 rgba(150,165,190,.24)
+
+
+.chat-textarea__btn-sand
+	position: absolute
+	right: 19px
+	top: 10px
+	padding: 0
+	border: 0
+	outline: 0
+	cursor: pointer
+	width: 36px
+	height: 36px
+	background: transparent url(../img/chat-sand-post-icon.png) no-repeat center
+
+
+
+
+
+
+
+

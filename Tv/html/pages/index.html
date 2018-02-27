@@ -1,0 +1,959 @@
+
+@@include('../sections/head.html')
+
+@@include('../sections/sidebar.html')
+
+		<div class="editor">
+
+			<div class="editor__header">
+
+				<a href="#" class="btn-editor-close"></a>
+
+				<a href="#" class="btn-editor-prev btn-editor-width-xs"></a>
+
+				<a href="#" class="btn-editor-next btn-editor-width-md"></a>
+
+
+				<div class="editor__panel-timer">
+					<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+					<div class="timer-progresbar"></div>
+				</div>
+
+			</div>
+
+
+			<div id="etitor-scroll" class="editor-panels-wrapper">
+
+				<div class="editor-panel">
+
+					<div class="editor-panel__header">
+						<label class="lable">Назва</label>
+						<a href="#" class="editor-panel__actions-btn editor-panel__actions-collaps"></a>
+					</div>
+					<!-- .editor-panel-header -->
+
+					<div class="editor-panel__body">
+
+
+
+						<div class="editor-panel__row">
+							<div class="editor-panel-col ep__wrap-input-name">
+								<input class="input" type="text">
+							</div>
+						</div>
+
+						<div class="editor-panel__row">
+							<div class="editor-panel-col ep__wrap-select-responsible">
+								<label class="lable">Відповідальний</label>
+
+								<select class="select">
+										<option class="select--null" value=""></option>
+										<option>Пункт 1</option>
+										<option>Пункт 2</option>
+								</select>
+							</div>
+
+							<div class="editor-panel-col ep__wrap-input-chronometry">
+								<div class=" lable">Хронометраж</div>
+								<input class="input chronometry" type="text" placeholder="00:00:00">
+							</div>
+	
+							<div class="editor-panel-col ep__wrap-select-type">
+								<label class="lable">Тип</label>
+								<select class="select">
+									<option class="select--null" value=""></option>
+									<option>Пункт 1</option>
+									<option>Пункт 2</option>
+								</select>
+							</div>
+
+							<div class="editor-panel-col ep__wrap-select-status">
+								<label class="lable">Статус</label>
+
+								<select class="select select-status">
+									<option class="select--null" value=""></option>
+									<option class="status-lable status--compleated" data-status="compleated">Compleated</option>
+									<option class="status-lable status--no-video" data-status="no-video">No Video</option>
+									<option class="status-lable status--edited" data-status="edited">To be edited</option>
+									<option class="status-lable status--edit" data-status="edit">Edit</option>
+									<option class="status-lable status--corrected" data-status="corrected">To be corrected</option>	
+								</select>
+							</div>
+
+						</div>
+
+						<div class="editor-panel__row">
+							<div class="editor-panel-col ep__wrap-textarea-text">
+								<label class="lable">Текст <a href="#" class="ep__wrap-textarea-text__link-print"></a></label>
+
+								<textarea class="textarea" rows="20"></textarea>
+							</div>
+						</div>
+
+					</div>
+					<!-- .editor-panel-body -->
+
+				</div>
+				<!-- .editor-panel -->
+
+
+				<div class="editor-panel">
+
+					<div class="editor-panel__header">
+						<label class="lable">Титри</label>
+						<a href="#" class="editor-panel__actions-btn editor-panel__actions-collaps"></a>
+					</div>
+					<!-- .editor-panel-header -->
+
+					<div class="editor-panel__body">
+
+						<div class="editor-panel__row">
+							<div class="editor-panel-col ep__wrap-div-block">
+								<div class="block">
+									<div class="block__header">
+										<img class="prev-image-title" src="img/img-car.jpg" alt="Титр Person Title">
+										<span>Титр Person Title</span>
+										<a href="#" class="block__header__delete"></a>
+									</div>
+									<div class="block__body">
+
+										<div class="block__content-wrapper">
+											<div class="block__content-headline">First and Last Name</div>
+											<div class="block__content">Washington. USA</div>
+										</div>
+
+										<div class="block__content-wrapper">
+											<div class="block__content-headline">Regalia</div>
+											<div class="block__content">The President is considered to be one of the world's most powerful political</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="block">
+									<div class="block__header">
+										<img class="prev-image-title" src="img/img-car.jpg" alt="Титр Person Title">
+										<span>Титр Person Title</span>
+										<a href="#" class="block__header__delete"></a>
+									</div>
+									<div class="block__body">
+
+										<div class="block__content-wrapper">
+											<div class="block__content-headline">First and Last Name</div>
+											<div class="block__content">Washington. USA</div>
+										</div>
+
+										<div class="block__content-wrapper">
+											<div class="block__content-headline">Regalia</div>
+											<div class="block__content">The President is considered to be one of the world's most powerful political</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="editor-panel__row">
+							<div class="editor-panel-col ep__wrap-btn-add-titles">
+								<a href="#" class="btn btn--full">+ Додати титри</a>
+							</div>
+						</div>
+					
+					</div>
+					<!-- .editor-panel-body -->
+
+				</div>
+				<!-- .editor-panel -->
+
+				<div class="editor-panel">
+
+					<div class="editor-panel__header">
+						<label class="lable">Відео</label>
+						<div class="panel__content-montage-status panel__content-montage-status--corrected">To be corrected</div>
+						<a href="#" class="editor-panel__actions-btn editor-panel__actions-collaps"></a>
+					</div>
+					<!-- .editor-panel-header -->
+
+					<div class="editor-panel__body">
+
+						<div class="editor-panel__row">
+							<div class="editor-panel-col ep__wrap-video">
+								<video controls>
+									<source src="video/mov_bbb.mp4" type="video/mp4">
+									<source src="video/mov_bbb.ogg" type="video/ogg">
+								</video>
+							</div>
+
+							<div class="editor-panel-col ep__wrap-textarea-desc">
+								<textarea class="textarea"></textarea>
+							</div>
+						</div>
+
+						<div class="editor-panel__row">
+							<div class="editor-panel-col ep__wrap-bin-trash">
+
+								<div class="bin-trash__header">
+									<h5>BIN - козина</h5>
+									<a href="#" class="btn bin-trash__btn-add-video">+</a>
+								</div>
+
+								<div class="bin-trash">
+
+									<div class="bin-trash__item">
+										<img src="img/img-car.jpg" alt="">
+										<div class="bin-trash__file-name">trailer.mp4</div>
+										<div class="bin-trash__file-duration">00:03:40</div>
+										<div class="bin-trash__file-desc">Описание видео которое полностью помещается в поле.</div>
+										<a href="#" class="bin-trash__item-delete"></a>
+									</div>
+
+									<div class="bin-trash__item">
+										<img src="img/img-car.jpg" alt="">
+										<div class="bin-trash__file-name">1026-16ar-final.mp4</div>
+										<div class="bin-trash__file-duration">00:03:40</div>
+										<div class="bin-trash__file-desc">Описание видео которое полностью помещается в поле.</div>
+										<a href="#" class="bin-trash__item-delete"></a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="editor-panel__row">
+							<div class="editor-panel-col ep__wrap-input-upload">
+								<h5>Выбрать готовый файл</h5>
+
+								<div class="custom-file-upload" data-label="Выбрать...">
+									<span class="custom-file-upload__name">Выберите файл</span>
+									<input type="file" name="custom-file-upload">
+								</div>
+
+							</div>
+						</div>
+
+						<div class="editor-panel__row">
+							<div class="editor-panel-col ep__wrap-mounting-done">
+								<a href="#" class="btn btn--mounting-done">Монтаж готов</a>
+							</div>
+						</div>
+						
+					</div>
+					<!-- .editor-panel-body -->
+
+				</div>
+				<!-- .editor-panel -->
+
+			</div>
+
+
+
+		</div>
+		<!-- .editor -->
+
+		<div id="main-page-content-wrapper">
+			<div class="content" role="main">
+
+				<header class="header-program">
+					<div class="header-program__title">
+
+						<h2 class="header-program__headline">Нічний випуск</h2>
+
+						<div class="header-program__time-date">
+							<span class="header-program__time">18:00</span>
+							<span class="header-program__date">Вівторок, 31.01.2017</span>
+						</div>
+
+					</div>
+
+					<div class="header-program__status">New</div>
+
+					<div class="header-program__responsible">
+						<div class="header-program__responsible-avatar avatar-wrapper">
+							<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+						</div>
+						<div class="header-program__responsible-name">Дмитрий<br>Иващенко</div>
+					</div>
+
+					<div class="header-program__full-time">
+						<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+						<div class="timer-progresbar"></div>
+					</div>
+
+					<div class="header-program__panel__actions">
+
+						<div class="header-program__switch toggle-switch">
+							<input type="checkbox" id="c4" />
+							<label for="c4"></label>
+						</div>
+
+						<a href="#" class="btn"><span class="btn-text--small">+</span><span class="btn-text--full">Додати блок</span></a>
+
+					</div>
+
+				</header>
+
+				<div id="panels-sortable-wrapper" class="panels-wrapper panels-sortable">
+
+					<div class="panel">
+
+						<div class="panel-header">
+
+							<div class="panel-header__switch toggle-switch">
+								<input type="checkbox" id="c2" />
+								<label for="c2"></label>
+							</div>
+
+							<h4 class="panel-header__headline">Основний блок</h4>
+
+							<div class="panel-header__btn-group">
+								<a href="#" class="panel__btn panel__btn-change"></a>
+								<a href="#" class="panel__btn panel__btn-preview"></a>
+							</div>
+
+							<div class="panel-header__status">In Process</div>
+
+							<div class="panel-header__timer">
+								<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+								<div class="timer-progresbar"></div>
+							</div>
+
+							<div class="panel__actions">
+
+								<div class="dropdown-wrapper">
+									<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+									<div class="dropdown">
+										<div class="dropdown__triangle-top"></div>
+										<ul class="dropdown__list">
+											<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+											<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+											<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<a href="#" class="panel__actions-btn panel__actions-collaps"></a>
+							</div>
+
+						</div>
+
+						<div class="panel__body panel__body--active">
+
+							<div class="panel__content panel__content-sortable">
+
+								<div class="panel_row panel-row--status-red">
+
+									<h5 class="panel__content-headline"><span>Без коментарів</span><span class="panel__content-headline-abbr">БК</span></h5>
+
+
+
+									<div class="panel__content-preview tooltip-text">Шехтер - Динамо</div>
+
+
+
+									<div class="panel__timer">
+										<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+										<div class="timer-progresbar timer-progresbar--gray"></div>
+									</div>
+
+
+
+									<div class="panel__responsible-name">
+										<div class="avatar-wrapper">
+											<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+										</div>
+
+										<div class="panel__content-user">Дмитрий Иващенко</div>
+									</div>
+
+
+
+
+									<div class="panel__content-montage-wrapper">
+										<div class="panel__content-montage-avatar">
+											<img class="avatar__image" src="img/avatar-2.jpg" alt="">
+										</div>
+										<div class="panel__content-montage-icon"></div>
+										<div class="panel__content-montage-status panel__content-montage-status--corrected">To be corrected</div>
+									</div>
+
+									<div class="panel__content-actions">
+										<div class="dropdown-wrapper">
+											<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+											<div class="dropdown">
+												<div class="dropdown__triangle-top"></div>
+												<ul class="dropdown__list">
+													<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+													<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+													<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="panel_row panel-row--status-orange">
+
+									<h5 class="panel__content-headline"><span>Відводка</span><span class="panel__content-headline-abbr">В</span></h5>
+
+
+
+									<div class="panel__content-preview tooltip-text">Біржа</div>
+
+
+
+									<div class="panel__timer">
+										<div class="timer-time"><span>00:08:26</span> / <span class="panel__timer--timeout">00:15:00</span></div>
+										<div class="timer-progresbar timer-progresbar--full"></div>
+									</div>
+
+
+
+									<div class="panel__responsible-name">
+										<div class="avatar-wrapper">
+											<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+										</div>
+
+										<div class="panel__content-user">Дмитрий Иващенко</div>
+									</div>
+
+
+
+
+									<div class="panel__content-montage-wrapper">
+										<div class="panel__content-montage-avatar">
+											<img class="avatar__image" src="img/avatar-2.jpg" alt="">
+										</div>
+										<div class="panel__content-montage-icon"></div>
+										<div class="panel__content-montage-status panel__content-montage-status--compleated">Compleated</div>
+									</div>
+
+									<div class="panel__content-actions">
+										<div class="dropdown-wrapper">
+											<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+											<div class="dropdown">
+												<div class="dropdown__triangle-top"></div>
+												<ul class="dropdown__list">
+													<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+													<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+													<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="panel_row panel-row--status-green">
+
+									<h5 class="panel__content-headline"><span>Сюжет</span><span class="panel__content-headline-abbr">С</span></h5>
+
+
+
+									<div class="panel__content-preview tooltip-text">Сюжет о наводнении который не влез полностью. Сюжет о наводнении который не влез полностью.</div>
+
+
+
+									<div class="panel__timer">
+										<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+										<div class="timer-progresbar"></div>
+									</div>
+
+
+
+									<div class="panel__responsible-name">
+										<div class="avatar-wrapper">
+											<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+										</div>
+
+										<div class="panel__content-user">Дмитрий Иващенко</div>
+									</div>
+
+
+
+
+									<div class="panel__content-montage-wrapper">
+										<div class="panel__content-montage-avatar">
+											<img class="avatar__image" src="img/avatar-2.jpg" alt="">
+										</div>
+										<div class="panel__content-montage-icon"></div>
+										<div class="panel__content-montage-status panel__content-montage-status--edit">Edit</div>
+									</div>
+
+									<div class="panel__content-actions">
+									<div class="dropdown-wrapper">
+										<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+										<div class="dropdown">
+											<div class="dropdown__triangle-top"></div>
+											<ul class="dropdown__list">
+												<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+												<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+												<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+											</ul>
+										</div>
+									</div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="panel__footer">
+								<a href="#" class="btn btn-editor-open">Додати елемент</a>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="panel">
+
+						<div class="panel-header">
+
+							<div class="panel-header__switch toggle-switch">
+								<input type="checkbox" id="c3" />
+								<label for="c3"></label>
+							</div>
+
+							<h4 class="panel-header__headline">Основний блок</h4>
+
+							<div class="panel-header__btn-group">
+								<a href="#" class="panel__btn panel__btn-change"></a>
+								<a href="#" class="panel__btn panel__btn-preview"></a>
+							</div>
+
+							<div class="panel-header__status">In Process</div>
+
+							<div class="panel-header__timer">
+								<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+								<div class="timer-progresbar"></div>
+							</div>
+
+							<div class="panel__actions">
+
+								<div class="dropdown-wrapper">
+									<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+									<div class="dropdown">
+										<div class="dropdown__triangle-top"></div>
+										<ul class="dropdown__list">
+											<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+											<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+											<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<a href="#" class="panel__actions-btn panel__actions-collaps"></a>
+							</div>
+
+						</div>
+
+						<div class="panel__body panel__body--active">
+
+							<div class="panel__content panel__content-sortable">
+
+								<div class="panel_row panel-row--status-red">
+
+									<h5 class="panel__content-headline"><span>Без коментарів</span><span class="panel__content-headline-abbr">БК</span></h5>
+
+
+
+									<div class="panel__content-preview tooltip-text">Шехтер - Динамо</div>
+
+
+
+									<div class="panel__timer">
+										<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+										<div class="timer-progresbar timer-progresbar--gray"></div>
+									</div>
+
+
+
+									<div class="panel__responsible-name">
+										<div class="avatar-wrapper">
+											<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+										</div>
+
+										<div class="panel__content-user">Дмитрий Иващенко</div>
+									</div>
+
+
+
+
+									<div class="panel__content-montage-wrapper">
+										<div class="panel__content-montage-avatar">
+											<img class="avatar__image" src="img/avatar-2.jpg" alt="">
+										</div>
+										<div class="panel__content-montage-icon"></div>
+										<div class="panel__content-montage-status panel__content-montage-status--corrected">To be corrected</div>
+									</div>
+
+									<div class="panel__content-actions">
+										<div class="dropdown-wrapper">
+											<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+											<div class="dropdown">
+												<div class="dropdown__triangle-top"></div>
+												<ul class="dropdown__list">
+													<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+													<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+													<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="panel_row panel-row--status-orange">
+
+									<h5 class="panel__content-headline"><span>Відводка</span><span class="panel__content-headline-abbr">В</span></h5>
+
+
+
+									<div class="panel__content-preview tooltip-text">Біржа</div>
+
+
+
+									<div class="panel__timer">
+										<div class="timer-time"><span>00:08:26</span> / <span class="panel__timer--timeout">00:15:00</span></div>
+										<div class="timer-progresbar timer-progresbar--full"></div>
+									</div>
+
+
+
+									<div class="panel__responsible-name">
+										<div class="avatar-wrapper">
+											<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+										</div>
+
+										<div class="panel__content-user">Дмитрий Иващенко</div>
+									</div>
+
+
+
+
+									<div class="panel__content-montage-wrapper">
+										<div class="panel__content-montage-avatar">
+											<img class="avatar__image" src="img/avatar-2.jpg" alt="">
+										</div>
+										<div class="panel__content-montage-icon"></div>
+										<div class="panel__content-montage-status panel__content-montage-status--compleated">Compleated</div>
+									</div>
+
+									<div class="panel__content-actions">
+										<div class="dropdown-wrapper">
+											<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+											<div class="dropdown">
+												<div class="dropdown__triangle-top"></div>
+												<ul class="dropdown__list">
+													<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+													<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+													<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="panel_row panel-row--status-green">
+
+									<h5 class="panel__content-headline"><span>Сюжет</span><span class="panel__content-headline-abbr">С</span></h5>
+
+
+
+									<div class="panel__content-preview tooltip-text">Сюжет о наводнении который не влез полностью. Сюжет о наводнении который не влез полностью.</div>
+
+
+
+									<div class="panel__timer">
+										<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+										<div class="timer-progresbar"></div>
+									</div>
+
+
+
+									<div class="panel__responsible-name">
+										<div class="avatar-wrapper">
+											<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+										</div>
+
+										<div class="panel__content-user">Дмитрий Иващенко</div>
+									</div>
+
+
+
+
+									<div class="panel__content-montage-wrapper">
+										<div class="panel__content-montage-avatar">
+											<img class="avatar__image" src="img/avatar-2.jpg" alt="">
+										</div>
+										<div class="panel__content-montage-icon"></div>
+										<div class="panel__content-montage-status panel__content-montage-status--edit">Edit</div>
+									</div>
+
+									<div class="panel__content-actions">
+									<div class="dropdown-wrapper">
+										<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+										<div class="dropdown">
+											<div class="dropdown__triangle-top"></div>
+											<ul class="dropdown__list">
+												<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+												<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+												<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+											</ul>
+										</div>
+									</div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="panel__footer">
+								<a href="#" class="btn btn-editor-open">Додати елемент</a>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="panel">
+
+						<div class="panel-header">
+
+							<div class="panel-header__switch toggle-switch">
+								<input type="checkbox" id="c5" />
+								<label for="c5"></label>
+							</div>
+
+							<h4 class="panel-header__headline">Основний блок</h4>
+
+							<div class="panel-header__btn-group">
+								<a href="#" class="panel__btn panel__btn-change"></a>
+								<a href="#" class="panel__btn panel__btn-preview"></a>
+							</div>
+
+							<div class="panel-header__status">In Process</div>
+
+							<div class="panel-header__timer">
+								<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+								<div class="timer-progresbar"></div>
+							</div>
+
+							<div class="panel__actions">
+
+								<div class="dropdown-wrapper">
+									<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+									<div class="dropdown">
+										<div class="dropdown__triangle-top"></div>
+										<ul class="dropdown__list">
+											<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+											<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+											<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<a href="#" class="panel__actions-btn panel__actions-collaps"></a>
+							</div>
+
+						</div>
+
+						<div class="panel__body panel__body--active">
+
+							<div class="panel__content panel__content-sortable">
+
+								<div class="panel_row panel-row--status-red">
+
+									<h5 class="panel__content-headline"><span>Без коментарів</span><span class="panel__content-headline-abbr">БК</span></h5>
+
+
+
+									<div class="panel__content-preview tooltip-text">Шехтер - Динамо</div>
+
+
+
+									<div class="panel__timer">
+										<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+										<div class="timer-progresbar timer-progresbar--gray"></div>
+									</div>
+
+
+
+									<div class="panel__responsible-name">
+										<div class="avatar-wrapper">
+											<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+										</div>
+
+										<div class="panel__content-user">Дмитрий Иващенко</div>
+									</div>
+
+
+
+
+									<div class="panel__content-montage-wrapper">
+										<div class="panel__content-montage-avatar">
+											<img class="avatar__image" src="img/avatar-2.jpg" alt="">
+										</div>
+										<div class="panel__content-montage-icon"></div>
+										<div class="panel__content-montage-status panel__content-montage-status--corrected">To be corrected</div>
+									</div>
+
+									<div class="panel__content-actions">
+										<div class="dropdown-wrapper">
+											<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+											<div class="dropdown">
+												<div class="dropdown__triangle-top"></div>
+												<ul class="dropdown__list">
+													<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+													<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+													<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="panel_row panel-row--status-orange">
+
+									<h5 class="panel__content-headline"><span>Відводка</span><span class="panel__content-headline-abbr">В</span></h5>
+
+
+
+									<div class="panel__content-preview tooltip-text">Біржа</div>
+
+
+
+									<div class="panel__timer">
+										<div class="timer-time"><span>00:08:26</span> / <span class="panel__timer--timeout">00:15:00</span></div>
+										<div class="timer-progresbar timer-progresbar--full"></div>
+									</div>
+
+
+
+									<div class="panel__responsible-name">
+										<div class="avatar-wrapper">
+											<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+										</div>
+
+										<div class="panel__content-user">Дмитрий Иващенко</div>
+									</div>
+
+
+
+
+									<div class="panel__content-montage-wrapper">
+										<div class="panel__content-montage-avatar">
+											<img class="avatar__image" src="img/avatar-2.jpg" alt="">
+										</div>
+										<div class="panel__content-montage-icon"></div>
+										<div class="panel__content-montage-status panel__content-montage-status--compleated">Compleated</div>
+									</div>
+
+									<div class="panel__content-actions">
+										<div class="dropdown-wrapper">
+											<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+											<div class="dropdown">
+												<div class="dropdown__triangle-top"></div>
+												<ul class="dropdown__list">
+													<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+													<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+													<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="panel_row panel-row--status-green">
+
+									<h5 class="panel__content-headline"><span>Сюжет</span><span class="panel__content-headline-abbr">С</span></h5>
+
+
+
+									<div class="panel__content-preview tooltip-text">Сюжет о наводнении который не влез полностью. Сюжет о наводнении который не влез полностью.</div>
+
+
+
+									<div class="panel__timer">
+										<div class="timer-time"><span>00:08:26</span> / <span>00:15:00</span></div>
+										<div class="timer-progresbar"></div>
+									</div>
+
+
+
+									<div class="panel__responsible-name">
+										<div class="avatar-wrapper">
+											<img class="avatar__image" src="img/avatar-1.jpg" alt="">
+										</div>
+
+										<div class="panel__content-user">Дмитрий Иващенко</div>
+									</div>
+
+
+
+
+									<div class="panel__content-montage-wrapper">
+										<div class="panel__content-montage-avatar">
+											<img class="avatar__image" src="img/avatar-2.jpg" alt="">
+										</div>
+										<div class="panel__content-montage-icon"></div>
+										<div class="panel__content-montage-status panel__content-montage-status--edit">Edit</div>
+									</div>
+
+									<div class="panel__content-actions">
+									<div class="dropdown-wrapper">
+										<a href="#" class="panel__actions-btn panel__actions-more dropdown-trigger"></a>
+
+										<div class="dropdown">
+											<div class="dropdown__triangle-top"></div>
+											<ul class="dropdown__list">
+												<li class="dropdown__list-item"><a href="#">Редагувати</a></li>
+												<li class="dropdown__list-item"><a href="#">Копіювати</a></li>
+												<li class="dropdown__list-item"><a href="#">Видалити</a></li>
+											</ul>
+										</div>
+									</div>
+									</div>
+
+								</div>
+
+							</div>
+
+							<div class="panel__footer">
+								<a href="#" class="btn btn-editor-open">Додати елемент</a>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			<!-- .content -->
+		</div>
+		<!-- #main-page-content-wrapper -->
+
+
+		@@include('../sections/chat.html')
+
+
+
+@@include('../sections/footer.html')
+
+

@@ -1,0 +1,110 @@
+@import "elements/vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+	/**/
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 575px)
+	/**/
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 667px)
+
+
+	#global-chat
+		position: fixed
+		right: 0
+		top: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 200
+		overflow: scroll
+		-webkit-overflow-scrolling: touch
+
+	.chat-wrapper
+		width: 100%
+		height: 100%
+		border: 0
+		border-radius: 0
+
+	.chat__header
+		display: block
+		position: fixed
+		top: 0
+		left: 0
+		height: 55px
+
+	.chat__footer
+		position: fixed
+		bottom: 0
+		left: 0
+		//min-height: 55px
+		width: 100%
+
+	.chat__body
+		position: fixed
+		top: 40px
+		bottom: 56px
+		max-height: 100%
+		width: 100%
+		overflow: auto
+
+	.chat-post__content
+		width: calc(100% - 55px)
+
+
+
+	.chat-textarea-wrapper
+		position: relative
+		//min-height: 55px
+
+	.chat-textarea
+		font-size: 16px
+		//position: absolute
+		//top: 0
+		//left: 0
+		//min-height: 55px
+
+
+	.chat-trigger--open
+		transform: scale(0)
+
+
+
+
+/* Айфон 6 */
+@media only screen and (max-width : 375px)
+	/**/
+
+
+/* Меньше Айфона 6 */
+@media only screen and (max-width : 374px)
+	/**/
+
+
+/* Custom, iPhone 5-4 */
+@media only screen and (max-width : 320px)
+	/**/

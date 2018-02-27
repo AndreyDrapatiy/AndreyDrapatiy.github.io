@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Dashboard TV</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/libs.js"></script>
+	<script src="js/common.js"></script>
+
+</head>
+
+<body>
+
+<div id="wrapper"> 
+
+<div class="sidebar">
+
+	<div class="sidebar-logo">Logotype</div>
+
+	<div id="btn-toggle" class="btn-sidebar-open">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<div class="nav" role="navigation">
+		<ul class="nav__list">
+			<li class="nav__item nav__item-1">
+				<a class="nav__item-link nav__item-link--active" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 1</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-2">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 2</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-3">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 3</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-4">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 4</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-5">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 5</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-6">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 6</span>
+				</a>
+			</li>
+
+			<li class="nav__item nav__item-7">
+				<a class="nav__item-link" href="#">
+					<i class="nav__item-icon"></i>
+					<span>Link 7</span>
+				</a>
+			</li>
+
+		</ul>
+
+	</div>
+
+	<div class="sidebar-user-avatar">
+
+		<div class="avatar-wrapper dropdown-trigger">
+			<img class="avatar__image mCS_img_loaded" src="img/avatar-1.jpg" alt="">
+		</div>
+
+		<div class="dropdown">
+			<div class="dropdown__triangle-top"></div>
+			<ul class="dropdown__list">
+				<li class="dropdown__list-item"><a href="#">Профіль</a></li>
+				<li class="dropdown__list-item"><a href="#">Налаштування</a></li>
+				<li class="dropdown__list-item"><a href="#">Вихід</a></li>
+			</ul>
+			<div class="dropdown__triangle-bottom"></div>
+		</div>
+
+		<span class="sidebar-user-name">Иван Иванов</span>
+
+	</div>
+
+	<div class="sidebar-mobile-icon"></div>
+
+</div>
+
+<div id="calendar-content-wrapper">
+
+	<div class="content" role="main">
+
+		<header id="header-calendar">
+			<h2 class="header-page">Выпуск программ</h2>
+
+			<select class="select calendar-select__month">
+				<option class="select--null" value="">Березень</option>
+				<option>Пункт 1</option>
+				<option>Пункт 2</option>
+			</select>
+
+			<select class="select calendar-select__year">
+				<option class="select--null" value="">2017</option>
+				<option>2017</option>
+				<option>2016</option>
+				<option>2015</option>
+				<option>2014</option>
+			</select>
+
+			<a href="#" class="btn"><span class="btn-text--full">Створити програму</span><span class="btn-text--small">+</span></a>
+		</header>
+
+		<div class="calendar-wrapper">
+
+			<div class="calendar-row calendar-ajax-content">
+
+			</div>
+
+			<div class="calendar-nav">
+				<a href="#" class="calendar-nav__arrow calendar-nav__prev"></a>
+				<a href="#" class="calendar-nav__arrow calendar-nav__next"></a>
+			</div>
+
+		</div>
+		<!-- .content -->
+	</div>
+	<!-- .content-wrapper -->
+
+</div>
+
+</div>
+<!-- #wrapper -->
+
+</body>
+
+</html>
