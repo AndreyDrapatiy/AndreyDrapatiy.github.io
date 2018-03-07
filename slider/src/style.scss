@@ -9,29 +9,46 @@
     height: 380px;
     overflow: hidden;
     position: relative;
-    .indicators{
+    .indicators {
       position: absolute;
+      padding: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
       z-index: 1001;
-    }
-    .content {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      position: absolute;
-      width: 9999px;
-
-
-      img {
-        display: inline-block;
-        margin-right: -4px;
-        padding: 0;
-        height: 380px;
-      }
     }
   }
 }
 
+.indicators li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: transparent;
+  margin: 5px;
+}
 
-.transition{
-  transition: 250ms ease-in all;
+.active {
+  background: white !important;
+}
+
+.flex-container .carousel .content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: absolute;
+  height: 380px;
+  width: 9999px;
+  img {
+    display: inline-block;
+    margin-right: -4px;
+    padding: 0;
+    height: 380px;
+  }
+}
+
+.transition {
+  transition: 150ms ease-in all;
 }

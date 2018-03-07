@@ -1,8 +1,10 @@
-let currentWidth = document.getElementsByClassName('carousel')[0].offsetWidth;// текущий размер одного слайдера в браузере
-let slider; //тут хранится текущий слайдер над которым водят указателем
+import './style.scss'
+
+var currentWidth = document.getElementsByClassName('carousel')[0].offsetWidth;// текущий размер одного слайдера в браузере
+var slider; //тут хранится текущий слайдер над которым водят указателем
 
 document.addEventListener('mousedown', function (event) {
-    let target = event.target; // где был клик?
+   var target = event.target; // где был клик?
 
     if (target.tagName === 'IMG') {
         dragStart()
@@ -12,9 +14,9 @@ document.addEventListener('mousedown', function (event) {
     }
 });
 
-for (let currentSlider = document.getElementsByClassName('carousel'), j = 0, lj = currentSlider.length; j < lj; j++) {
+for (var currentSlider = document.getElementsByClassName('carousel'), j = 0, lj = currentSlider.length; j < lj; j++) {
 
-    for (let i = 0; i < currentSlider[j].getElementsByTagName('img').length; i++) {
+    for (var i = 0; i < currentSlider[j].getElementsByTagName('img').length; i++) {
         //добывим индикаторы к слайдерам в от количества картинок в них
         currentSlider[j].getElementsByTagName('ul')[0].innerHTML += '<li class="indicator" id="' + i + '"><a href="#"></a></li>';
         currentSlider[j].getElementsByTagName('li')[0].classList.add('active');
@@ -24,7 +26,7 @@ for (let currentSlider = document.getElementsByClassName('carousel'), j = 0, lj 
     });
 }
 
-for (let image = document.getElementsByTagName('img'), j = 0, lj = image.length; j < lj; j++) {
+for (var image = document.getElementsByTagName('img'), j = 0, lj = image.length; j < lj; j++) {
     image[j].setAttribute('width', currentWidth + 'px');
 }
 
@@ -32,7 +34,7 @@ function moveToSlide(target) {
     //перемещаем к слайду по индикатору
     target.parentNode.parentNode.getElementsByClassName('content')[0].style.marginLeft = -(target.id * currentWidth) + 'px';
     //после перемещения снимаем active со всех индикаторов и присваивам на новый
-    for (let x = target.parentNode.getElementsByTagName('LI'), j = 0, lj = x.length; j < lj; j++) {
+    for (var x = target.parentNode.getElementsByTagName('LI'), j = 0, lj = x.length; j < lj; j++) {
         x[j].classList.remove('active');
     }
     target.classList.add('active');
@@ -48,9 +50,9 @@ function setIndicator() {
     //индикатору с индексом 1 присвоен класс active
 
 
-    let index = Math.abs(parseInt(getComputedStyle(slider).marginLeft));
+    var index = Math.abs(parseInt(getComputedStyle(slider).marginLeft));
 
-    for (let unsetInd = slider.parentNode.getElementsByTagName('li'), j = 0, lj = unsetInd.length; j < lj; j++) {
+    for (var unsetInd = slider.parentNode.getElementsByTagName('li'), j = 0, lj = unsetInd.length; j < lj; j++) {
         unsetInd[j].classList.remove('active');
     }
     slider.parentNode.getElementsByTagName('li')[index / currentWidth].classList.add('active');
@@ -59,15 +61,15 @@ function setIndicator() {
 
 function dragStart() {
     console.log('start');
-    let startX = event.clientX;
-    let params = {
+    var startX = event.clientX;
+    var params = {
         currentMargin: null,
         maxMargin: currentWidth * slider.getElementsByTagName('img').length - currentWidth,
-        imgLength: slider.getElementsByTagName('img').length,
+        imgLength: slider.getElementsByTagName('img').length
     };
 
     function currentMarginFn() {
-        let x = getComputedStyle(slider);
+        var x = getComputedStyle(slider);
         return params.currentMargin = parseInt(x.marginLeft);
     }
 
@@ -77,7 +79,7 @@ function dragStart() {
     document.addEventListener('mouseup', moveEnd);
 
     function mouseMove() {
-        let move = startX - event.clientX;
+        var move = startX - event.clientX;
         if (((slider.style.marginLeft = -move + params.currentMargin) < 0) && ((slider.style.marginLeft = -move + params.currentMargin) > -params.maxMargin)) {
             slider.style.marginLeft = -move + params.currentMargin + 'px';
         }
@@ -86,17 +88,17 @@ function dragStart() {
     function moveEnd() {
         slider.classList.add('transition');// добавим transition после того как сладйр отпустили, раньше нельзя, будет не корректное перетаскивание мышкой
 
-        let endX = event.clientX;
+        var endX = event.clientX;
 
         document.removeEventListener('mousemove', mouseMove);
 
-        if (endX < startX) {
+        if (endX <= startX) {
             //выясним напрваление разницей точки в которой был mousedown и mouseup
             //если точка старта по X например больше точки конца, значить танут влево
             //выясняем сколько уже протянуто, и сколько осталось
             //остаток присваиваем в свойство marginLeft
             if (params.currentMargin !== -params.maxMargin) {
-                let left = currentWidth - params.currentMargin;
+                var left = currentWidth - params.currentMargin;
                 slider.style.marginLeft = -left + 'px';
             }
             else {
@@ -105,7 +107,7 @@ function dragStart() {
         }
         else if (endX > startX) {
             if (params.currentMargin !== 0) {
-                let right = currentWidth + params.currentMargin;
+                var right = currentWidth + params.currentMargin;
                 slider.style.marginLeft = right + 'px';
             }
             else {
