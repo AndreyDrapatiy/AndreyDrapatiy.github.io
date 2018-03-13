@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/hamburgers-master/dist/hamburgers.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="vendors/jquery/dist/jquery.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="navbar-header">
+                    <button class="hamburger hamburger--spin toggler" id="hamburger" data-toggle="collapse"
+                            data-target="#myNavbar">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                    </button>
+                    <h1>
+                        <a href="#">
+                            <img src="img/logo.png">
+                        </a>
+                    </h1>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">ПЕРВЫЙ ЭКРАН</a><span class="line"></span></li>
+                        <li><a href="#">ВСТУПЛЕНИЕ</a><span class="line"></span></li>
+                        <li><a href="#">ИНФОГРАФИКА</a><span class="line"></span></li>
+                        <li><a href="#">ПРОИЗВОДИТЕЛЬНОСТЬ</a><span class="line"></span></li>
+                        <li><a href="#">КОНТАКТЫ</a><span class="line"></span></li>
+                        <li class="header-contact-info"><a href="#">+38 (096) 622 86 13 &nbsp;&nbsp;+38 (096) 622 86 13</a></li>
+                        <li class="header-lang">
+                            <ul>
+                                <li><a href="#">EN</a></li>
+                                |
+                                <li><a href="#">UA</a></li>
+                                |
+                                <li><a href="#">RU</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<section class="hero">
+    <div class="slider text-center" id="slider">
+        <div class="item slide1 active">
+            <img src="img/logo-colored.png">
+            <h2>
+                Frontend-разработчики<br>
+                <span>должны быть в теме всего</span>
+            </h2>
+            <div>
+                <a href="#" class="hero-btn-transparent">да, должны </a>
+                <a href="#" class="hero-btn-light">конечно, должны</a>
+            </div>
+        </div>
+        <div class="item slide2">
+            <img src="img/logo-colored.png">
+            <h2>
+                Frontend-разработчики<br>
+                <span>должны быть в теме всего</span>
+            </h2>
+            <div>
+                <a href="#" class="hero-btn-transparent">да, должны </a>
+                <a href="#" class="hero-btn-light">конечно, должны</a>
+            </div>
+        </div>
+        <div class="item slide3">
+            <img src="img/logo-colored.png">
+            <h2>
+                Frontend-разработчики<br>
+                <span>должны быть в теме всего</span>
+            </h2>
+            <div>
+                <a href="#" class="hero-btn-transparent">да, должны </a>
+                <a href="#" class="hero-btn-light">конечно, должны</a>
+            </div>
+        </div>
+    </div>
+    <ul class="switchers">
+        <li class="prev" onclick="nextItem('prev')"><i class="fa fa-angle-left" aria-hidden="true"></i></li>
+        <li class="next" onclick="nextItem('next')"><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+    </ul>
+    <ul class="indicators" id="indicators"></ul>
+    <div class="shared-icons">
+        <span>SHARE</span>
+        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    </div>
+    <div class="slideshow">
+        <input type="checkbox" id="slideshow" placeholder="Slide show">
+        <label for="slideshow">SlideShow</label>
+    </div>
+
+</section>
+<section class="coiper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="img/logo-colored-1.png">
+                <h3>Мысли Криса Койера</h3>
+            </div>
+            <div class="col-md-7">
+                <p>
+                    Одна из мыслей, которая поселилась в моей голове:<strong>
+                    должен ли frontend- разработчик быть в курсе всего?</strong>
+                </p>
+                <p>
+                    В общем смысле, frontend-разработчик может использоваться
+                    и на других рабочих местах. Вся команда разработчиков заканчивает
+                    разговор на frontend-разработчике. В этом смысл моей идеи.
+                </p>
+                <p>
+                    Frontend-разработчики создают те вещи, с которыми будут взаимодействовать
+                    люди. Все этапы разработки проходят вместе с frontend-разработчиком.
+                    Возможно, именно поэтому это такая забавная работа!
+                </p>
+                <p>
+                    Поскольку frontend-разработчик занимает центральное место в цепочке разработки, и при этом мы имеем
+                    дело с большим количеством разных специалистов, мы должны понимать их работу и иногда подсказывать,
+                    что
+                    и как сделать лучше.
+                </p>
+                <h4>Frontend-разработчик должен разбираться в дизайне</h4>
+                <p>
+                    Если frontend-разработчик не является сам по себе дизайнером,
+                    он должен знать, насколько важен дизайн. Он должен иметь хороший вкус.
+                    Он должен знать об инструментах, участвующих непосредственно в разработке.
+                </p>
+                <p>
+                    <strong>
+                        Frontend-разработчик должен разбираться
+                        в работе серверной части (backend)
+                    </strong>
+                </p>
+                <p>
+                    Даже если вы и не backend-разработчик, то вы явно осознаёте
+                    всю важность серверной части. Вы понимаете, с чем взаимодействует
+                    backend, что передается на сервер, а что нет. Вы знаете об
+                    обязанностях backend-разработчика. Вы понимаете, какой язык
+                    используется на сервере, и при этом должны уметь объяснить,
+                    что должен дать вам backend и что нужно от серверной части frontend-а.
+                </p>
+                <p>
+                    <strong>
+                        Frontend-разработчик должен разбираться в работе сетей
+                    </strong>
+                </p>
+                <p>
+                    Frontend-разработчик понимает, что сайты располагаются в интернете,
+                    данные передаются по сети, и что сеть — это дикое и непредсказуемое.
+                    Необходимо понимать, какие бывают сети, как они работают, и насколько
+                    они бывают быстрые и надежные.
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="shared-icons">
+        <span>SHARE</span>
+        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+    </div>
+</section>
+<section class="fronend-tech">
+    <div class="container">
+        <div class="row">
+            <div class="flex-container">
+                <div class="content">
+                    <img src="img/html.png">
+                    <div class="info">
+                        <div class="marker">1</div>
+                        <div class="info-text">
+                            <h5>HTML 5</h5>
+                            <p>HyperText Markup<br>Language</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <img src="img/css.png">
+                    <div class="info">
+                        <div class="marker">2</div>
+                        <div class="info-text">
+                            <h5>CSS</h5>
+                            <p>Cascading Style <br>Sheets</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <img src="img/js.png">
+                    <div class="info">
+                        <div class="marker">3</div>
+                        <div class="info-text">
+                            <h5>JS</h5>
+                            <p>JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="performance">
+    <div class="container-fluid">
+    <div class="flex-container">
+        <h3 class="text-center">Frontend-разработчик должен разбираться<br> в производительности</h3>
+        <div class="content">
+            <div class="info">
+                <h4>Performance Matters</h4>
+                <p>производительность имеет важное место в успехе вашего проекта</p>
+                <a href="#" class="btn-blue">подробнее</a>
+            </div>
+            <img src="img/perfomance1.png">
+        </div>
+        <div class="content revers">
+            <div class="info">
+                <h4>Тонкости</h4>
+                <p>Необходимо понимать насколько быстрым должен быть backend</p>
+                <a href="#" class="btn-blue">подробнее</a>
+            </div>
+            <img src="img/performace2.png">
+        </div>
+    </div>
+    </div>
+</section>
+<section class="contact-us">
+    <div class="container">
+        <div class="flex-container">
+            <div class="contact-info">
+                <h4>контакты</h4>
+                <ul>
+                    <li id="address">18000, Украина, г. Черкассы,<br>ул. Героев Сталинграда 42/1</li>
+                    <li id="phone">+38 (096) 622 86 13<br>+38 (096) 622 86 13</li>
+                    <li id="mail">web@rubarbs.com</li>
+                    <li id="website">rubarbs.com</li>
+                </ul>
+            </div>
+            <div class="feed-back">
+                <h4>напишите нам</h4>
+                <form>
+                    <div class="input-flex-container">
+                        <input type="text" placeholder="имя">
+                        <input type="text" placeholder="телефон">
+                        <input type="text" placeholder="email">
+                    </div>
+                    <textarea placeholder="сообщение"></textarea>
+                    <div class="submit-flex-container">
+                        <input type="submit" value="отправить" class="submit-blue">
+                        <p>Спасибо за сообщение!<br>Мы обязательно свяжемся с Вами.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="flex-container">
+        <div>
+            <img src="img/logofooter.png">
+            <ul>
+                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+    <p class="text-center">© 2017 «Frontend» |  сайт разработан в <span>Rubarb digital</span></p>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+@font-face {
+  font-family: Geometria-Light;
+  src: url("../fonts/Geometria-Light.otf") format("opentype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Geometria;
+  src: url("../fonts/Geometria.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Geometria-Bold;
+  font-weight: 700;
+  src: url("../fonts/Geometria-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Geometria-Extrablack;
+  font-weight: 800;
+  src: url("../fonts/Geometria-ExtaBlack.otf") format("opentype");
+}
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic');// В свободном доступе не нашел Mariad Pro, заменил свободным
+
+body{
+  font-family: Geometria, sans-serif;
+}
+.flex-container{
+  display: flex;
+}
+.header-dark{
+  background: rgba(0, 0, 0, 0.8);
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+a:visited{
+  color:  inherit;
+  text-decoration: none;
+}
+#hamburger{
+  display: none;
+}
+.submit-blue{
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'PT Sans', sans-serif;
+  color: #000;
+  width: 228px;
+  padding: 17px 0 17px 0;
+  text-align: center;
+  background-color: #53d0fb;
+  border:1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.submit-blue:hover{
+  background: transparent;
+  border:1px solid #53d0fb;
+  color: #fff;
+}
+
+.hero-btn-transparent{
+  font-family: 'PT Sans', sans-serif;
+  display: inline-block;
+  position: relative;
+  left: 3px;
+  width: 226px;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgba(0,0,0, 0.4);
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  border: 1px solid rgba(255,255,255, 0.2);
+  margin: 0;
+}
+.hero-btn-light{
+  display: inline-block;
+  position: relative;
+  right: 3px;
+  width: 226px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+.btn-blue{
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'PT Sans', sans-serif;
+  color: #000;
+  width: 228px;
+  padding: 17px 0 17px 0;
+  text-align: center;
+  background-color: #53d0fb;
+  border:1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.btn-blue:hover{
+  background: transparent;
+  border:1px solid #53d0fb;
+}
+
+.shared-icons{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 30px;
+  bottom: 22px;
+  span{
+    display: inline-block;
+    position: relative;
+    right: 3px;
+    color: #ffffff;
+    font-family: Geometria, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 90px;
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+  a{
+    display: inline-block;
+    margin: 6px 0 6px 0;
+    width: 44px;
+    height: 44px;
+    border-radius:50%;
+    border: 1px solid rgba(255,255,255, 0.5);
+    text-align: center;
+    i{
+      line-height: 44px;
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+}

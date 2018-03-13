@@ -1,0 +1,39 @@
+footer{
+  position: relative;
+  .flex-container{
+    flex-direction: row;
+    max-width: 340px;
+    margin: 0 auto;
+    padding: 42px 0 34px 0;
+    div{
+      display: inherit;
+      flex-direction: inherit;
+      justify-content: space-between;
+      width: 100%;
+      ul{
+        display: inherit;
+        flex-direction: inherit;
+        justify-content: space-between;
+        vertical-align: center;
+        align-items: center;
+        li{
+          padding: 10px;
+          a{
+              color: #0f0f0f;
+              font-size: 32px;
+            }
+
+        }
+      }
+    }
+  }
+  p{
+    margin: 8px 0 8px 0;
+    font-size: 13px;
+    font-family: Geometria, sans-serif;
+    span{
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+  }
+}
