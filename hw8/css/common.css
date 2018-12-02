@@ -1,0 +1,15 @@
+body {
+  font-family: 'Lato', sans-serif; }
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 950px;
+  margin: 0 auto; }
+  @media (max-width: 950px) {
+    .container {
+      max-width: calc(100% - 60px); } }
+  @media (max-width: 760px) {
+    .container {
+      max-width: calc(100% - 30px); } }
