@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main">
         <button v-on:click="loopStart" v-if="buttonVisible">START</button>
 
         <app-item
@@ -89,6 +89,10 @@
 <style>
     body {
         font-family: 'Roboto', sans-serif;
+    }
+
+    .main{
+        background: #263238;
     }
 
     button {

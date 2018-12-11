@@ -16,3 +16,9 @@
         }
     }
 </script>
+
+<style scoped>
+    #app{
+        background: ;
+    }
+</style>
