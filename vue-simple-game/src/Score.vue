@@ -30,7 +30,7 @@
         top: 0;
         right: 0;
         left: auto;
-        padding: 20px 40px;
+        padding: 10px 20px;
         font-size: 28px;
         font-weight: 400;
 
@@ -38,6 +38,6 @@
 
     .score span {
         font-weight: 300;
-        color: #f50057;
+        color: #ff5722;
     }
 </style>

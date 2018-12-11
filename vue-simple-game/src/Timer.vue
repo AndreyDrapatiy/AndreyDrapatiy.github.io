@@ -23,7 +23,7 @@
 
 
             gameOver: function () {
-                alert('GAME OVER');
+                confirm('GAME OVER. PRESS "OK" TO RESTART');
                 location.reload();
             }
         },
@@ -47,13 +47,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        padding: 20px 40px;
+        padding: 10px 30px;
         font-size: 28px;
         font-weight: 400;
     }
 
     .timer span {
         font-weight: 300;
-        color: #f50057;
+        color: #ff5722;
     }
 </style>

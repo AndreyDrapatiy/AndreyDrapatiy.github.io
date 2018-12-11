@@ -1,7 +1,6 @@
 <template>
     <div class="main">
-        <button v-on:click="loopStart" v-if="buttonVisible">START</button>
-
+        <button v-on:click="loopStart" v-if="buttonVisible" class="pure-material-button-contained">start</button>
         <app-item
                 :dataAddTime="addTime"
                 :dataScoreFactor="scoreFactor"
@@ -26,7 +25,6 @@
         data() {
             return {
                 buttonVisible: true,
-                padding:200,
 
                 itemModel: [
                     {class: 'red-s', factor: 3, time: 3},
@@ -89,22 +87,41 @@
 <style>
     body {
         font-family: 'Roboto', sans-serif;
+        padding: 0;
+        margin: 0;
     }
 
     .main{
+        height: 100vh;
         background: #263238;
+        color:#eceff1;
     }
 
-    button {
-        position: absolute;
+    .pure-material-button-contained {
+        position:absolute;
         top: 50%;
         left: 50%;
-        padding: 10px 30px;
-        font-size: 18px;
         transform: translate(-50%, -50%);
-        border: 1px solid orangered;
-        background: none;
+        background: #ff5722;
+        display: inline-block;
+        box-sizing: border-box;
+        border: none;
+        width: 160px;
+        border-radius: 4px;
+        padding: 0 16px;
+        color:#eceff1;
+        min-width: 64px;
+        height:46px;
+        vertical-align: middle;
+        text-align: center;
+        text-transform: uppercase;
+        box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        font-size: 20px;
+        font-weight: 500;
+        overflow: hidden;
         outline: none;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
     }
 
     .green-l, .yellow-m, .red-s{
@@ -118,19 +135,19 @@
     }
 
     .green-l {
-        background: #76ff03;
+        background: #64dd17;
         width: 125px;
         height: 125px;
     }
 
     .yellow-m {
-        background: #ffeb3b;
+        background: #ffd600;
         width: 75px;
         height: 75px;
     }
 
     .red-s {
-        background: #f50057;
+        background: #dd2c00;
         width: 25px;
         height: 25px;
 
